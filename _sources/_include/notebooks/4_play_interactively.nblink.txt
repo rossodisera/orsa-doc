@@ -1,0 +1,3 @@
+{
+    "path": "../../../../tutorials/4_play_interactively.ipynb"
+}

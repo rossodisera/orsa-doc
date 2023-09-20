@@ -1,0 +1,7 @@
+orsa.generator
+------------------------
+.. This submodule can be used to fit spectra.
+
+.. .. automodule:: orsa.generator
+..     :members:
+..     :imported-members:

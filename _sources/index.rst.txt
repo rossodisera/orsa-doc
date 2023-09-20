@@ -1,0 +1,49 @@
+Welcome to the ORSA fitter!
+===========================
+
+Installation
+------------
+
+To use ORSA, install it using pip.
+While the package is pip-compatible, it still isn't published in the official `pip repo <https://pypi.org/project/pip/>`_.
+
+First, clone the repository to your machine using your IHEP SSO credentials:
+
+.. code-block:: console
+
+   $ git clone https://code.ihep.ac.cn/orsa/orsa_fitter.git
+
+Finally, install it with pip:
+
+.. code-block:: console
+
+   $ pip3 install ./orsa_fitter
+
+
+Tutorials
+-------------
+
+You will find some useful tutorials to kickstart your analysis here:
+
+.. toctree::
+   :maxdepth: 2
+   
+   _include/tutorials
+
+
+Documentation
+-------------
+
+The (still not) full documentation about orsa methods and classes can be found here:
+
+.. toctree::
+   :maxdepth: 2
+   
+   _include/modules
+
+
+Indices and tables
+------------------
+
+* :ref:`genindex`
+* :ref:`modindex`

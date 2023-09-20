@@ -1,0 +1,3 @@
+{
+    "path": "../../../../tutorials/3_your_first_fit.ipynb"
+}

@@ -1,0 +1,7 @@
+orsa.selection
+------------------------
+.. This submodule can be used to fit spectra.
+
+.. .. automodule:: orsa.selection
+..     :members:
+..     :imported-members:

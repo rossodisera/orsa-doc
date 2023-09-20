@@ -1,0 +1,18 @@
+Tutorials
+=========
+Learn how to play with the spectrum class and the fitter.
+
+.. toctree::
+    :titlesonly:
+    :maxdepth: 0
+
+    1. Play with spectra <notebooks/1_play_with_spectra>
+    2. Create a model <notebooks/2_create_a_model>
+    3. Your first fit <notebooks/3_your_first_fit>
+    4. Play interactively <notebooks/4_play_interactively>
+    5. Opening a SNiPER userfile <notebooks/5_opening_sniper_userfiles>
+    6. Opening a SNiPER EDM <notebooks/6_opening_sniper_EDMs>
+    7. Exploiting MCMC <notebooks/7_exploiting_MCMC>
+    8. Testing NMO <notebooks/8_testing_NMO>
+    9. Exploiting nested sampling <notebooks/9_exploiting_nested_sampling>
+    10. Plot your results <notebooks/10_plot_your_results>

@@ -1,0 +1,7 @@
+orsa.oscillation
+--------------------------
+.. This submodule can be used to fit spectra.
+
+.. .. automodule:: orsa.oscillation
+..     :members:
+..     :imported-members:

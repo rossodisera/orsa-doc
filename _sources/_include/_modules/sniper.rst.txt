@@ -1,0 +1,7 @@
+orsa.sniper
+---------------------
+.. This submodule can be used to fit spectra.
+
+.. .. automodule:: orsa.sniper
+..     :members:
+..     :imported-members:

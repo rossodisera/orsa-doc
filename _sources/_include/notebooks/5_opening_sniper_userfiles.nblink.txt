@@ -1,0 +1,3 @@
+{
+    "path": "../../../../tutorials/5_opening_sniper_userfiles.ipynb"
+}

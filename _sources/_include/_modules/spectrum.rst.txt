@@ -1,0 +1,7 @@
+orsa.spectrum
+-----------------------
+.. This submodule can add and subtract numbers.
+
+.. .. automodule:: orsa.spectrum
+..     :members:
+..     :imported-members:

@@ -1,0 +1,7 @@
+orsa.probability
+--------------------------
+.. This submodule can be used to fit spectra.
+
+.. .. automodule:: orsa.probability
+..     :members:
+..     :imported-members:

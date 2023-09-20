@@ -1,0 +1,7 @@
+orsa.fit
+------------------
+This submodule can be used to fit spectra.
+
+.. automodule:: orsa.fit
+    :members:
+    :imported-members:

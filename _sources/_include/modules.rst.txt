@@ -1,0 +1,20 @@
+Documentation
+==================
+This section contains the API reference of the orsa_fitter package.
+
+.. toctree::
+    :titlesonly:
+    :maxdepth: 0
+
+    _modules/detector
+    _modules/fit
+    _modules/generator
+    _modules/model
+    _modules/oscillation
+    _modules/plot
+    _modules/probability
+    _modules/selection
+    _modules/sniper
+    _modules/spectrum
+    _modules/utils
+    _modules/xs
