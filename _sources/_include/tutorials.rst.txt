@@ -16,3 +16,5 @@ Learn how to play with the spectrum class and the fitter.
     8. Testing NMO <notebooks/8_testing_NMO>
     9. Exploiting nested sampling <notebooks/9_exploiting_nested_sampling>
     10. Plot your results <notebooks/10_plot_your_results>
+    11. Build TAO model <notebooks/11_build_TAO_model>
+    12. Model other experiments <notebooks/12_model_other_experiments>
