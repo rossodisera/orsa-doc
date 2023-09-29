@@ -3,10 +3,10 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Testing the NMO" href="8_testing_NMO.html" /><link rel="prev" title="Opening a SNiPER EDM" href="6_opening_sniper_EDMs.html" />
+<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Documentation" href="../modules.html" /><link rel="prev" title="Model other experiments" href="12_model_other_experiments.html" />
 
     <link rel="shortcut icon" href="../../_static/orsa_fitter.ico"/><!-- Generated with Sphinx 7.2.6 and Furo 2023.09.10 -->
-        <title>Exploiting the MCMC - orsa_fitter 0.7.1 documentation</title>
+        <title>Explore the effect of correlations - orsa_fitter 0.7.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=362ab14a" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=135e06be" />
     <link rel="stylesheet" type="text/css" href="../../_static/nbsphinx-code-cells.css?v=2aa19091" />
@@ -175,13 +175,13 @@
 <li class="toctree-l2"><a class="reference internal" href="4_play_interactively.html">4. Play interactively</a></li>
 <li class="toctree-l2"><a class="reference internal" href="5_opening_sniper_userfiles.html">5. Opening a SNiPER userfile</a></li>
 <li class="toctree-l2"><a class="reference internal" href="6_opening_sniper_EDMs.html">6. Opening a SNiPER EDM</a></li>
-<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">7. Exploiting MCMC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="7_exploiting_MCMC.html">7. Exploiting MCMC</a></li>
 <li class="toctree-l2"><a class="reference internal" href="8_testing_NMO.html">8. Testing NMO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="9_exploiting_nested_sampling.html">9. Exploiting nested sampling</a></li>
 <li class="toctree-l2"><a class="reference internal" href="10_plot_your_results.html">10. Plot your results</a></li>
 <li class="toctree-l2"><a class="reference internal" href="11_build_TAO_model.html">11. Build TAO model</a></li>
 <li class="toctree-l2"><a class="reference internal" href="12_model_other_experiments.html">12. Model other experiments</a></li>
-<li class="toctree-l2"><a class="reference internal" href="13_explore_correlations.html">13. Explore correlations</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">13. Explore correlations</a></li>
 </ul>
 </li>
 </ul>
@@ -235,10 +235,10 @@
           </label>
         </div>
         <article role="main">
-          <section id="Exploiting-the-MCMC">
-<h1>Exploiting the MCMC<a class="headerlink" href="#Exploiting-the-MCMC" title="Link to this heading">#</a></h1>
+          <section id="Explore-the-effect-of-correlations">
+<h1>Explore the effect of correlations<a class="headerlink" href="#Explore-the-effect-of-correlations" title="Link to this heading">#</a></h1>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">orsa</span>
@@ -264,11 +264,11 @@
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-0.7.0
+0.7.1
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">orsa</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">read_json</span><span class="p">(</span><span class="s1">&#39;0_test_model.json&#39;</span><span class="p">)</span>
@@ -281,20 +281,20 @@
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../../_images/_include_notebooks_7_exploiting_MCMC_2_0.png" src="../../_images/_include_notebooks_7_exploiting_MCMC_2_0.png" />
+<img alt="../../_images/_include_notebooks_13_explore_correlations_2_0.png" src="../../_images/_include_notebooks_13_explore_correlations_2_0.png" />
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;orsa.model.model.Model at 0x7f3016d95360&gt;
+&lt;orsa.model.model.Model at 0x7f7aca24fa00&gt;
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">get_spectrum</span><span class="p">(</span><span class="n">asimov</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
@@ -306,38 +306,20 @@
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../../_images/_include_notebooks_7_exploiting_MCMC_3_0.png" src="../../_images/_include_notebooks_7_exploiting_MCMC_3_0.png" />
+<img alt="../../_images/_include_notebooks_13_explore_correlations_3_0.png" src="../../_images/_include_notebooks_13_explore_correlations_3_0.png" />
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;orsa.spectrum.spectrum.ReconstructedSpectrum at 0x7f2fc0604760&gt;
+&lt;orsa.spectrum.spectrum.ReconstructedSpectrum at 0x7f7ad036a590&gt;
 </pre></div></div>
 </div>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">param</span> <span class="ow">in</span> <span class="n">model</span><span class="o">.</span><span class="n">detector_parameters</span><span class="p">:</span>
-    <span class="n">model</span><span class="o">.</span><span class="n">detector_parameters</span><span class="p">[</span><span class="n">param</span><span class="p">]</span><span class="o">.</span><span class="n">fixed</span> <span class="o">=</span> <span class="kc">True</span>
-
-<span class="k">for</span> <span class="n">param</span> <span class="ow">in</span> <span class="n">model</span><span class="o">.</span><span class="n">core_parameters</span><span class="p">:</span>
-    <span class="n">model</span><span class="o">.</span><span class="n">core_parameters</span><span class="p">[</span><span class="n">param</span><span class="p">]</span><span class="o">.</span><span class="n">fixed</span> <span class="o">=</span> <span class="kc">True</span>
-
-<span class="k">for</span> <span class="n">param</span> <span class="ow">in</span> <span class="n">model</span><span class="o">.</span><span class="n">normalization_parameters</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">model</span><span class="o">.</span><span class="n">normalization_parameters</span><span class="p">[</span><span class="n">param</span><span class="p">]</span><span class="o">.</span><span class="n">label</span> <span class="o">!=</span> <span class="s1">&#39;rea&#39;</span><span class="p">:</span>
-        <span class="n">model</span><span class="o">.</span><span class="n">normalization_parameters</span><span class="p">[</span><span class="n">param</span><span class="p">]</span><span class="o">.</span><span class="n">fixed</span> <span class="o">=</span> <span class="kc">True</span>
-
-<span class="n">model</span><span class="o">.</span><span class="n">parameters</span><span class="p">[</span><span class="s1">&#39;rho&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fixed</span> <span class="o">=</span> <span class="kc">True</span>
-</pre></div>
-</div>
-</div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">init_model</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
@@ -356,149 +338,53 @@ Cost function parsed as chi2-like
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">m_mcmc</span> <span class="o">=</span> <span class="n">orsa</span><span class="o">.</span><span class="n">fit</span><span class="o">.</span><span class="n">emcee</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">min_func_bin</span><span class="p">,</span> <span class="mi">10000</span><span class="p">,</span> <span class="n">err_scale</span><span class="o">=</span><span class="mf">1e-3</span><span class="p">)</span><span class="c1">#, backend=&#39;asimov_6y_chi2_comb_shape.h5&#39;)</span>
-</pre></div>
-</div>
-</div>
-<div class="nboutput docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-Cost function parsed as chi2-like
-Param. space dim.: 5
-Number of walkers: 10
-Number of samples: 10000
-Backend h5 file: None
-</pre></div></div>
-</div>
-<div class="nboutput docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area stderr docutils container">
-<div class="highlight"><pre>
-100%|██████████| 10000/10000 [28:15&lt;00:00,  5.90it/s]
-</pre></div></div>
-</div>
-<div class="nboutput docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-Discarded 5000 samples for best fit values. Recalculate them by looking at the chain.
-</pre></div></div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area stderr docutils container">
-<div class="highlight"><pre>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;dm2_21&#39;</span>
+<span class="n">res</span><span class="o">.</span><span class="n">get_samples</span><span class="p">(</span><span class="mi">100000</span><span class="p">)</span>
+<span class="n">n_points</span> <span class="o">=</span> <span class="mi">101</span>
 
-</pre></div></div>
-</div>
-<div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">m_mcmc</span><span class="o">.</span><span class="n">discard</span> <span class="o">=</span> <span class="mi">100</span>
-<span class="n">orsa</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">chain</span><span class="p">(</span><span class="n">m_mcmc</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">orsa</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">draw_profile</span><span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="n">label</span><span class="p">,</span> <span class="n">kind</span> <span class="o">=</span> <span class="s1">&#39;conditional&#39;</span><span class="p">,</span> <span class="n">n_sigmas</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">n_samples</span> <span class="o">=</span> <span class="n">n_points</span><span class="p">,</span> <span class="n">use_minuit</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">subtract_min</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">ax</span><span class="p">,</span> <span class="n">plot_kwargs</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">ls</span> <span class="o">=</span> <span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;Conditional&#39;</span><span class="p">))</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">orsa</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">draw_profile</span><span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="n">label</span><span class="p">,</span> <span class="n">kind</span> <span class="o">=</span> <span class="s1">&#39;profile&#39;</span><span class="p">,</span> <span class="n">n_sigmas</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">n_samples</span> <span class="o">=</span> <span class="n">n_points</span><span class="p">,</span> <span class="n">use_minuit</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">subtract_min</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">ax</span><span class="p">,</span> <span class="n">plot_kwargs</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">ls</span> <span class="o">=</span> <span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;Profile&#39;</span><span class="p">))</span>
+
+<span class="c1"># Marginalization is unreliable when covariance is not positive-semidefinite. Try using emcce for the fit.</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">orsa</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">draw_profile</span><span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="n">label</span><span class="p">,</span> <span class="n">kind</span> <span class="o">=</span> <span class="s1">&#39;marginal&#39;</span><span class="p">,</span> <span class="n">n_sigmas</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">n_samples</span> <span class="o">=</span> <span class="n">n_points</span><span class="p">,</span> <span class="n">use_minuit</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">subtract_min</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">ax</span><span class="p">,</span> <span class="n">plot_kwargs</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">ls</span> <span class="o">=</span> <span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s1">&#39;g&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;Marginal&#39;</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">frameon</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="nboutput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-(&lt;Figure size 1000x1000 with 10 Axes&gt;,
- array([[&lt;Axes: ylabel=&#39;dm2_21&#39;&gt;, &lt;Axes: &gt;],
-        [&lt;Axes: ylabel=&#39;dm2_31&#39;&gt;, &lt;Axes: &gt;],
-        [&lt;Axes: ylabel=&#39;s2_12&#39;&gt;, &lt;Axes: &gt;],
-        [&lt;Axes: ylabel=&#39;s2_13&#39;&gt;, &lt;Axes: &gt;],
-        [&lt;Axes: xlabel=&#39;step number&#39;, ylabel=&#39;rea&#39;&gt;, &lt;Axes: &gt;]],
-       dtype=object))
+&lt;matplotlib.legend.Legend at 0x7f7ac9ae1fc0&gt;
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../../_images/_include_notebooks_7_exploiting_MCMC_7_1.png" src="../../_images/_include_notebooks_7_exploiting_MCMC_7_1.png" />
+<img alt="../../_images/_include_notebooks_13_explore_correlations_5_1.png" src="../../_images/_include_notebooks_13_explore_correlations_5_1.png" />
 </div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">orsa</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">corner</span><span class="p">(</span><span class="n">m_mcmc</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">orsa</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">draw_profiles</span><span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="n">kind</span> <span class="o">=</span> <span class="s1">&#39;conditional&#39;</span><span class="p">,</span> <span class="n">n_sigmas</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">n_samples</span> <span class="o">=</span> <span class="n">n_points</span><span class="p">,</span> <span class="n">use_minuit</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">subtract_min</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">plot_kwargs</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">ls</span> <span class="o">=</span> <span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;Conditional&#39;</span><span class="p">),</span> <span class="n">n_cols</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span> <span class="n">box_size</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">which</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">orsa</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">draw_profiles</span><span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="n">kind</span> <span class="o">=</span> <span class="s1">&#39;profile&#39;</span><span class="p">,</span> <span class="n">n_sigmas</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">n_samples</span> <span class="o">=</span> <span class="n">n_points</span><span class="p">,</span> <span class="n">use_minuit</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">subtract_min</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">axes</span><span class="p">,</span> <span class="n">plot_kwargs</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">ls</span> <span class="o">=</span> <span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;Profile&#39;</span><span class="p">),</span> <span class="n">n_cols</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span> <span class="n">box_size</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">which</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="nboutput docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-Removed no burn in
-</pre></div></div>
-</div>
-<div class="nboutput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
-</pre></div>
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-(&lt;Figure size 1000x1000 with 15 Axes&gt;,
- array([[&lt;Axes: &gt;, None, None, None, None],
-        [&lt;Axes: ylabel=&#39;$dm2_31$&#39;&gt;, &lt;Axes: &gt;, None, None, None],
-        [&lt;Axes: ylabel=&#39;$s2_12$&#39;&gt;, &lt;Axes: &gt;, &lt;Axes: &gt;, None, None],
-        [&lt;Axes: ylabel=&#39;$s2_13$&#39;&gt;, &lt;Axes: &gt;, &lt;Axes: &gt;, &lt;Axes: &gt;, None],
-        [&lt;Axes: xlabel=&#39;$dm2_21$&#39;, ylabel=&#39;$rea$&#39;&gt;,
-         &lt;Axes: xlabel=&#39;$dm2_31$&#39;&gt;, &lt;Axes: xlabel=&#39;$s2_12$&#39;&gt;,
-         &lt;Axes: xlabel=&#39;$s2_13$&#39;&gt;, &lt;Axes: xlabel=&#39;$rea$&#39;&gt;]], dtype=object))
-</pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../../_images/_include_notebooks_7_exploiting_MCMC_8_2.png" src="../../_images/_include_notebooks_7_exploiting_MCMC_8_2.png" />
-</div>
-</div>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># from scipy.stats import norm</span>
-<span class="c1"># fig, ax = plt.subplots(4, 8, figsize = (8*3, 4*3))</span>
-<span class="c1"># ax = ax.flatten()</span>
-<span class="c1"># for i, l in enumerate(labels):</span>
-<span class="c1">#     n, edges, _ = ax[i].hist(m_mcmc.samples[:,m_mcmc.discard:,i].flatten(), histtype = &#39;step&#39;, bins = 20, density = True, lw = 2, label = &#39;MCMC&#39;)</span>
-<span class="c1">#     x_samples = np.linspace(edges.min(), edges.max(), 1000)</span>
-<span class="c1">#     ax[i].plot(x_samples, norm.pdf(x_samples, m_res.values[i], m_res.errors[i]), &#39;r-&#39;, label = &#39;Minuit&#39;)</span>
-<span class="c1">#     if l in to_lab:</span>
-<span class="c1">#         ax[i].set_xlabel(to_lab[l])</span>
-<span class="c1">#     else:</span>
-<span class="c1">#         ax[i].set_xlabel(l)</span>
-
-<span class="c1">#     ax[i].margins(x = 0.0, y = 0.4)</span>
-<span class="c1">#     ax[i].legend(frameon = False, loc = &#39;upper right&#39;)</span>
-<span class="c1"># fig.tight_layout()</span>
-<span class="c1"># # fig.savefig(&#39;comparison.pdf&#39;)</span>
-<span class="c1"># # fig.savefig(&#39;comparison.png&#39;, dpi = 300)</span>
-</pre></div>
-</div>
-</div>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
+<img alt="../../_images/_include_notebooks_13_explore_correlations_6_0.png" src="../../_images/_include_notebooks_13_explore_correlations_6_0.png" />
 </div>
 </div>
 </section>
@@ -508,23 +394,23 @@ Removed no burn in
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="8_testing_NMO.html">
+          <a class="next-page" href="../modules.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Testing the NMO</div>
+                <div class="title">Documentation</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="6_opening_sniper_EDMs.html">
+          <a class="prev-page" href="12_model_other_experiments.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Opening a SNiPER EDM</div>
+                <div class="title">Model other experiments</div>
                 
               </div>
             </a>

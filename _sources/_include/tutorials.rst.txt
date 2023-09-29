@@ -18,3 +18,4 @@ Learn how to play with the spectrum class and the fitter.
     10. Plot your results <notebooks/10_plot_your_results>
     11. Build TAO model <notebooks/11_build_TAO_model>
     12. Model other experiments <notebooks/12_model_other_experiments>
+    13. Explore correlations <notebooks/13_explore_correlations>

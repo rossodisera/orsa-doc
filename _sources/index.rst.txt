@@ -47,3 +47,9 @@ Indices and tables
 
 * :ref:`genindex`
 * :ref:`modindex`
+
+
+.. .. image:: _static/footer.png
+..    :width: 100 %
+..    :alt: ORSA logo
+..    :align: center
