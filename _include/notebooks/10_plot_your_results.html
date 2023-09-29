@@ -264,14 +264,14 @@
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-0.7.0
+0.7.1
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">orsa</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">read_json</span><span class="p">(</span><span class="s1">&#39;0_test_model.json&#39;</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">orsa</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">read_json</span><span class="p">(</span><span class="s1">&#39;inputs/test_model.json&#39;</span><span class="p">)</span>
 <span class="n">model</span><span class="o">.</span><span class="n">exposure</span> <span class="o">=</span> <span class="mi">6</span><span class="o">*</span><span class="mf">365.25</span>
 <span class="n">model</span>
 </pre></div>
@@ -290,7 +290,7 @@
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;orsa.model.model.Model at 0x7f544ffa0fa0&gt;
+&lt;orsa.model.model.Model at 0x7fe5c27e1c90&gt;
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -314,7 +314,7 @@
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;orsa.model.model.Model at 0x7f544ffa0fa0&gt;
+&lt;orsa.model.model.Model at 0x7fe5c27e1c90&gt;
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -339,7 +339,7 @@
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;orsa.spectrum.spectrum.ReconstructedSpectrum at 0x7f53e86cf040&gt;
+&lt;orsa.spectrum.spectrum.ReconstructedSpectrum at 0x7fe732162140&gt;
 </pre></div></div>
 </div>
 <div class="nbinput nblast docutils container">
@@ -394,30 +394,27 @@ Cost function parsed as chi2-like
 <div class="output_area rendered_html docutils container">
 <table>
     <tr>
-        <th colspan="5" style="text-align:center" title="Minimizer"> Migrad </th>
+        <th colspan="2" style="text-align:center" title="Minimizer"> Migrad </th>
     </tr>
     <tr>
-        <td colspan="2" style="text-align:left" title="Minimum value of function"> FCN = 951.6 </td>
-        <td colspan="3" style="text-align:center" title="Total number of function and (optional) gradient evaluations"> Nfcn = 175 </td>
+        <td style="text-align:left" title="Minimum value of function"> FCN = 931.1 </td>
+        <td style="text-align:center" title="Total number of function and (optional) gradient evaluations"> Nfcn = 190 </td>
     </tr>
     <tr>
-        <td colspan="2" style="text-align:left" title="Estimated distance to minimum and goal"> EDM = 1.83e-05 (Goal: 0.0002) </td>
-        <td colspan="3" style="text-align:center" title="Total run time of algorithms"> time = 2.0 sec </td>
+        <td style="text-align:left" title="Estimated distance to minimum and goal"> EDM = 2.94e-05 (Goal: 0.0002) </td>
+        <td style="text-align:center" title="Total run time of algorithms"> time = 7.2 sec </td>
     </tr>
     <tr>
-        <td colspan="2" style="text-align:center;background-color:#92CCA6;color:black"> Valid Minimum </td>
-        <td colspan="3" style="text-align:center;background-color:#92CCA6;color:black"> No Parameters at limit </td>
+        <td style="text-align:center;background-color:#92CCA6;color:black"> Valid Minimum </td>
+        <td style="text-align:center;background-color:#92CCA6;color:black"> Below EDM threshold (goal x 10) </td>
     </tr>
     <tr>
-        <td colspan="2" style="text-align:center;background-color:#92CCA6;color:black"> Below EDM threshold (goal x 10) </td>
-        <td colspan="3" style="text-align:center;background-color:#92CCA6;color:black"> Below call limit </td>
+        <td style="text-align:center;background-color:#92CCA6;color:black"> No parameters at limit </td>
+        <td style="text-align:center;background-color:#92CCA6;color:black"> Below call limit </td>
     </tr>
     <tr>
-        <td style="text-align:center;background-color:#92CCA6;color:black"> Covariance </td>
         <td style="text-align:center;background-color:#92CCA6;color:black"> Hesse ok </td>
-        <td style="text-align:center;background-color:#92CCA6;color:black" title="Is covariance matrix accurate?"> Accurate </td>
-        <td style="text-align:center;background-color:#92CCA6;color:black" title="Is covariance matrix positive definite?"> Pos. def. </td>
-        <td style="text-align:center;background-color:#92CCA6;color:black" title="Was positive definiteness enforced by Minuit?"> Not forced </td>
+        <td style="text-align:center;background-color:#92CCA6;color:black"> Covariance accurate </td>
     </tr>
 </table><table>
     <tr>
@@ -434,7 +431,7 @@ Cost function parsed as chi2-like
     <tr>
         <th> 0 </th>
         <td> dm2_21 </td>
-        <td> 75.35e-6 </td>
+        <td> 75.39e-6 </td>
         <td> 0.21e-6 </td>
         <td>  </td>
         <td>  </td>
@@ -445,8 +442,8 @@ Cost function parsed as chi2-like
     <tr>
         <th> 1 </th>
         <td> dm2_31 </td>
-        <td> 2.529e-3 </td>
-        <td> 0.004e-3 </td>
+        <td> 2.525e-3 </td>
+        <td> 0.005e-3 </td>
         <td>  </td>
         <td>  </td>
         <td>  </td>
@@ -456,7 +453,7 @@ Cost function parsed as chi2-like
     <tr>
         <th> 2 </th>
         <td> s2_12 </td>
-        <td> 0.3056 </td>
+        <td> 0.3055 </td>
         <td> 0.0016 </td>
         <td>  </td>
         <td>  </td>
@@ -467,7 +464,7 @@ Cost function parsed as chi2-like
     <tr>
         <th> 3 </th>
         <td> s2_13 </td>
-        <td> 0.0251 </td>
+        <td> 0.0194 </td>
         <td> 0.0024 </td>
         <td>  </td>
         <td>  </td>
@@ -478,7 +475,7 @@ Cost function parsed as chi2-like
     <tr>
         <th> 4 </th>
         <td> rea </td>
-        <td> 291.0e3 </td>
+        <td> 288.1e3 </td>
         <td> 2.3e3 </td>
         <td>  </td>
         <td>  </td>
@@ -489,7 +486,7 @@ Cost function parsed as chi2-like
     <tr>
         <th> 5 </th>
         <td> U </td>
-        <td> 1.85e3 </td>
+        <td> 1.81e3 </td>
         <td> 0.33e3 </td>
         <td>  </td>
         <td>  </td>
@@ -500,7 +497,7 @@ Cost function parsed as chi2-like
     <tr>
         <th> 6 </th>
         <td> Th </td>
-        <td> 0.59e3 </td>
+        <td> 0.70e3 </td>
         <td> 0.12e3 </td>
         <td>  </td>
         <td>  </td>
@@ -521,72 +518,72 @@ Cost function parsed as chi2-like
     </tr>
     <tr>
         <th> dm2_21 </th>
-        <td> 4.52e-14 </td>
-        <td style="background-color:rgb(249,249,250);color:black"> -0.01e-12 <strong>(-0.011)</strong> </td>
-        <td style="background-color:rgb(224,224,250);color:black"> -67.77e-12 <strong>(-0.201)</strong> </td>
-        <td style="background-color:rgb(244,244,250);color:black"> -23.45e-12 <strong>(-0.046)</strong> </td>
-        <td style="background-color:rgb(250,197,197);color:black"> 173.55482968e-6 <strong>(0.352)</strong> </td>
-        <td style="background-color:rgb(157,157,250);color:black"> -49.76794597e-6 <strong>(-0.714)</strong> </td>
-        <td style="background-color:rgb(250,220,220);color:black"> 5.27342149e-6 <strong>(0.199)</strong> </td>
+        <td> 4.48e-14 </td>
+        <td style="background-color:rgb(248,248,250);color:black"> -0.01e-12 <strong>(-0.014)</strong> </td>
+        <td style="background-color:rgb(224,224,250);color:black"> -65.72e-12 <strong>(-0.197)</strong> </td>
+        <td style="background-color:rgb(244,244,250);color:black"> -23.52e-12 <strong>(-0.046)</strong> </td>
+        <td style="background-color:rgb(250,198,198);color:black"> 170.89180555e-6 <strong>(0.350)</strong> </td>
+        <td style="background-color:rgb(157,157,250);color:black"> -49.46605399e-6 <strong>(-0.714)</strong> </td>
+        <td style="background-color:rgb(250,220,220);color:black"> 5.24748437e-6 <strong>(0.199)</strong> </td>
     </tr>
     <tr>
         <th> dm2_31 </th>
-        <td style="background-color:rgb(249,249,250);color:black"> -0.01e-12 <strong>(-0.011)</strong> </td>
-        <td> 1.31e-11 </td>
-        <td style="background-color:rgb(250,246,246);color:black"> 0.163e-9 <strong>(0.028)</strong> </td>
-        <td style="background-color:rgb(250,248,248);color:black"> 0.132e-9 <strong>(0.015)</strong> </td>
-        <td style="background-color:rgb(250,247,247);color:black"> 172.473433e-6 <strong>(0.021)</strong> </td>
-        <td style="background-color:rgb(250,248,248);color:black"> 13.746774e-6 <strong>(0.012)</strong> </td>
-        <td style="background-color:rgb(249,249,250);color:black"> -3.923121e-6 <strong>(-0.009)</strong> </td>
+        <td style="background-color:rgb(248,248,250);color:black"> -0.01e-12 <strong>(-0.014)</strong> </td>
+        <td> 2.07e-11 </td>
+        <td style="background-color:rgb(250,247,247);color:black"> 0.146e-9 <strong>(0.020)</strong> </td>
+        <td style="background-color:rgb(250,248,248);color:black"> 0.131e-9 <strong>(0.012)</strong> </td>
+        <td style="background-color:rgb(250,248,248);color:black"> 116.156242e-6 <strong>(0.011)</strong> </td>
+        <td style="background-color:rgb(250,248,248);color:black"> 22.942911e-6 <strong>(0.015)</strong> </td>
+        <td style="background-color:rgb(249,249,250);color:black"> -5.416659e-6 <strong>(-0.010)</strong> </td>
     </tr>
     <tr>
         <th> s2_12 </th>
-        <td style="background-color:rgb(224,224,250);color:black"> -67.77e-12 <strong>(-0.201)</strong> </td>
-        <td style="background-color:rgb(250,246,246);color:black"> 0.163e-9 <strong>(0.028)</strong> </td>
-        <td> 2.51e-06 </td>
-        <td style="background-color:rgb(246,246,250);color:black"> -0.1e-6 <strong>(-0.031)</strong> </td>
-        <td style="background-color:rgb(250,172,172);color:black"> 1.9105643 <strong>(0.521)</strong> </td>
-        <td style="background-color:rgb(250,189,189);color:black"> 211.4293e-3 <strong>(0.408)</strong> </td>
-        <td style="background-color:rgb(196,196,250);color:black"> -82.1741e-3 <strong>(-0.417)</strong> </td>
+        <td style="background-color:rgb(224,224,250);color:black"> -65.72e-12 <strong>(-0.197)</strong> </td>
+        <td style="background-color:rgb(250,247,247);color:black"> 0.146e-9 <strong>(0.020)</strong> </td>
+        <td> 2.5e-06 </td>
+        <td style="background-color:rgb(245,245,250);color:black"> -0.1e-6 <strong>(-0.036)</strong> </td>
+        <td style="background-color:rgb(250,172,172);color:black"> 1.8870515 <strong>(0.518)</strong> </td>
+        <td style="background-color:rgb(250,190,190);color:black"> 208.6345e-3 <strong>(0.403)</strong> </td>
+        <td style="background-color:rgb(196,196,250);color:black"> -81.7473e-3 <strong>(-0.415)</strong> </td>
     </tr>
     <tr>
         <th> s2_13 </th>
-        <td style="background-color:rgb(244,244,250);color:black"> -23.45e-12 <strong>(-0.046)</strong> </td>
-        <td style="background-color:rgb(250,248,248);color:black"> 0.132e-9 <strong>(0.015)</strong> </td>
-        <td style="background-color:rgb(246,246,250);color:black"> -0.1e-6 <strong>(-0.031)</strong> </td>
-        <td> 5.72e-06 </td>
-        <td style="background-color:rgb(250,174,174);color:black"> 2.811868 <strong>(0.508)</strong> </td>
-        <td style="background-color:rgb(250,245,245);color:black"> 27.545e-3 <strong>(0.035)</strong> </td>
-        <td style="background-color:rgb(250,247,247);color:black"> 6.635e-3 <strong>(0.022)</strong> </td>
+        <td style="background-color:rgb(244,244,250);color:black"> -23.52e-12 <strong>(-0.046)</strong> </td>
+        <td style="background-color:rgb(250,248,248);color:black"> 0.131e-9 <strong>(0.012)</strong> </td>
+        <td style="background-color:rgb(245,245,250);color:black"> -0.1e-6 <strong>(-0.036)</strong> </td>
+        <td> 5.84e-06 </td>
+        <td style="background-color:rgb(250,173,173);color:black"> 2.872476 <strong>(0.515)</strong> </td>
+        <td style="background-color:rgb(250,245,245);color:black"> 28.346e-3 <strong>(0.036)</strong> </td>
+        <td style="background-color:rgb(250,247,247);color:black"> 6.352e-3 <strong>(0.021)</strong> </td>
     </tr>
     <tr>
         <th> rea </th>
-        <td style="background-color:rgb(250,197,197);color:black"> 173.55482968e-6 <strong>(0.352)</strong> </td>
-        <td style="background-color:rgb(250,247,247);color:black"> 172.473433e-6 <strong>(0.021)</strong> </td>
-        <td style="background-color:rgb(250,172,172);color:black"> 1.9105643 <strong>(0.521)</strong> </td>
-        <td style="background-color:rgb(250,174,174);color:black"> 2.811868 <strong>(0.508)</strong> </td>
-        <td> 5.37e+06 </td>
-        <td style="background-color:rgb(226,226,250);color:black"> -0.14e6 <strong>(-0.186)</strong> </td>
-        <td style="background-color:rgb(234,234,250);color:black"> -0.035e6 <strong>(-0.121)</strong> </td>
+        <td style="background-color:rgb(250,198,198);color:black"> 170.89180555e-6 <strong>(0.350)</strong> </td>
+        <td style="background-color:rgb(250,248,248);color:black"> 116.156242e-6 <strong>(0.011)</strong> </td>
+        <td style="background-color:rgb(250,172,172);color:black"> 1.8870515 <strong>(0.518)</strong> </td>
+        <td style="background-color:rgb(250,173,173);color:black"> 2.872476 <strong>(0.515)</strong> </td>
+        <td> 5.33e+06 </td>
+        <td style="background-color:rgb(226,226,250);color:black"> -0.14e6 <strong>(-0.184)</strong> </td>
+        <td style="background-color:rgb(234,234,250);color:black"> -0.035e6 <strong>(-0.120)</strong> </td>
     </tr>
     <tr>
         <th> U </th>
-        <td style="background-color:rgb(157,157,250);color:black"> -49.76794597e-6 <strong>(-0.714)</strong> </td>
-        <td style="background-color:rgb(250,248,248);color:black"> 13.746774e-6 <strong>(0.012)</strong> </td>
-        <td style="background-color:rgb(250,189,189);color:black"> 211.4293e-3 <strong>(0.408)</strong> </td>
-        <td style="background-color:rgb(250,245,245);color:black"> 27.545e-3 <strong>(0.035)</strong> </td>
-        <td style="background-color:rgb(226,226,250);color:black"> -0.14e6 <strong>(-0.186)</strong> </td>
+        <td style="background-color:rgb(157,157,250);color:black"> -49.46605399e-6 <strong>(-0.714)</strong> </td>
+        <td style="background-color:rgb(250,248,248);color:black"> 22.942911e-6 <strong>(0.015)</strong> </td>
+        <td style="background-color:rgb(250,190,190);color:black"> 208.6345e-3 <strong>(0.403)</strong> </td>
+        <td style="background-color:rgb(250,245,245);color:black"> 28.346e-3 <strong>(0.036)</strong> </td>
+        <td style="background-color:rgb(226,226,250);color:black"> -0.14e6 <strong>(-0.184)</strong> </td>
         <td> 1.07e+05 </td>
-        <td style="background-color:rgb(170,170,250);color:black"> -0.025e6 <strong>(-0.615)</strong> </td>
+        <td style="background-color:rgb(170,170,250);color:black"> -0.025e6 <strong>(-0.614)</strong> </td>
     </tr>
     <tr>
         <th> Th </th>
-        <td style="background-color:rgb(250,220,220);color:black"> 5.27342149e-6 <strong>(0.199)</strong> </td>
-        <td style="background-color:rgb(249,249,250);color:black"> -3.923121e-6 <strong>(-0.009)</strong> </td>
-        <td style="background-color:rgb(196,196,250);color:black"> -82.1741e-3 <strong>(-0.417)</strong> </td>
-        <td style="background-color:rgb(250,247,247);color:black"> 6.635e-3 <strong>(0.022)</strong> </td>
-        <td style="background-color:rgb(234,234,250);color:black"> -0.035e6 <strong>(-0.121)</strong> </td>
-        <td style="background-color:rgb(170,170,250);color:black"> -0.025e6 <strong>(-0.615)</strong> </td>
+        <td style="background-color:rgb(250,220,220);color:black"> 5.24748437e-6 <strong>(0.199)</strong> </td>
+        <td style="background-color:rgb(249,249,250);color:black"> -5.416659e-6 <strong>(-0.010)</strong> </td>
+        <td style="background-color:rgb(196,196,250);color:black"> -81.7473e-3 <strong>(-0.415)</strong> </td>
+        <td style="background-color:rgb(250,247,247);color:black"> 6.352e-3 <strong>(0.021)</strong> </td>
+        <td style="background-color:rgb(234,234,250);color:black"> -0.035e6 <strong>(-0.120)</strong> </td>
+        <td style="background-color:rgb(170,170,250);color:black"> -0.025e6 <strong>(-0.614)</strong> </td>
         <td> 1.55e+04 </td>
     </tr>
 </table></div>
@@ -659,7 +656,9 @@ Cost function parsed as chi2-like
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-  1%|          | 7/1000 [00:00&lt;00:15, 62.65it/s]100%|██████████| 1000/1000 [00:17&lt;00:00, 58.50it/s]
+/home/ubuntu/.miniconda3/lib/python3.10/site-packages/orsa/fit/minimizers.py:135: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  samples = np.random.multivariate_normal(self.values, self.covariance, size=n, tol = 1e-16)
+  0%|          | 4/1000 [00:00&lt;00:57, 17.24it/s]100%|██████████| 1000/1000 [00:52&lt;00:00, 19.11it/s]
 </pre></div></div>
 </div>
 <div class="nboutput docutils container">

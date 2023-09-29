@@ -259,7 +259,7 @@
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">reco</span> <span class="o">=</span> <span class="n">orsa</span><span class="o">.</span><span class="n">sniper</span><span class="o">.</span><span class="n">load_edm</span><span class="p">(</span><span class="s1">&#39;../tests/common_files/reactor_edm.root&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">to_list</span><span class="p">()</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">reco</span> <span class="o">=</span> <span class="n">orsa</span><span class="o">.</span><span class="n">sniper</span><span class="o">.</span><span class="n">load_edm</span><span class="p">(</span><span class="s1">&#39;inputs/reactor_edm.root&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">to_list</span><span class="p">()</span>
 
 <span class="n">bins</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">)</span>
 <span class="n">reco</span><span class="o">.</span><span class="n">to_hist</span><span class="p">(</span><span class="n">bins</span><span class="p">)</span>
@@ -279,7 +279,7 @@
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;orsa.spectrum.spectrum.ReconstructedSpectrum at 0x7fae5853f520&gt;
+&lt;orsa.spectrum.spectrum.ReconstructedSpectrum at 0x7f8a7390a980&gt;
 </pre></div></div>
 </div>
 <div class="nbinput nblast docutils container">
@@ -311,7 +311,7 @@
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;orsa.spectrum.spectrum.ReconstructedSpectrum at 0x7fae20f33f70&gt;
+&lt;orsa.spectrum.spectrum.ReconstructedSpectrum at 0x7f8a7390b160&gt;
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -335,7 +335,7 @@
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;orsa.spectrum.spectrum.ReconstructedSpectrum at 0x7fae209acaf0&gt;
+&lt;orsa.spectrum.spectrum.ReconstructedSpectrum at 0x7f8a73908220&gt;
 </pre></div></div>
 </div>
 <section id="Let's-try-a-fit">
@@ -388,7 +388,7 @@
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;orsa.spectrum.spectrum.ReconstructedSpectrum at 0x7fad9ed38730&gt;
+&lt;orsa.spectrum.spectrum.ReconstructedSpectrum at 0x7f88de9f8d90&gt;
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -426,30 +426,27 @@ Cost function parsed as chi2-like
 <div class="output_area rendered_html docutils container">
 <table>
     <tr>
-        <th colspan="5" style="text-align:center" title="Minimizer"> Migrad </th>
+        <th colspan="2" style="text-align:center" title="Minimizer"> Migrad </th>
     </tr>
     <tr>
-        <td colspan="2" style="text-align:left" title="Minimum value of function"> FCN = 374.1 </td>
-        <td colspan="3" style="text-align:center" title="Total number of function and (optional) gradient evaluations"> Nfcn = 384 </td>
+        <td style="text-align:left" title="Minimum value of function"> FCN = 374.1 </td>
+        <td style="text-align:center" title="Total number of function and (optional) gradient evaluations"> Nfcn = 384 </td>
     </tr>
     <tr>
-        <td colspan="2" style="text-align:left" title="Estimated distance to minimum and goal"> EDM = 3.99e-05 (Goal: 0.0002) </td>
-        <td colspan="3" style="text-align:center" title="Total run time of algorithms"> time = 1.7 sec </td>
+        <td style="text-align:left" title="Estimated distance to minimum and goal"> EDM = 3.99e-05 (Goal: 0.0002) </td>
+        <td style="text-align:center" title="Total run time of algorithms"> time = 6.1 sec </td>
     </tr>
     <tr>
-        <td colspan="2" style="text-align:center;background-color:#92CCA6;color:black"> Valid Minimum </td>
-        <td colspan="3" style="text-align:center;background-color:#92CCA6;color:black"> No Parameters at limit </td>
+        <td style="text-align:center;background-color:#92CCA6;color:black"> Valid Minimum </td>
+        <td style="text-align:center;background-color:#92CCA6;color:black"> Below EDM threshold (goal x 10) </td>
     </tr>
     <tr>
-        <td colspan="2" style="text-align:center;background-color:#92CCA6;color:black"> Below EDM threshold (goal x 10) </td>
-        <td colspan="3" style="text-align:center;background-color:#92CCA6;color:black"> Below call limit </td>
+        <td style="text-align:center;background-color:#92CCA6;color:black"> No parameters at limit </td>
+        <td style="text-align:center;background-color:#92CCA6;color:black"> Below call limit </td>
     </tr>
     <tr>
-        <td style="text-align:center;background-color:#92CCA6;color:black"> Covariance </td>
         <td style="text-align:center;background-color:#92CCA6;color:black"> Hesse ok </td>
-        <td style="text-align:center;background-color:#92CCA6;color:black" title="Is covariance matrix accurate?"> Accurate </td>
-        <td style="text-align:center;background-color:#92CCA6;color:black" title="Is covariance matrix positive definite?"> Pos. def. </td>
-        <td style="text-align:center;background-color:#92CCA6;color:black" title="Was positive definiteness enforced by Minuit?"> Not forced </td>
+        <td style="text-align:center;background-color:#92CCA6;color:black"> Covariance accurate </td>
     </tr>
 </table><table>
     <tr>
@@ -894,7 +891,7 @@ Cost function parsed as chi2-like
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-[&lt;matplotlib.lines.Line2D at 0x7fad9f1d3910&gt;]
+[&lt;matplotlib.lines.Line2D at 0x7f88df195180&gt;]
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -919,7 +916,7 @@ Cost function parsed as chi2-like
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-[&lt;matplotlib.lines.Line2D at 0x7fae2314a230&gt;]
+[&lt;matplotlib.lines.Line2D at 0x7f88deea6710&gt;]
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -946,7 +943,9 @@ Cost function parsed as chi2-like
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-  1%|          | 12/1000 [00:00&lt;00:08, 118.91it/s]100%|██████████| 1000/1000 [00:09&lt;00:00, 107.94it/s]
+/home/ubuntu/.miniconda3/lib/python3.10/site-packages/orsa/fit/minimizers.py:135: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  samples = np.random.multivariate_normal(self.values, self.covariance, size=n, tol = 1e-16)
+  0%|          | 0/1000 [00:00&lt;?, ?it/s]100%|██████████| 1000/1000 [00:07&lt;00:00, 128.24it/s]
 </pre></div></div>
 </div>
 <div class="nboutput docutils container">
