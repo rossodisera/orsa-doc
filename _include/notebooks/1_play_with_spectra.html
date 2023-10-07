@@ -263,7 +263,7 @@
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-0.7.1
+0.7.3
 </pre></div></div>
 </div>
 <div class="nbinput nblast docutils container">
@@ -278,9 +278,9 @@
 <span class="n">isPDF</span> <span class="o">=</span> <span class="kc">False</span>
 
 <span class="c1"># Specify the sampling of your model</span>
-<span class="n">E_bin</span> <span class="o">=</span> <span class="mf">1e-3</span> <span class="c1"># sampling resolution in MeV</span>
-<span class="n">E_left</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="c1"># minimum energy</span>
-<span class="n">E_right</span> <span class="o">=</span> <span class="mf">13.</span> <span class="c1"># maximum energy</span>
+<span class="n">E_bin</span> <span class="o">=</span> <span class="mf">1e-4</span>    <span class="c1"># sampling resolution in MeV</span>
+<span class="n">E_left</span> <span class="o">=</span> <span class="mf">0.5</span>    <span class="c1"># minimum energy</span>
+<span class="n">E_right</span> <span class="o">=</span> <span class="mf">13.</span>   <span class="c1"># maximum energy</span>
 
 <span class="n">E_eval</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">E_left</span><span class="o">+</span><span class="n">E_bin</span><span class="o">/</span><span class="mf">2.</span><span class="p">,</span> <span class="n">E_right</span><span class="o">+</span><span class="n">E_bin</span><span class="o">/</span><span class="mf">2.</span><span class="p">,</span> <span class="n">E_bin</span><span class="p">)</span>
 </pre></div>
@@ -310,7 +310,7 @@
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;orsa.spectrum.spectrum.UnoscillatedSpectrum at 0x7fb0906e9840&gt;
+&lt;orsa.spectrum.spectrum.UnoscillatedSpectrum at 0x7f9bc47dca60&gt;
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -336,7 +336,7 @@
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;orsa.spectrum.spectrum.OscillatedSpectrum at 0x7fb08c603f10&gt;
+&lt;orsa.spectrum.spectrum.OscillatedSpectrum at 0x7f9bc47dc9a0&gt;
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -364,7 +364,7 @@
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;orsa.spectrum.spectrum.OscillatedSpectrum at 0x7fb0906e9bd0&gt;
+&lt;orsa.spectrum.spectrum.OscillatedSpectrum at 0x7f9aec3230a0&gt;
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -388,7 +388,7 @@
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;orsa.spectrum.spectrum.OscillatedSpectrum at 0x7fb08c603af0&gt;
+&lt;orsa.spectrum.spectrum.OscillatedSpectrum at 0x7f9bc47de0e0&gt;
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -412,7 +412,7 @@
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;orsa.spectrum.spectrum.OscillatedSpectrum at 0x7fb08c603070&gt;
+&lt;orsa.spectrum.spectrum.OscillatedSpectrum at 0x7f9aec3231f0&gt;
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -441,7 +441,7 @@
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;orsa.spectrum.spectrum.DepositedSpectrum at 0x7faefc69a9e0&gt;
+&lt;orsa.spectrum.spectrum.DepositedSpectrum at 0x7f9bc06f6dd0&gt;
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -467,7 +467,7 @@
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;orsa.spectrum.spectrum.DepositedSpectrum at 0x7faefc6dfe50&gt;
+&lt;orsa.spectrum.spectrum.DepositedSpectrum at 0x7f9aec2f8f40&gt;
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -493,7 +493,7 @@
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;orsa.spectrum.spectrum.VisibleSpectrum at 0x7faefc5b29b0&gt;
+&lt;orsa.spectrum.spectrum.VisibleSpectrum at 0x7f9ae9a77cd0&gt;
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -519,7 +519,7 @@
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;orsa.spectrum.spectrum.ReconstructedSpectrum at 0x7faefc82fb50&gt;
+&lt;orsa.spectrum.spectrum.ReconstructedSpectrum at 0x7f9ae77795d0&gt;
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -560,8 +560,8 @@ Text(0, 0.5, &#39;Entries [A.U.]&#39;)
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Run pseudoexperiment for asimov of 100000 events and rebin it (here I group 10 bins to reach 10keV-binning)</span>
-<span class="n">asimov</span> <span class="o">=</span> <span class="n">sp_rec</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="n">E_eval</span><span class="p">)</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="mi">100000</span><span class="p">)</span><span class="o">.</span><span class="n">rebin</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
-<span class="n">pseudoexperiment</span> <span class="o">=</span> <span class="n">asimov</span><span class="o">.</span><span class="n">run_pseudoexperiment</span><span class="p">()</span>
+<span class="n">asimov</span> <span class="o">=</span> <span class="n">sp_rec</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="n">E_eval</span><span class="p">)</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="mi">100000</span><span class="p">)</span>
+<span class="n">pseudoexperiment</span> <span class="o">=</span> <span class="n">asimov</span><span class="o">.</span><span class="n">run_pseudoexperiment</span><span class="p">()</span><span class="o">.</span><span class="n">rebin</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
 <span class="n">pseudoexperiment</span>
 </pre></div>
 </div>
@@ -579,7 +579,7 @@ Text(0, 0.5, &#39;Entries [A.U.]&#39;)
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;orsa.spectrum.spectrum.ReconstructedSpectrum at 0x7faefc497250&gt;
+&lt;orsa.spectrum.spectrum.ReconstructedSpectrum at 0x7f9ae9b6ba00&gt;
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -589,8 +589,7 @@ Text(0, 0.5, &#39;Entries [A.U.]&#39;)
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># get list of events for unbinned analysis</span>
 <span class="n">samples</span> <span class="o">=</span> <span class="n">asimov</span><span class="o">.</span><span class="n">get_samples</span><span class="p">()</span>
 
-<span class="c1"># put events in a histogram to see them</span>
-<span class="n">samples</span><span class="o">.</span><span class="n">to_hist</span><span class="p">(</span><span class="n">bins</span> <span class="o">=</span> <span class="n">asimov</span><span class="o">.</span><span class="n">Eedges</span><span class="p">)</span>
+<span class="n">samples</span>
 </pre></div>
 </div>
 </div>
@@ -607,37 +606,33 @@ Text(0, 0.5, &#39;Entries [A.U.]&#39;)
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;orsa.spectrum.spectrum.ReconstructedSpectrum at 0x7faefc78ece0&gt;
+&lt;orsa.spectrum.spectrum.EventList at 0x7f9ae9b6bbb0&gt;
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">samples</span><span class="o">.</span><span class="n">pos</span><span class="o">.</span><span class="n">R</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># put events in a histogram to see them</span>
+<span class="n">samples</span><span class="o">.</span><span class="n">to_hist</span><span class="p">(</span><span class="n">bins</span> <span class="o">=</span> <span class="n">pseudoexperiment</span><span class="o">.</span><span class="n">Eedges</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/_include_notebooks_1_play_with_spectra_15_0.png" src="../../_images/_include_notebooks_1_play_with_spectra_15_0.png" />
+</div>
+</div>
+<div class="nboutput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-(array([  190.,   827.,  2077.,  3969.,  6239.,  9037., 12878., 16642.,
-        21503., 26428.]),
- array([ 0.3366637 ,  2.0229882 ,  3.7093127 ,  5.3956372 ,  7.08196171,
-         8.76828621, 10.45461071, 12.14093521, 13.82725971, 15.51358421,
-        17.19990871]),
- &lt;BarContainer object of 10 artists&gt;)
+&lt;orsa.spectrum.spectrum.ReconstructedSpectrum at 0x7f9aec386230&gt;
 </pre></div></div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<img alt="../../_images/_include_notebooks_1_play_with_spectra_15_1.png" src="../../_images/_include_notebooks_1_play_with_spectra_15_1.png" />
-</div>
 </div>
 </section>
 
