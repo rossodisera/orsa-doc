@@ -292,7 +292,7 @@
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># load the default reactor UnoscillatedSpectrum (Huber-Mueller). You can create your own generator if needed</span>
 <span class="c1"># (if UnoscillatedSpectrum is provided without XS, it will be applied in detector response)</span>
-<span class="n">sp_uno_rea</span> <span class="o">=</span> <span class="n">orsa</span><span class="o">.</span><span class="n">generator</span><span class="o">.</span><span class="n">reactor</span><span class="p">(</span><span class="s1">&#39;hm&#39;</span><span class="p">,</span> <span class="n">isPDF</span><span class="p">,</span> <span class="n">hasXS</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">get_spectrum</span><span class="p">(</span><span class="n">E_eval</span><span class="p">)</span>
+<span class="n">sp_uno_rea</span> <span class="o">=</span> <span class="n">orsa</span><span class="o">.</span><span class="n">generator</span><span class="o">.</span><span class="n">reactor</span><span class="p">(</span><span class="s1">&#39;HM&#39;</span><span class="p">,</span> <span class="n">isPDF</span><span class="p">,</span> <span class="n">hasXS</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">get_spectrum</span><span class="p">(</span><span class="n">E_eval</span><span class="p">)</span>
 <span class="n">sp_uno_rea</span>
 </pre></div>
 </div>
@@ -310,7 +310,7 @@
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;orsa.spectrum.spectrum.UnoscillatedSpectrum at 0x7f9bc47dca60&gt;
+&lt;orsa.spectrum.spectrum.UnoscillatedSpectrum at 0x14e760e7a30&gt;
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -336,7 +336,7 @@
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;orsa.spectrum.spectrum.OscillatedSpectrum at 0x7f9bc47dc9a0&gt;
+&lt;orsa.spectrum.spectrum.OscillatedSpectrum at 0x14e760e5f00&gt;
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -364,7 +364,7 @@
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;orsa.spectrum.spectrum.OscillatedSpectrum at 0x7f9aec3230a0&gt;
+&lt;orsa.spectrum.spectrum.OscillatedSpectrum at 0x14e776d16f0&gt;
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -388,7 +388,7 @@
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;orsa.spectrum.spectrum.OscillatedSpectrum at 0x7f9bc47de0e0&gt;
+&lt;orsa.spectrum.spectrum.OscillatedSpectrum at 0x14e7bfa7f70&gt;
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -412,7 +412,7 @@
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;orsa.spectrum.spectrum.OscillatedSpectrum at 0x7f9aec3231f0&gt;
+&lt;orsa.spectrum.spectrum.OscillatedSpectrum at 0x14e7d0bee60&gt;
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -441,7 +441,7 @@
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;orsa.spectrum.spectrum.DepositedSpectrum at 0x7f9bc06f6dd0&gt;
+&lt;orsa.spectrum.spectrum.DepositedSpectrum at 0x14e7e5191b0&gt;
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -467,7 +467,7 @@
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;orsa.spectrum.spectrum.DepositedSpectrum at 0x7f9aec2f8f40&gt;
+&lt;orsa.spectrum.spectrum.DepositedSpectrum at 0x14e7e519030&gt;
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -493,7 +493,7 @@
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;orsa.spectrum.spectrum.VisibleSpectrum at 0x7f9ae9a77cd0&gt;
+&lt;orsa.spectrum.spectrum.VisibleSpectrum at 0x14e7e65a740&gt;
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -519,7 +519,7 @@
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;orsa.spectrum.spectrum.ReconstructedSpectrum at 0x7f9ae77795d0&gt;
+&lt;orsa.spectrum.spectrum.ReconstructedSpectrum at 0x14e05a1bcd0&gt;
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -579,7 +579,7 @@ Text(0, 0.5, &#39;Entries [A.U.]&#39;)
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;orsa.spectrum.spectrum.ReconstructedSpectrum at 0x7f9ae9b6ba00&gt;
+&lt;orsa.spectrum.spectrum.ReconstructedSpectrum at 0x14e05a1be20&gt;
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -606,7 +606,7 @@ Text(0, 0.5, &#39;Entries [A.U.]&#39;)
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;orsa.spectrum.spectrum.EventList at 0x7f9ae9b6bbb0&gt;
+&lt;orsa.spectrum.spectrum.EventList at 0x14e05174d90&gt;
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -631,7 +631,7 @@ Text(0, 0.5, &#39;Entries [A.U.]&#39;)
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;orsa.spectrum.spectrum.ReconstructedSpectrum at 0x7f9aec386230&gt;
+&lt;orsa.spectrum.spectrum.ReconstructedSpectrum at 0x14e051ed3f0&gt;
 </pre></div></div>
 </div>
 </section>
