@@ -20,3 +20,4 @@ Learn how to play with the spectrum class and the fitter.
     12. Model other experiments <notebooks/12_model_other_experiments>
     13. Explore correlations <notebooks/13_explore_correlations>
     14. Test different interaction targets <notebooks/14_test_different_interaction_targets>
+    15. Save and reload a fit configuration <notebooks/15_save_and_reload_a_fit_configuration>

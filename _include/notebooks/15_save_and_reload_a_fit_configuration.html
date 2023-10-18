@@ -3,10 +3,10 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Opening a SNiPER userfile" href="5_opening_sniper_userfiles.html" /><link rel="prev" title="Your first fit" href="3_your_first_fit.html" />
+<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Documentation" href="../modules.html" /><link rel="prev" title="Test different interaction targets" href="14_test_different_interaction_targets.html" />
 
     <link rel="shortcut icon" href="../../_static/orsa_fitter.ico"/><!-- Generated with Sphinx 7.2.6 and Furo 2023.09.10 -->
-        <title>Play interactively - orsa_fitter 0.7.4 documentation</title>
+        <title>Save and reload a fit configuration - orsa_fitter 0.7.4 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=362ab14a" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=135e06be" />
     <link rel="stylesheet" type="text/css" href="../../_static/nbsphinx-code-cells.css?v=2aa19091" />
@@ -172,7 +172,7 @@
 <li class="toctree-l2"><a class="reference internal" href="1_play_with_spectra.html">1. Play with spectra</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2_create_a_model.html">2. Create a model</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3_your_first_fit.html">3. Your first fit</a></li>
-<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">4. Play interactively</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4_play_interactively.html">4. Play interactively</a></li>
 <li class="toctree-l2"><a class="reference internal" href="5_opening_sniper_userfiles.html">5. Opening a SNiPER userfile</a></li>
 <li class="toctree-l2"><a class="reference internal" href="6_opening_sniper_EDMs.html">6. Opening a SNiPER EDM</a></li>
 <li class="toctree-l2"><a class="reference internal" href="7_exploiting_MCMC.html">7. Exploiting MCMC</a></li>
@@ -183,7 +183,7 @@
 <li class="toctree-l2"><a class="reference internal" href="12_model_other_experiments.html">12. Model other experiments</a></li>
 <li class="toctree-l2"><a class="reference internal" href="13_explore_correlations.html">13. Explore correlations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="14_test_different_interaction_targets.html">14. Test different interaction targets</a></li>
-<li class="toctree-l2"><a class="reference internal" href="15_save_and_reload_a_fit_configuration.html">15. Save and reload a fit configuration</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">15. Save and reload a fit configuration</a></li>
 </ul>
 </li>
 </ul>
@@ -237,25 +237,16 @@
           </label>
         </div>
         <article role="main">
-          <section id="Play-interactively">
-<h1>Play interactively<a class="headerlink" href="#Play-interactively" title="Link to this heading">#</a></h1>
+          <section id="Save-and-reload-a-fit-configuration">
+<h1>Save and reload a fit configuration<a class="headerlink" href="#Save-and-reload-a-fit-configuration" title="Link to this heading">#</a></h1>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">orsa</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
 <span class="kn">import</span> <span class="nn">matplotlib</span> <span class="k">as</span> <span class="nn">mpl</span>
-
-<span class="n">sns</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">style</span> <span class="o">=</span> <span class="s1">&#39;white&#39;</span><span class="p">)</span>
-<span class="n">mpl</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;xtick.minor&#39;</span><span class="p">,</span> <span class="n">visible</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
-<span class="n">mpl</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;ytick.minor&#39;</span><span class="p">,</span> <span class="n">visible</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
-<span class="n">mpl</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;xtick&#39;</span><span class="p">,</span> <span class="n">direction</span><span class="o">=</span><span class="s1">&#39;in&#39;</span><span class="p">,</span> <span class="n">top</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">bottom</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
-<span class="n">mpl</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;ytick&#39;</span><span class="p">,</span> <span class="n">direction</span><span class="o">=</span><span class="s1">&#39;in&#39;</span><span class="p">,</span> <span class="n">right</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">left</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">orsa</span><span class="o">.</span><span class="n">__version__</span><span class="p">)</span>
 </pre></div>
@@ -266,29 +257,17 @@
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-0.7.3
+0.7.4
 </pre></div></div>
 </div>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">orsa</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">read_json</span><span class="p">(</span><span class="s1">&#39;inputs/test_model.json&#39;</span><span class="p">)</span>
 <span class="n">model</span><span class="o">.</span><span class="n">exposure</span> <span class="o">=</span> <span class="mi">6</span><span class="o">*</span><span class="mf">365.25</span>
-
 <span class="n">data</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">get_spectrum</span><span class="p">(</span><span class="n">asimov</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">init_model</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
-<span class="n">min_func_bin</span> <span class="o">=</span> <span class="n">orsa</span><span class="o">.</span><span class="n">probability</span><span class="o">.</span><span class="n">CostFunction</span><span class="p">(</span><span class="n">ll</span><span class="o">=</span><span class="n">orsa</span><span class="o">.</span><span class="n">probability</span><span class="o">.</span><span class="n">chi2</span><span class="p">,</span> <span class="n">ll_args</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">))</span>
-<span class="n">model</span><span class="o">.</span><span class="n">use_shape_uncertainty</span> <span class="o">=</span> <span class="kc">False</span>
-
-<span class="n">orsa</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">interactive</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">min_func_bin</span><span class="p">,</span> <span class="n">init_model</span><span class="o">=</span><span class="n">init_model</span><span class="p">,</span> <span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+<span class="n">model</span>
 </pre></div>
 </div>
 </div>
@@ -296,17 +275,71 @@
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<div class="highlight"><pre>
-Inizialization of the parameters to the best fit. Fitting with iMinuit
-Cost function parsed as chi2-like
-</pre></div></div>
+<img alt="../../_images/_include_notebooks_15_save_and_reload_a_fit_configuration_2_0.png" src="../../_images/_include_notebooks_15_save_and_reload_a_fit_configuration_2_0.png" />
+</div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
-<script type="application/vnd.jupyter.widget-view+json">{"model_id": "53f26e8235394f97b860ee905a017274", "version_major": 2, "version_minor": 0}</script></div>
+<div class="highlight"><pre>
+&lt;orsa.model.model.Model at 0x209ff6412a0&gt;
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">min_func_bin</span> <span class="o">=</span> <span class="n">orsa</span><span class="o">.</span><span class="n">probability</span><span class="o">.</span><span class="n">CostFunction</span><span class="p">(</span><span class="n">ll</span><span class="o">=</span><span class="n">orsa</span><span class="o">.</span><span class="n">probability</span><span class="o">.</span><span class="n">chi2</span><span class="p">,</span> <span class="n">ll_args</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">),</span> <span class="n">lp_args</span><span class="o">=</span><span class="n">model</span><span class="o">.</span><span class="n">get_priors</span><span class="p">())</span>
+<span class="n">model</span><span class="o">.</span><span class="n">use_shape_uncertainty</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">orsa</span><span class="o">.</span><span class="n">fit</span><span class="o">.</span><span class="n">minuit</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">min_func_bin</span><span class="p">)</span>
+<span class="nb">round</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">obj</span><span class="o">.</span><span class="n">fval</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+1019.47963
+</pre></div></div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">orsa</span><span class="o">.</span><span class="n">save_config</span><span class="p">(</span><span class="s1">&#39;inputs/test_conf.json&#39;</span><span class="p">,</span> <span class="n">model</span> <span class="o">=</span> <span class="n">model</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="p">,</span> <span class="n">cost_function</span> <span class="o">=</span> <span class="n">min_func_bin</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model_</span><span class="p">,</span> <span class="n">data_</span><span class="p">,</span> <span class="n">cost_function_</span> <span class="o">=</span> <span class="n">orsa</span><span class="o">.</span><span class="n">read_config</span><span class="p">(</span><span class="s1">&#39;inputs/test_conf.json&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">res_</span> <span class="o">=</span> <span class="n">orsa</span><span class="o">.</span><span class="n">fit</span><span class="o">.</span><span class="n">minuit</span><span class="p">(</span><span class="n">model_</span><span class="p">,</span> <span class="n">cost_function_</span><span class="p">)</span>
+<span class="nb">round</span><span class="p">(</span><span class="n">res_</span><span class="o">.</span><span class="n">obj</span><span class="o">.</span><span class="n">fval</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+1019.47963
+</pre></div></div>
 </div>
 </section>
 
@@ -315,23 +348,23 @@ Cost function parsed as chi2-like
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="5_opening_sniper_userfiles.html">
+          <a class="next-page" href="../modules.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Opening a SNiPER userfile</div>
+                <div class="title">Documentation</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="3_your_first_fit.html">
+          <a class="prev-page" href="14_test_different_interaction_targets.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Your first fit</div>
+                <div class="title">Test different interaction targets</div>
                 
               </div>
             </a>
