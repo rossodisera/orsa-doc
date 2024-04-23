@@ -5,11 +5,11 @@
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Opening a SNiPER EDM" href="6_opening_sniper_EDMs.html" /><link rel="prev" title="Play interactively" href="4_play_interactively.html" />
 
-    <link rel="shortcut icon" href="../../_static/orsa_fitter.ico"/><!-- Generated with Sphinx 7.2.6 and Furo 2023.09.10 -->
-        <title>Opening a SNiPER userfile - orsa_fitter 0.7.4 documentation</title>
+    <link rel="shortcut icon" href="../../_static/orsa_fitter.ico"/><!-- Generated with Sphinx 7.3.7 and Furo 2024.01.29 -->
+        <title>Opening a SNiPER userfile - orsa_fitter 0.8.5 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=362ab14a" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=135e06be" />
-    <link rel="stylesheet" type="text/css" href="../../_static/nbsphinx-code-cells.css?v=2aa19091" />
+    <link rel="stylesheet" type="text/css" href="../../_static/nbsphinx-code-cells.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?v=36a5483c" />
     
     
@@ -133,7 +133,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../index.html"><div class="brand">orsa_fitter 0.7.4 documentation</div></a>
+      <a href="../../index.html"><div class="brand">orsa_fitter 0.8.5 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -159,7 +159,7 @@
     <img class="sidebar-logo" src="../../_static/orsa_fitter.svg" alt="Logo"/>
   </div>
   
-  <span class="sidebar-brand-text">orsa_fitter 0.7.4 documentation</span>
+  <span class="sidebar-brand-text">orsa_fitter 0.8.5 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../search.html" role="search">
   <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
@@ -238,7 +238,7 @@
         </div>
         <article role="main">
           <section id="Opening-a-SNiPER-userfile">
-<h1>Opening a SNiPER userfile<a class="headerlink" href="#Opening-a-SNiPER-userfile" title="Link to this heading">#</a></h1>
+<h1>Opening a SNiPER userfile<a class="headerlink" href="#Opening-a-SNiPER-userfile" title="Link to this heading">¶</a></h1>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
 </pre></div>
@@ -280,7 +280,7 @@
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;orsa.spectrum.spectrum.EventList at 0x1f5f7736d40&gt;
+&lt;orsa.spectrum.spectrum.ReconstructedEventList at 0x7f66f0096310&gt;
 </pre></div></div>
 </div>
 <div class="nbinput nblast docutils container">
@@ -312,7 +312,7 @@
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;orsa.spectrum.spectrum.EventList at 0x1f5f7736b00&gt;
+&lt;orsa.spectrum.spectrum.ReconstructedEventList at 0x7f66dc3fe550&gt;
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -336,25 +336,25 @@
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;orsa.spectrum.spectrum.EventList at 0x1f5fc710640&gt;
+&lt;orsa.spectrum.spectrum.ReconstructedEventList at 0x7f66bcec08d0&gt;
 </pre></div></div>
 </div>
 <section id="Let's-try-a-fit">
-<h2>Let’s try a fit<a class="headerlink" href="#Let's-try-a-fit" title="Link to this heading">#</a></h2>
+<h2>Let’s try a fit<a class="headerlink" href="#Let's-try-a-fit" title="Link to this heading">¶</a></h2>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">orsa</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">Model</span><span class="p">([],</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">),</span> <span class="mf">0.8</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="n">orsa</span><span class="o">.</span><span class="n">oscillation</span><span class="o">.</span><span class="n">default</span><span class="p">(),</span> <span class="n">orsa</span><span class="o">.</span><span class="n">detector</span><span class="o">.</span><span class="n">default</span><span class="p">(),</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="n">rebin</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">exposure</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">orsa</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">Model</span><span class="p">(</span><span class="n">parameters</span> <span class="o">=</span> <span class="p">[],</span> <span class="n">E_eval</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">),</span> <span class="n">E_fit_min</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span> <span class="n">E_fit_max</span><span class="o">=</span><span class="mi">11</span><span class="p">,</span> <span class="n">oscillation</span><span class="o">=</span><span class="n">orsa</span><span class="o">.</span><span class="n">oscillation</span><span class="o">.</span><span class="n">load</span><span class="p">(),</span> <span class="n">detector</span><span class="o">=</span><span class="n">orsa</span><span class="o">.</span><span class="n">detector</span><span class="o">.</span><span class="n">load</span><span class="p">(),</span> <span class="n">use_gpu</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">use_shape_uncertainty</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">rebin</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">exposure</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
 
 <span class="n">model</span><span class="o">.</span><span class="n">add_parameter</span><span class="p">(</span><span class="n">orsa</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">DetectorParameter</span><span class="p">(</span><span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;eff&#39;</span><span class="p">,</span> <span class="n">value</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>          <span class="n">error</span> <span class="o">=</span> <span class="mf">0.01</span><span class="p">,</span>   <span class="n">prior</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;positive&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">},</span>   <span class="n">formatted_label</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;$\epsilon$&#39;</span><span class="p">))</span>
-<span class="n">model</span><span class="o">.</span><span class="n">add_parameter</span><span class="p">(</span><span class="n">orsa</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">DetectorParameter</span><span class="p">(</span><span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span>   <span class="n">value</span> <span class="o">=</span> <span class="mf">0.02614</span><span class="p">,</span>    <span class="n">error</span> <span class="o">=</span> <span class="mf">0.0077</span><span class="p">,</span> <span class="n">prior</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;positive&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">},</span>   <span class="n">formatted_label</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;$a$&#39;</span><span class="p">))</span>
-<span class="n">model</span><span class="o">.</span><span class="n">add_parameter</span><span class="p">(</span><span class="n">orsa</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">DetectorParameter</span><span class="p">(</span><span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span>   <span class="n">value</span> <span class="o">=</span> <span class="mf">0.006401</span><span class="p">,</span>   <span class="n">error</span> <span class="o">=</span> <span class="mf">0.012</span><span class="p">,</span>  <span class="n">prior</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;positive&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">},</span>   <span class="n">formatted_label</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;$b$&#39;</span><span class="p">))</span>
-<span class="n">model</span><span class="o">.</span><span class="n">add_parameter</span><span class="p">(</span><span class="n">orsa</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">DetectorParameter</span><span class="p">(</span><span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span>   <span class="n">value</span> <span class="o">=</span> <span class="mf">0.01205</span><span class="p">,</span>    <span class="n">error</span> <span class="o">=</span> <span class="mf">0.033</span><span class="p">,</span>  <span class="n">prior</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;positive&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">},</span>   <span class="n">formatted_label</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;$c$&#39;</span><span class="p">))</span>
-<span class="n">model</span><span class="o">.</span><span class="n">add_parameter</span><span class="p">(</span><span class="n">orsa</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">DetectorParameter</span><span class="p">(</span><span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;a0&#39;</span><span class="p">,</span>  <span class="n">value</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>          <span class="n">error</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>      <span class="n">is_relative</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>            <span class="n">formatted_label</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;$a^</span><span class="si">{nl}</span><span class="s1">_0$&#39;</span><span class="p">))</span>
-<span class="n">model</span><span class="o">.</span><span class="n">add_parameter</span><span class="p">(</span><span class="n">orsa</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">DetectorParameter</span><span class="p">(</span><span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;a1&#39;</span><span class="p">,</span>  <span class="n">value</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>          <span class="n">error</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>      <span class="n">is_relative</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>            <span class="n">formatted_label</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;$a^</span><span class="si">{nl}</span><span class="s1">_1$&#39;</span><span class="p">))</span>
-<span class="n">model</span><span class="o">.</span><span class="n">add_parameter</span><span class="p">(</span><span class="n">orsa</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">DetectorParameter</span><span class="p">(</span><span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;a2&#39;</span><span class="p">,</span>  <span class="n">value</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>          <span class="n">error</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>      <span class="n">is_relative</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>            <span class="n">formatted_label</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;$a^</span><span class="si">{nl}</span><span class="s1">_2$&#39;</span><span class="p">))</span>
-<span class="n">model</span><span class="o">.</span><span class="n">add_parameter</span><span class="p">(</span><span class="n">orsa</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">DetectorParameter</span><span class="p">(</span><span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;a3&#39;</span><span class="p">,</span>  <span class="n">value</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>          <span class="n">error</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>      <span class="n">is_relative</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>            <span class="n">formatted_label</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;$a^</span><span class="si">{nl}</span><span class="s1">_3$&#39;</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add_parameter</span><span class="p">(</span><span class="n">orsa</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">ResolutionParameter</span><span class="p">(</span><span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span>   <span class="n">value</span> <span class="o">=</span> <span class="mf">0.02614</span><span class="p">,</span>    <span class="n">error</span> <span class="o">=</span> <span class="mf">0.0077</span><span class="p">,</span> <span class="n">prior</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;positive&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">},</span>   <span class="n">formatted_label</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;$a$&#39;</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add_parameter</span><span class="p">(</span><span class="n">orsa</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">ResolutionParameter</span><span class="p">(</span><span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span>   <span class="n">value</span> <span class="o">=</span> <span class="mf">0.006401</span><span class="p">,</span>   <span class="n">error</span> <span class="o">=</span> <span class="mf">0.012</span><span class="p">,</span>  <span class="n">prior</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;positive&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">},</span>   <span class="n">formatted_label</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;$b$&#39;</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add_parameter</span><span class="p">(</span><span class="n">orsa</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">ResolutionParameter</span><span class="p">(</span><span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span>   <span class="n">value</span> <span class="o">=</span> <span class="mf">0.01205</span><span class="p">,</span>    <span class="n">error</span> <span class="o">=</span> <span class="mf">0.033</span><span class="p">,</span>  <span class="n">prior</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;positive&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">},</span>   <span class="n">formatted_label</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;$c$&#39;</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add_parameter</span><span class="p">(</span><span class="n">orsa</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">NonLinearityParameter</span><span class="p">(</span><span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;a0&#39;</span><span class="p">,</span>  <span class="n">value</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>          <span class="n">error</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>      <span class="n">is_relative</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>            <span class="n">formatted_label</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;$a^</span><span class="si">{nl}</span><span class="s1">_0$&#39;</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add_parameter</span><span class="p">(</span><span class="n">orsa</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">NonLinearityParameter</span><span class="p">(</span><span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;a1&#39;</span><span class="p">,</span>  <span class="n">value</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>          <span class="n">error</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>      <span class="n">is_relative</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>            <span class="n">formatted_label</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;$a^</span><span class="si">{nl}</span><span class="s1">_1$&#39;</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add_parameter</span><span class="p">(</span><span class="n">orsa</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">NonLinearityParameter</span><span class="p">(</span><span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;a2&#39;</span><span class="p">,</span>  <span class="n">value</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>          <span class="n">error</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>      <span class="n">is_relative</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>            <span class="n">formatted_label</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;$a^</span><span class="si">{nl}</span><span class="s1">_2$&#39;</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add_parameter</span><span class="p">(</span><span class="n">orsa</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">NonLinearityParameter</span><span class="p">(</span><span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;a3&#39;</span><span class="p">,</span>  <span class="n">value</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>          <span class="n">error</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>      <span class="n">is_relative</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>            <span class="n">formatted_label</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;$a^</span><span class="si">{nl}</span><span class="s1">_3$&#39;</span><span class="p">))</span>
 
 <span class="n">model</span><span class="o">.</span><span class="n">add_parameter</span><span class="p">(</span><span class="n">orsa</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">OscillationParameter</span><span class="p">(</span><span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;rho&#39;</span><span class="p">,</span>      <span class="n">value</span> <span class="o">=</span> <span class="mf">2.45</span><span class="p">,</span>       <span class="n">error</span> <span class="o">=</span> <span class="mf">0.06</span><span class="p">,</span>   <span class="n">prior</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;positive&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">},</span> <span class="n">formatted_label</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;$\rho$&#39;</span><span class="p">))</span>
 <span class="n">model</span><span class="o">.</span><span class="n">add_parameter</span><span class="p">(</span><span class="n">orsa</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">OscillationParameter</span><span class="p">(</span><span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;dm2_21&#39;</span><span class="p">,</span>   <span class="n">value</span> <span class="o">=</span> <span class="mf">7.53e-5</span><span class="p">,</span>    <span class="n">error</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">inf</span><span class="p">,</span>                       <span class="n">formatted_label</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;$\Delta m^2_</span><span class="si">{21}</span><span class="s1">$&#39;</span><span class="p">))</span>
@@ -368,7 +368,7 @@
 
 <span class="n">gen_dict</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
 <span class="n">gen_dict</span><span class="p">[</span><span class="s1">&#39;rea&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">orsa</span><span class="o">.</span><span class="n">generator</span><span class="o">.</span><span class="n">reactor</span><span class="p">(</span><span class="s1">&#39;HM_bump&#39;</span><span class="p">,</span> <span class="n">isPDF</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">hasXS</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">shape_uncertainty</span><span class="o">=</span><span class="s1">&#39;tao&#39;</span><span class="p">)</span>
-
+<span class="n">model</span><span class="o">.</span><span class="n">add_parameter</span><span class="p">(</span><span class="n">orsa</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">CoreParameter</span><span class="p">(</span><span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;YJ-C1&#39;</span><span class="p">,</span> <span class="n">value</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">error</span> <span class="o">=</span> <span class="mf">0.008</span><span class="p">,</span> <span class="n">formatted_label</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;$R_\mathrm{YJ-C1}$&#39;</span><span class="p">,</span> <span class="n">baseline</span> <span class="o">=</span> <span class="mf">52.74</span><span class="p">,</span> <span class="n">power</span> <span class="o">=</span> <span class="mf">2.9</span><span class="p">))</span>
 <span class="n">model</span><span class="o">.</span><span class="n">add_parameter</span><span class="p">(</span><span class="n">orsa</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">NormalizationParameter</span><span class="p">(</span><span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;rea&#39;</span><span class="p">,</span>   <span class="n">value</span> <span class="o">=</span> <span class="n">promptlist</span><span class="o">.</span><span class="n">n</span><span class="p">,</span>    <span class="n">generator</span> <span class="o">=</span> <span class="n">gen_dict</span><span class="p">[</span><span class="s1">&#39;rea&#39;</span><span class="p">],</span>     <span class="n">error</span> <span class="o">=</span> <span class="mf">0.02</span><span class="p">,</span>     <span class="n">is_oscillated</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">has_duty</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>      <span class="n">formatted_label</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;$N_\mathrm</span><span class="si">{rea}</span><span class="s1">$&#39;</span><span class="p">))</span>
 
 <span class="n">asimov</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">get_spectrum</span><span class="p">(</span><span class="n">asimov</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">to_hist</span><span class="p">()</span>
@@ -389,18 +389,18 @@
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;orsa.spectrum.spectrum.ReconstructedSpectrum at 0x1f5f7736980&gt;
+&lt;orsa.spectrum.spectrum.ReconstructedSpectrum at 0x7f66afef9dd0&gt;
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">init_model</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
-<span class="n">data_hist</span> <span class="o">=</span> <span class="n">promptlist</span><span class="o">.</span><span class="n">to_hist</span><span class="p">(</span><span class="n">asimov</span><span class="o">.</span><span class="n">Eedges</span><span class="p">)</span>
-<span class="n">min_func_bin</span> <span class="o">=</span> <span class="n">orsa</span><span class="o">.</span><span class="n">probability</span><span class="o">.</span><span class="n">CostFunction</span><span class="p">(</span><span class="n">ll</span><span class="o">=</span><span class="n">orsa</span><span class="o">.</span><span class="n">probability</span><span class="o">.</span><span class="n">chi2</span><span class="p">,</span> <span class="n">ll_args</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data_hist</span><span class="p">))</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_hist</span> <span class="o">=</span> <span class="n">promptlist</span><span class="o">.</span><span class="n">to_hist</span><span class="p">(</span><span class="n">asimov</span><span class="o">.</span><span class="n">Eedges</span><span class="p">)</span>
+<span class="n">init_model</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
 <span class="n">model</span><span class="o">.</span><span class="n">use_shape_uncertainty</span> <span class="o">=</span> <span class="kc">False</span>
-<span class="n">res</span> <span class="o">=</span> <span class="n">orsa</span><span class="o">.</span><span class="n">fit</span><span class="o">.</span><span class="n">minuit</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">min_func_bin</span><span class="p">)</span>
+<span class="n">cf</span> <span class="o">=</span> <span class="n">orsa</span><span class="o">.</span><span class="n">probability</span><span class="o">.</span><span class="n">CostFunction</span><span class="p">(</span><span class="n">ll</span><span class="o">=</span><span class="n">orsa</span><span class="o">.</span><span class="n">probability</span><span class="o">.</span><span class="n">chi2</span><span class="p">,</span> <span class="n">model</span><span class="o">=</span><span class="n">model</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">data_hist</span><span class="p">,</span> <span class="n">ll_args</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">which</span> <span class="o">=</span> <span class="s1">&#39;C&#39;</span><span class="p">))</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">orsa</span><span class="o">.</span><span class="n">fit</span><span class="o">.</span><span class="n">minuit</span><span class="p">(</span><span class="n">cf</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -431,7 +431,7 @@ Cost function parsed as chi2-like
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-[&lt;matplotlib.lines.Line2D at 0x1f5ff41fb20&gt;]
+[&lt;matplotlib.lines.Line2D at 0x7f66afc4b090&gt;]
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -485,12 +485,12 @@ Cost function parsed as chi2-like
         <th colspan="2" style="text-align:center" title="Minimizer"> Migrad </th>
     </tr>
     <tr>
-        <td style="text-align:left" title="Minimum value of function"> FCN = 787.4 </td>
-        <td style="text-align:center" title="Total number of function and (optional) gradient evaluations"> Nfcn = 719 </td>
+        <td style="text-align:left" title="Minimum value of function"> FCN = 4191 </td>
+        <td style="text-align:center" title="Total number of function and (optional) gradient evaluations"> Nfcn = 550 </td>
     </tr>
     <tr>
-        <td style="text-align:left" title="Estimated distance to minimum and goal"> EDM = 3.58e-05 (Goal: 0.0002) </td>
-        <td style="text-align:center" title="Total run time of algorithms"> time = 8.2 sec </td>
+        <td style="text-align:left" title="Estimated distance to minimum and goal"> EDM = 1.07e-09 (Goal: 0.0002) </td>
+        <td style="text-align:center" title="Total run time of algorithms"> time = 2.3 sec </td>
     </tr>
     <tr>
         <td style="text-align:center;background-color:#92CCA6;color:black"> Valid Minimum </td>
@@ -518,7 +518,7 @@ Cost function parsed as chi2-like
     </tr>
     <tr>
         <th> 0 </th>
-        <td> eff </td>
+        <td> eff: </td>
         <td> 1.001 </td>
         <td> 0.009 </td>
         <td>  </td>
@@ -529,8 +529,8 @@ Cost function parsed as chi2-like
     </tr>
     <tr>
         <th> 1 </th>
-        <td> a </td>
-        <td> 26.16e-3 </td>
+        <td> a: </td>
+        <td> 26.14e-3 </td>
         <td> 0.20e-3 </td>
         <td>  </td>
         <td>  </td>
@@ -540,7 +540,7 @@ Cost function parsed as chi2-like
     </tr>
     <tr>
         <th> 2 </th>
-        <td> b </td>
+        <td> b: </td>
         <td> 6.40e-3 </td>
         <td> 0.08e-3 </td>
         <td>  </td>
@@ -551,7 +551,7 @@ Cost function parsed as chi2-like
     </tr>
     <tr>
         <th> 3 </th>
-        <td> c </td>
+        <td> c: </td>
         <td> 12.1e-3 </td>
         <td> 0.4e-3 </td>
         <td>  </td>
@@ -562,9 +562,9 @@ Cost function parsed as chi2-like
     </tr>
     <tr>
         <th> 4 </th>
-        <td> a0 </td>
-        <td> 0.4 </td>
-        <td> 0.9 </td>
+        <td> a0: </td>
+        <td> 0 </td>
+        <td> 1 </td>
         <td>  </td>
         <td>  </td>
         <td>  </td>
@@ -573,9 +573,9 @@ Cost function parsed as chi2-like
     </tr>
     <tr>
         <th> 5 </th>
-        <td> a1 </td>
-        <td> 0.4 </td>
-        <td> 0.8 </td>
+        <td> a1: </td>
+        <td> 0 </td>
+        <td> 1 </td>
         <td>  </td>
         <td>  </td>
         <td>  </td>
@@ -584,9 +584,9 @@ Cost function parsed as chi2-like
     </tr>
     <tr>
         <th> 6 </th>
-        <td> a2 </td>
-        <td> 0.1 </td>
-        <td> 0.7 </td>
+        <td> a2: </td>
+        <td> 0 </td>
+        <td> 1 </td>
         <td>  </td>
         <td>  </td>
         <td>  </td>
@@ -595,9 +595,9 @@ Cost function parsed as chi2-like
     </tr>
     <tr>
         <th> 7 </th>
-        <td> a3 </td>
-        <td> -1.0 </td>
-        <td> 0.7 </td>
+        <td> a3: </td>
+        <td> 0 </td>
+        <td> 1 </td>
         <td>  </td>
         <td>  </td>
         <td>  </td>
@@ -606,7 +606,7 @@ Cost function parsed as chi2-like
     </tr>
     <tr>
         <th> 8 </th>
-        <td> rho </td>
+        <td> rho: </td>
         <td> 2.45 </td>
         <td> 0.15 </td>
         <td>  </td>
@@ -617,8 +617,8 @@ Cost function parsed as chi2-like
     </tr>
     <tr>
         <th> 9 </th>
-        <td> dm2_21 </td>
-        <td> 74.77e-6 </td>
+        <td> dm2_21: </td>
+        <td> 74.42e-6 </td>
         <td> 0.12e-6 </td>
         <td>  </td>
         <td>  </td>
@@ -628,8 +628,8 @@ Cost function parsed as chi2-like
     </tr>
     <tr>
         <th> 10 </th>
-        <td> dm2_31 </td>
-        <td> 2.522e-3 </td>
+        <td> dm2_31: </td>
+        <td> 2.517e-3 </td>
         <td> 0.004e-3 </td>
         <td>  </td>
         <td>  </td>
@@ -639,9 +639,9 @@ Cost function parsed as chi2-like
     </tr>
     <tr>
         <th> 11 </th>
-        <td> s2_12 </td>
-        <td> 0.3104 </td>
-        <td> 0.0013 </td>
+        <td> s2_12: </td>
+        <td> 0.3124 </td>
+        <td> 0.0012 </td>
         <td>  </td>
         <td>  </td>
         <td>  </td>
@@ -650,8 +650,8 @@ Cost function parsed as chi2-like
     </tr>
     <tr>
         <th> 12 </th>
-        <td> s2_13 </td>
-        <td> 0.0196 </td>
+        <td> s2_13: </td>
+        <td> 0.0195 </td>
         <td> 0.0022 </td>
         <td>  </td>
         <td>  </td>
@@ -661,9 +661,20 @@ Cost function parsed as chi2-like
     </tr>
     <tr>
         <th> 13 </th>
-        <td> rea </td>
-        <td> 277.9e3 </td>
-        <td> 2.9e3 </td>
+        <td> YJ-C1: </td>
+        <td> 1.000 </td>
+        <td> 0.008 </td>
+        <td>  </td>
+        <td>  </td>
+        <td>  </td>
+        <td>  </td>
+        <td>  </td>
+    </tr>
+    <tr>
+        <th> 14 </th>
+        <td> rea: </td>
+        <td> 278.8e3 </td>
+        <td> 3.3e3 </td>
         <td>  </td>
         <td>  </td>
         <td>  </td>
@@ -673,258 +684,291 @@ Cost function parsed as chi2-like
 </table><table>
     <tr>
         <td></td>
-        <th> eff </th>
-        <th> a </th>
-        <th> b </th>
-        <th> c </th>
-        <th> a0 </th>
-        <th> a1 </th>
-        <th> a2 </th>
-        <th> a3 </th>
-        <th> rho </th>
-        <th> dm2_21 </th>
-        <th> dm2_31 </th>
-        <th> s2_12 </th>
-        <th> s2_13 </th>
-        <th> rea </th>
+        <th> eff: </th>
+        <th> a: </th>
+        <th> b: </th>
+        <th> c: </th>
+        <th> a0: </th>
+        <th> a1: </th>
+        <th> a2: </th>
+        <th> a3: </th>
+        <th> rho: </th>
+        <th> dm2_21: </th>
+        <th> dm2_31: </th>
+        <th> s2_12: </th>
+        <th> s2_13: </th>
+        <th> YJ-C1: </th>
+        <th> rea: </th>
     </tr>
     <tr>
-        <th> eff </th>
-        <td> 8.19e-05 </td>
-        <td style="background-color:rgb(250,249,249);color:black"> 0.01e-6 <strong>(0.004)</strong> </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 1e-9 <strong>(0.001)</strong> </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0 <strong>(0.001)</strong> </td>
-        <td style="background-color:rgb(250,249,249);color:black"> 0.08e-3 <strong>(0.009)</strong> </td>
-        <td style="background-color:rgb(248,248,250);color:black"> -0.09e-3 <strong>(-0.012)</strong> </td>
-        <td style="background-color:rgb(250,246,246);color:black"> 0.18e-3 <strong>(0.029)</strong> </td>
-        <td style="background-color:rgb(246,246,250);color:black"> -0.17e-3 <strong>(-0.028)</strong> </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
-        <td style="background-color:rgb(250,245,245);color:black"> 37.327e-12 <strong>(0.033)</strong> </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0.074e-9 <strong>(0.002)</strong> </td>
-        <td style="background-color:rgb(250,235,235);color:black"> 1.2e-6 <strong>(0.101)</strong> </td>
-        <td style="background-color:rgb(250,237,237);color:black"> 2e-6 <strong>(0.088)</strong> </td>
-        <td style="background-color:rgb(153,153,250);color:black"> -19.93850 <strong>(-0.749)</strong> </td>
-    </tr>
-    <tr>
-        <th> a </th>
-        <td style="background-color:rgb(250,249,249);color:black"> 0.01e-6 <strong>(0.004)</strong> </td>
-        <td> 4.04e-08 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0e-9 </td>
-        <td style="background-color:rgb(249,249,250);color:black"> -0 <strong>(-0.004)</strong> </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0.20e-6 <strong>(-0.001)</strong> </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0.17e-6 <strong>(0.001)</strong> </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0.08e-6 </td>
-        <td style="background-color:rgb(250,247,247);color:black"> 2.89e-6 <strong>(0.021)</strong> </td>
+        <th> eff: </th>
+        <td> 8.37e-05 </td>
         <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0.034e-12 <strong>(-0.001)</strong> </td>
-        <td style="background-color:rgb(249,249,250);color:black"> -0.009e-9 <strong>(-0.010)</strong> </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0 <strong>(-0.001)</strong> </td>
-        <td style="background-color:rgb(250,243,243);color:black"> 0.02e-6 <strong>(0.047)</strong> </td>
-        <td style="background-color:rgb(250,248,248);color:black"> 8.31303e-3 <strong>(0.014)</strong> </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0e-9 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
+        <td style="background-color:rgb(250,246,246);color:black"> 25.875e-12 <strong>(0.024)</strong> </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0.096e-9 <strong>(0.002)</strong> </td>
+        <td style="background-color:rgb(250,238,238);color:black"> 0.9e-6 <strong>(0.082)</strong> </td>
+        <td style="background-color:rgb(250,238,238);color:black"> 2e-6 <strong>(0.077)</strong> </td>
+        <td style="background-color:rgb(230,230,250);color:black"> -0.01e-3 <strong>(-0.150)</strong> </td>
+        <td style="background-color:rgb(172,172,250);color:black"> -18.05688 <strong>(-0.599)</strong> </td>
     </tr>
     <tr>
-        <th> b </th>
-        <td style="background-color:rgb(250,250,250);color:black"> 1e-9 <strong>(0.001)</strong> </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0e-9 </td>
-        <td> 5.9e-09 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0e-9 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -47e-9 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 42e-9 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 13e-9 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 103e-9 <strong>(0.002)</strong> </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0e-9 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0.002e-12 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0 <strong>(-0.001)</strong> </td>
+        <th> a: </th>
+        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
+        <td> 4.05e-08 </td>
         <td style="background-color:rgb(250,250,250);color:black"> 0e-9 </td>
-        <td style="background-color:rgb(250,248,248);color:black"> 2e-9 <strong>(0.015)</strong> </td>
-        <td style="background-color:rgb(250,249,249);color:black"> 1.045641e-3 <strong>(0.005)</strong> </td>
-    </tr>
-    <tr>
-        <th> c </th>
-        <td style="background-color:rgb(250,250,250);color:black"> 0 <strong>(0.001)</strong> </td>
-        <td style="background-color:rgb(249,249,250);color:black"> -0 <strong>(-0.004)</strong> </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0e-9 </td>
-        <td> 1.58e-07 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0.09e-6 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0.11e-6 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0.25e-6 </td>
-        <td style="background-color:rgb(250,247,247);color:black"> 5.34e-6 <strong>(0.020)</strong> </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0.035e-12 </td>
-        <td style="background-color:rgb(249,249,250);color:black"> -0.010e-9 <strong>(-0.006)</strong> </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0 <strong>(-0.002)</strong> </td>
-        <td style="background-color:rgb(250,248,248);color:black"> 0.01e-6 <strong>(0.014)</strong> </td>
-        <td style="background-color:rgb(250,249,249);color:black"> 4.48272e-3 </td>
-    </tr>
-    <tr>
-        <th> a0 </th>
-        <td style="background-color:rgb(250,249,249);color:black"> 0.08e-3 <strong>(0.009)</strong> </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0.20e-6 <strong>(-0.001)</strong> </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -47e-9 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0.09e-6 </td>
-        <td> 0.835 </td>
-        <td style="background-color:rgb(238,238,250);color:black"> -0.1 <strong>(-0.092)</strong> </td>
-        <td style="background-color:rgb(250,220,220);color:black"> 0.1 <strong>(0.201)</strong> </td>
-        <td style="background-color:rgb(250,207,207);color:black"> 0.2 <strong>(0.283)</strong> </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0.000 </td>
-        <td style="background-color:rgb(243,243,250);color:black"> -5.863691e-9 <strong>(-0.052)</strong> </td>
-        <td style="background-color:rgb(250,244,244);color:black"> 167.415e-9 <strong>(0.042)</strong> </td>
-        <td style="background-color:rgb(250,234,234);color:black"> 125.6e-6 <strong>(0.106)</strong> </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -5e-6 <strong>(-0.003)</strong> </td>
-        <td style="background-color:rgb(250,245,245);color:black"> 85.1 <strong>(0.032)</strong> </td>
-    </tr>
-    <tr>
-        <th> a1 </th>
-        <td style="background-color:rgb(248,248,250);color:black"> -0.09e-3 <strong>(-0.012)</strong> </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0.17e-6 <strong>(0.001)</strong> </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 42e-9 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0.11e-6 </td>
-        <td style="background-color:rgb(238,238,250);color:black"> -0.1 <strong>(-0.092)</strong> </td>
-        <td> 0.635 </td>
-        <td style="background-color:rgb(250,191,191);color:black"> 0.2 <strong>(0.393)</strong> </td>
-        <td style="background-color:rgb(250,170,170);color:black"> 0.3 <strong>(0.536)</strong> </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0.000 </td>
-        <td style="background-color:rgb(250,237,237);color:black"> 8.802683e-9 <strong>(0.089)</strong> </td>
-        <td style="background-color:rgb(241,241,250);color:black"> -231.097e-9 <strong>(-0.066)</strong> </td>
-        <td style="background-color:rgb(231,231,250);color:black"> -151.7e-6 <strong>(-0.146)</strong> </td>
-        <td style="background-color:rgb(250,249,249);color:black"> 17e-6 <strong>(0.010)</strong> </td>
-        <td style="background-color:rgb(245,245,250);color:black"> -94.3 <strong>(-0.040)</strong> </td>
-    </tr>
-    <tr>
-        <th> a2 </th>
-        <td style="background-color:rgb(250,246,246);color:black"> 0.18e-3 <strong>(0.029)</strong> </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0.08e-6 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 13e-9 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0.25e-6 </td>
-        <td style="background-color:rgb(250,220,220);color:black"> 0.1 <strong>(0.201)</strong> </td>
-        <td style="background-color:rgb(250,191,191);color:black"> 0.2 <strong>(0.393)</strong> </td>
-        <td> 0.451 </td>
-        <td style="background-color:rgb(217,217,250);color:black"> -0.1 <strong>(-0.253)</strong> </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0.000 </td>
-        <td style="background-color:rgb(250,214,214);color:black"> 20.085562e-9 <strong>(0.240)</strong> </td>
-        <td style="background-color:rgb(239,239,250);color:black"> -245.844e-9 <strong>(-0.084)</strong> </td>
-        <td style="background-color:rgb(250,223,223);color:black"> 158.7e-6 <strong>(0.182)</strong> </td>
-        <td style="background-color:rgb(250,244,244);color:black"> 55e-6 <strong>(0.038)</strong> </td>
-        <td style="background-color:rgb(250,235,235);color:black"> 197.8 <strong>(0.100)</strong> </td>
-    </tr>
-    <tr>
-        <th> a3 </th>
-        <td style="background-color:rgb(246,246,250);color:black"> -0.17e-3 <strong>(-0.028)</strong> </td>
-        <td style="background-color:rgb(250,247,247);color:black"> 2.89e-6 <strong>(0.021)</strong> </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 103e-9 <strong>(0.002)</strong> </td>
-        <td style="background-color:rgb(250,247,247);color:black"> 5.34e-6 <strong>(0.020)</strong> </td>
-        <td style="background-color:rgb(250,207,207);color:black"> 0.2 <strong>(0.283)</strong> </td>
-        <td style="background-color:rgb(250,170,170);color:black"> 0.3 <strong>(0.536)</strong> </td>
-        <td style="background-color:rgb(217,217,250);color:black"> -0.1 <strong>(-0.253)</strong> </td>
-        <td> 0.473 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0.000 </td>
-        <td style="background-color:rgb(234,234,250);color:black"> -10.556470e-9 <strong>(-0.123)</strong> </td>
-        <td style="background-color:rgb(244,244,250);color:black"> -131.921e-9 <strong>(-0.044)</strong> </td>
-        <td style="background-color:rgb(222,222,250);color:black"> -194.0e-6 <strong>(-0.217)</strong> </td>
-        <td style="background-color:rgb(247,247,250);color:black"> -30e-6 <strong>(-0.020)</strong> </td>
-        <td style="background-color:rgb(238,238,250);color:black"> -192.2 <strong>(-0.095)</strong> </td>
-    </tr>
-    <tr>
-        <th> rho </th>
         <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
         <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
+    </tr>
+    <tr>
+        <th> b: </th>
+        <td style="background-color:rgb(250,250,250);color:black"> -0e-9 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0e-9 </td>
+        <td> 5.9e-09 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0e-9 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0e-9 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0e-9 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0e-9 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0e-9 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0e-9 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0e-9 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0e-9 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0e-9 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0e-9 </td>
+    </tr>
+    <tr>
+        <th> c: </th>
+        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0e-9 </td>
+        <td> 1.58e-07 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
+    </tr>
+    <tr>
+        <th> a0: </th>
+        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
         <td style="background-color:rgb(250,250,250);color:black"> -0e-9 </td>
         <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0.000 </td>
+        <td> 1 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0.000 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0e-6 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0.0 </td>
+    </tr>
+    <tr>
+        <th> a1: </th>
+        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0e-9 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
+        <td> 1 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0.000 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0e-6 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0.0 </td>
+    </tr>
+    <tr>
+        <th> a2: </th>
+        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0e-9 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
+        <td> 1 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0.000 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0e-6 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0.0 </td>
+    </tr>
+    <tr>
+        <th> a3: </th>
+        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0e-9 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
+        <td> 1 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0.000 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0e-6 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0.0 </td>
+    </tr>
+    <tr>
+        <th> rho: </th>
+        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0e-9 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0.000 </td>
         <td style="background-color:rgb(250,250,250);color:black"> 0.000 </td>
         <td style="background-color:rgb(250,250,250);color:black"> 0.000 </td>
         <td style="background-color:rgb(250,250,250);color:black"> 0.000 </td>
         <td> 0.0216 </td>
-        <td style="background-color:rgb(242,242,250);color:black"> -1.123960e-9 <strong>(-0.061)</strong> </td>
-        <td style="background-color:rgb(249,249,250);color:black"> -6.686e-9 <strong>(-0.010)</strong> </td>
-        <td style="background-color:rgb(250,227,227);color:black"> 29.6e-6 <strong>(0.155)</strong> </td>
+        <td style="background-color:rgb(242,242,250);color:black"> -1.118401e-9 <strong>(-0.064)</strong> </td>
+        <td style="background-color:rgb(249,249,250);color:black"> -6.710e-9 <strong>(-0.011)</strong> </td>
+        <td style="background-color:rgb(250,225,225);color:black"> 29.9e-6 <strong>(0.165)</strong> </td>
         <td style="background-color:rgb(250,250,250);color:black"> -0e-6 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0.936 <strong>(0.002)</strong> </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0.866 <strong>(0.002)</strong> </td>
     </tr>
     <tr>
-        <th> dm2_21 </th>
-        <td style="background-color:rgb(250,245,245);color:black"> 37.327e-12 <strong>(0.033)</strong> </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0.034e-12 <strong>(-0.001)</strong> </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0.002e-12 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0.035e-12 </td>
-        <td style="background-color:rgb(243,243,250);color:black"> -5.863691e-9 <strong>(-0.052)</strong> </td>
-        <td style="background-color:rgb(250,237,237);color:black"> 8.802683e-9 <strong>(0.089)</strong> </td>
-        <td style="background-color:rgb(250,214,214);color:black"> 20.085562e-9 <strong>(0.240)</strong> </td>
-        <td style="background-color:rgb(234,234,250);color:black"> -10.556470e-9 <strong>(-0.123)</strong> </td>
-        <td style="background-color:rgb(242,242,250);color:black"> -1.123960e-9 <strong>(-0.061)</strong> </td>
-        <td> 1.55e-14 </td>
-        <td style="background-color:rgb(247,247,250);color:black"> -0.014e-12 <strong>(-0.026)</strong> </td>
-        <td style="background-color:rgb(250,245,245);color:black"> 5.279e-12 <strong>(0.033)</strong> </td>
-        <td style="background-color:rgb(249,249,250);color:black"> -1.854e-12 <strong>(-0.007)</strong> </td>
-        <td style="background-color:rgb(250,233,233);color:black"> 41.282131781e-6 <strong>(0.113)</strong> </td>
+        <th> dm2_21: </th>
+        <td style="background-color:rgb(250,246,246);color:black"> 25.875e-12 <strong>(0.024)</strong> </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
+        <td style="background-color:rgb(242,242,250);color:black"> -1.118401e-9 <strong>(-0.064)</strong> </td>
+        <td> 1.41e-14 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0.002e-12 <strong>(-0.003)</strong> </td>
+        <td style="background-color:rgb(249,249,250);color:black"> -1.355e-12 <strong>(-0.009)</strong> </td>
+        <td style="background-color:rgb(248,248,250);color:black"> -4.353e-12 <strong>(-0.017)</strong> </td>
+        <td style="background-color:rgb(250,247,247);color:black"> 16.566e-12 <strong>(0.018)</strong> </td>
+        <td style="background-color:rgb(250,239,239);color:black"> 28.709228339e-6 <strong>(0.073)</strong> </td>
     </tr>
     <tr>
-        <th> dm2_31 </th>
-        <td style="background-color:rgb(250,250,250);color:black"> 0.074e-9 <strong>(0.002)</strong> </td>
-        <td style="background-color:rgb(249,249,250);color:black"> -0.009e-9 <strong>(-0.010)</strong> </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0 <strong>(-0.001)</strong> </td>
-        <td style="background-color:rgb(249,249,250);color:black"> -0.010e-9 <strong>(-0.006)</strong> </td>
-        <td style="background-color:rgb(250,244,244);color:black"> 167.415e-9 <strong>(0.042)</strong> </td>
-        <td style="background-color:rgb(241,241,250);color:black"> -231.097e-9 <strong>(-0.066)</strong> </td>
-        <td style="background-color:rgb(239,239,250);color:black"> -245.844e-9 <strong>(-0.084)</strong> </td>
-        <td style="background-color:rgb(244,244,250);color:black"> -131.921e-9 <strong>(-0.044)</strong> </td>
-        <td style="background-color:rgb(249,249,250);color:black"> -6.686e-9 <strong>(-0.010)</strong> </td>
-        <td style="background-color:rgb(247,247,250);color:black"> -0.014e-12 <strong>(-0.026)</strong> </td>
-        <td> 1.91e-11 </td>
-        <td style="background-color:rgb(250,247,247);color:black"> 0.115e-9 <strong>(0.020)</strong> </td>
-        <td style="background-color:rgb(250,249,249);color:black"> 0.041e-9 <strong>(0.004)</strong> </td>
-        <td style="background-color:rgb(250,249,249);color:black"> 81.400039e-6 <strong>(0.006)</strong> </td>
+        <th> dm2_31: </th>
+        <td style="background-color:rgb(250,250,250);color:black"> 0.096e-9 <strong>(0.002)</strong> </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
+        <td style="background-color:rgb(249,249,250);color:black"> -6.710e-9 <strong>(-0.011)</strong> </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0.002e-12 <strong>(-0.003)</strong> </td>
+        <td> 1.88e-11 </td>
+        <td style="background-color:rgb(250,247,247);color:black"> 0.115e-9 <strong>(0.021)</strong> </td>
+        <td style="background-color:rgb(250,249,249);color:black"> 0.062e-9 <strong>(0.007)</strong> </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0.061e-9 <strong>(0.002)</strong> </td>
+        <td style="background-color:rgb(250,249,249);color:black"> 106.506882e-6 <strong>(0.007)</strong> </td>
     </tr>
     <tr>
-        <th> s2_12 </th>
-        <td style="background-color:rgb(250,235,235);color:black"> 1.2e-6 <strong>(0.101)</strong> </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0 <strong>(-0.001)</strong> </td>
+        <th> s2_12: </th>
+        <td style="background-color:rgb(250,238,238);color:black"> 0.9e-6 <strong>(0.082)</strong> </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
         <td style="background-color:rgb(250,250,250);color:black"> 0e-9 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0 <strong>(-0.002)</strong> </td>
-        <td style="background-color:rgb(250,234,234);color:black"> 125.6e-6 <strong>(0.106)</strong> </td>
-        <td style="background-color:rgb(231,231,250);color:black"> -151.7e-6 <strong>(-0.146)</strong> </td>
-        <td style="background-color:rgb(250,223,223);color:black"> 158.7e-6 <strong>(0.182)</strong> </td>
-        <td style="background-color:rgb(222,222,250);color:black"> -194.0e-6 <strong>(-0.217)</strong> </td>
-        <td style="background-color:rgb(250,227,227);color:black"> 29.6e-6 <strong>(0.155)</strong> </td>
-        <td style="background-color:rgb(250,245,245);color:black"> 5.279e-12 <strong>(0.033)</strong> </td>
-        <td style="background-color:rgb(250,247,247);color:black"> 0.115e-9 <strong>(0.020)</strong> </td>
-        <td> 1.69e-06 </td>
-        <td style="background-color:rgb(248,248,250);color:black"> -0 <strong>(-0.016)</strong> </td>
-        <td style="background-color:rgb(250,199,199);color:black"> 1.3116133 <strong>(0.343)</strong> </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
+        <td style="background-color:rgb(250,225,225);color:black"> 29.9e-6 <strong>(0.165)</strong> </td>
+        <td style="background-color:rgb(249,249,250);color:black"> -1.355e-12 <strong>(-0.009)</strong> </td>
+        <td style="background-color:rgb(250,247,247);color:black"> 0.115e-9 <strong>(0.021)</strong> </td>
+        <td> 1.53e-06 </td>
+        <td style="background-color:rgb(247,247,250);color:black"> -0.1e-6 <strong>(-0.021)</strong> </td>
+        <td style="background-color:rgb(250,240,240);color:black"> 0.6e-6 <strong>(0.063)</strong> </td>
+        <td style="background-color:rgb(250,212,212);color:black"> 1.0271225 <strong>(0.252)</strong> </td>
     </tr>
     <tr>
-        <th> s2_13 </th>
-        <td style="background-color:rgb(250,237,237);color:black"> 2e-6 <strong>(0.088)</strong> </td>
-        <td style="background-color:rgb(250,243,243);color:black"> 0.02e-6 <strong>(0.047)</strong> </td>
-        <td style="background-color:rgb(250,248,248);color:black"> 2e-9 <strong>(0.015)</strong> </td>
-        <td style="background-color:rgb(250,248,248);color:black"> 0.01e-6 <strong>(0.014)</strong> </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -5e-6 <strong>(-0.003)</strong> </td>
-        <td style="background-color:rgb(250,249,249);color:black"> 17e-6 <strong>(0.010)</strong> </td>
-        <td style="background-color:rgb(250,244,244);color:black"> 55e-6 <strong>(0.038)</strong> </td>
-        <td style="background-color:rgb(247,247,250);color:black"> -30e-6 <strong>(-0.020)</strong> </td>
+        <th> s2_13: </th>
+        <td style="background-color:rgb(250,238,238);color:black"> 2e-6 <strong>(0.077)</strong> </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0e-9 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
         <td style="background-color:rgb(250,250,250);color:black"> -0e-6 </td>
-        <td style="background-color:rgb(249,249,250);color:black"> -1.854e-12 <strong>(-0.007)</strong> </td>
-        <td style="background-color:rgb(250,249,249);color:black"> 0.041e-9 <strong>(0.004)</strong> </td>
-        <td style="background-color:rgb(248,248,250);color:black"> -0 <strong>(-0.016)</strong> </td>
-        <td> 4.71e-06 </td>
-        <td style="background-color:rgb(250,205,205);color:black"> 1.919325 <strong>(0.301)</strong> </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0e-6 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0e-6 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0e-6 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0e-6 </td>
+        <td style="background-color:rgb(248,248,250);color:black"> -4.353e-12 <strong>(-0.017)</strong> </td>
+        <td style="background-color:rgb(250,249,249);color:black"> 0.062e-9 <strong>(0.007)</strong> </td>
+        <td style="background-color:rgb(247,247,250);color:black"> -0.1e-6 <strong>(-0.021)</strong> </td>
+        <td> 4.72e-06 </td>
+        <td style="background-color:rgb(250,241,241);color:black"> 1e-6 <strong>(0.060)</strong> </td>
+        <td style="background-color:rgb(250,214,214);color:black"> 1.701573 <strong>(0.238)</strong> </td>
     </tr>
     <tr>
-        <th> rea </th>
-        <td style="background-color:rgb(153,153,250);color:black"> -19.93850 <strong>(-0.749)</strong> </td>
-        <td style="background-color:rgb(250,248,248);color:black"> 8.31303e-3 <strong>(0.014)</strong> </td>
-        <td style="background-color:rgb(250,249,249);color:black"> 1.045641e-3 <strong>(0.005)</strong> </td>
-        <td style="background-color:rgb(250,249,249);color:black"> 4.48272e-3 </td>
-        <td style="background-color:rgb(250,245,245);color:black"> 85.1 <strong>(0.032)</strong> </td>
-        <td style="background-color:rgb(245,245,250);color:black"> -94.3 <strong>(-0.040)</strong> </td>
-        <td style="background-color:rgb(250,235,235);color:black"> 197.8 <strong>(0.100)</strong> </td>
-        <td style="background-color:rgb(238,238,250);color:black"> -192.2 <strong>(-0.095)</strong> </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0.936 <strong>(0.002)</strong> </td>
-        <td style="background-color:rgb(250,233,233);color:black"> 41.282131781e-6 <strong>(0.113)</strong> </td>
-        <td style="background-color:rgb(250,249,249);color:black"> 81.400039e-6 <strong>(0.006)</strong> </td>
-        <td style="background-color:rgb(250,199,199);color:black"> 1.3116133 <strong>(0.343)</strong> </td>
-        <td style="background-color:rgb(250,205,205);color:black"> 1.919325 <strong>(0.301)</strong> </td>
-        <td> 8.65e+06 </td>
+        <th> YJ-C1: </th>
+        <td style="background-color:rgb(230,230,250);color:black"> -0.01e-3 <strong>(-0.150)</strong> </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0e-9 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
+        <td style="background-color:rgb(250,247,247);color:black"> 16.566e-12 <strong>(0.018)</strong> </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0.061e-9 <strong>(0.002)</strong> </td>
+        <td style="background-color:rgb(250,240,240);color:black"> 0.6e-6 <strong>(0.063)</strong> </td>
+        <td style="background-color:rgb(250,241,241);color:black"> 1e-6 <strong>(0.060)</strong> </td>
+        <td> 5.73e-05 </td>
+        <td style="background-color:rgb(190,190,250);color:black"> -11.56073 <strong>(-0.463)</strong> </td>
+    </tr>
+    <tr>
+        <th> rea: </th>
+        <td style="background-color:rgb(172,172,250);color:black"> -18.05688 <strong>(-0.599)</strong> </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0e-9 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0.0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0.0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0.0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0.0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0.866 <strong>(0.002)</strong> </td>
+        <td style="background-color:rgb(250,239,239);color:black"> 28.709228339e-6 <strong>(0.073)</strong> </td>
+        <td style="background-color:rgb(250,249,249);color:black"> 106.506882e-6 <strong>(0.007)</strong> </td>
+        <td style="background-color:rgb(250,212,212);color:black"> 1.0271225 <strong>(0.252)</strong> </td>
+        <td style="background-color:rgb(250,214,214);color:black"> 1.701573 <strong>(0.238)</strong> </td>
+        <td style="background-color:rgb(190,190,250);color:black"> -11.56073 <strong>(-0.463)</strong> </td>
+        <td> 1.09e+07 </td>
     </tr>
 </table></div>
 </div>
@@ -936,7 +980,7 @@ Cost function parsed as chi2-like
 
 <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">promptlist</span><span class="o">.</span><span class="n">to_hist</span><span class="p">(</span><span class="n">asimov</span><span class="o">.</span><span class="n">Eedges</span><span class="p">)</span><span class="o">.</span><span class="n">E</span><span class="p">,</span> <span class="n">promptlist</span><span class="o">.</span><span class="n">to_hist</span><span class="p">(</span><span class="n">asimov</span><span class="o">.</span><span class="n">Eedges</span><span class="p">)</span><span class="o">.</span><span class="n">counts</span><span class="p">,</span> <span class="s1">&#39;k-&#39;</span><span class="p">,</span> <span class="n">zorder</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">orsa</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">model_ci</span><span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">ax</span><span class="p">)</span>
+<span class="c1"># orsa.plot.model_ci(res, 1000, [3], ax = ax) # Needs fix</span>
 </pre></div>
 </div>
 </div>
@@ -945,9 +989,8 @@ Cost function parsed as chi2-like
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-c:\Users\metal\miniconda3\lib\site-packages\orsa\fit\minimizers.py:135: RuntimeWarning: covariance is not positive-semidefinite.
-  samples = np.random.multivariate_normal(self.values, self.covariance, size=n, tol = 1e-16)
-100%|██████████| 1000/1000 [00:15&lt;00:00, 65.97it/s]
+/home/ubuntu/miniconda3/lib/python3.11/site-packages/orsa/fit/minimizers.py:152: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  samples = np.random.multivariate_normal(
 </pre></div></div>
 </div>
 <div class="nboutput docutils container">
@@ -956,7 +999,7 @@ c:\Users\metal\miniconda3\lib\site-packages\orsa\fit\minimizers.py:135: RuntimeW
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-(&lt;Figure size 640x480 with 1 Axes&gt;, &lt;Axes: &gt;)
+[&lt;matplotlib.lines.Line2D at 0x7f66afe70890&gt;]
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -970,12 +1013,11 @@ c:\Users\metal\miniconda3\lib\site-packages\orsa\fit\minimizers.py:135: RuntimeW
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># min_func_bin = orsa.probability.CostFunction(ll=orsa.probability.chi2, ll_args=dict(data=data_hist))</span>
-<span class="n">min_func_unb</span> <span class="o">=</span> <span class="n">orsa</span><span class="o">.</span><span class="n">probability</span><span class="o">.</span><span class="n">CostFunction</span><span class="p">(</span><span class="n">ll</span><span class="o">=</span><span class="n">orsa</span><span class="o">.</span><span class="n">probability</span><span class="o">.</span><span class="n">ll_unbinned</span><span class="p">,</span> <span class="n">ll_args</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">promptlist</span><span class="p">))</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cf_unb</span> <span class="o">=</span> <span class="n">orsa</span><span class="o">.</span><span class="n">probability</span><span class="o">.</span><span class="n">CostFunction</span><span class="p">(</span><span class="n">ll</span><span class="o">=</span><span class="n">orsa</span><span class="o">.</span><span class="n">probability</span><span class="o">.</span><span class="n">ll_unbinned</span><span class="p">,</span> <span class="n">model</span> <span class="o">=</span> <span class="n">model</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">promptlist</span><span class="p">,</span> <span class="n">ll_args</span><span class="o">=</span><span class="nb">dict</span><span class="p">())</span>
 
-<span class="n">min_func_unb</span><span class="o">.</span><span class="n">lp_args</span> <span class="o">=</span> <span class="n">min_func_bin</span><span class="o">.</span><span class="n">lp_args</span>
+<span class="n">cf_unb</span><span class="o">.</span><span class="n">lp_args</span> <span class="o">=</span> <span class="n">cf_unb</span><span class="o">.</span><span class="n">lp_args</span>
 
-<span class="n">m_res_unb</span> <span class="o">=</span> <span class="n">orsa</span><span class="o">.</span><span class="n">fit</span><span class="o">.</span><span class="n">minuit</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">min_func_unb</span><span class="p">,</span> <span class="n">res</span><span class="o">.</span><span class="n">model</span><span class="p">)</span>
+<span class="n">res_unb</span> <span class="o">=</span> <span class="n">orsa</span><span class="o">.</span><span class="n">fit</span><span class="o">.</span><span class="n">minuit</span><span class="p">(</span><span class="n">cf_unb</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -991,7 +1033,7 @@ Cost function parsed as LogLikelihood-like
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">orsa</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">bars</span><span class="p">([</span><span class="n">res</span><span class="p">,</span> <span class="n">m_res_unb</span><span class="p">],</span> <span class="n">true_values</span><span class="o">=</span><span class="kc">True</span><span class="p">);</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">orsa</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">bars</span><span class="p">([</span><span class="n">res</span><span class="p">,</span> <span class="n">res_unb</span><span class="p">],</span> <span class="n">true_values</span><span class="o">=</span><span class="kc">False</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
@@ -1072,8 +1114,8 @@ Cost function parsed as LogLikelihood-like
       
     </aside>
   </div>
-</div><script src="../../_static/documentation_options.js?v=020ce317"></script>
-    <script src="../../_static/doctools.js?v=888ff710"></script>
+</div><script src="../../_static/documentation_options.js?v=1067c88a"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/scripts/furo.js?v=32e29ea5"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
