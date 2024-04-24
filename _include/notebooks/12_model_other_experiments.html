@@ -6,10 +6,10 @@
 <link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Explore the effect of correlations" href="13_explore_correlations.html" /><link rel="prev" title="Build TAO model" href="11_build_TAO_model.html" />
 
     <link rel="shortcut icon" href="../../_static/orsa_fitter.ico"/><!-- Generated with Sphinx 7.3.7 and Furo 2024.01.29 -->
-        <title>Model other experiments - orsa_fitter 0.8.5 documentation</title>
+        <title>Model other experiments - orsa_fitter 0.8.6 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=362ab14a" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=135e06be" />
-    <link rel="stylesheet" type="text/css" href="../../_static/nbsphinx-code-cells.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/nbsphinx-code-cells.css?v=2aa19091" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?v=36a5483c" />
     
     
@@ -133,7 +133,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../index.html"><div class="brand">orsa_fitter 0.8.5 documentation</div></a>
+      <a href="../../index.html"><div class="brand">orsa_fitter 0.8.6 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -159,7 +159,7 @@
     <img class="sidebar-logo" src="../../_static/orsa_fitter.svg" alt="Logo"/>
   </div>
   
-  <span class="sidebar-brand-text">orsa_fitter 0.8.5 documentation</span>
+  <span class="sidebar-brand-text">orsa_fitter 0.8.6 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../search.html" role="search">
   <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
@@ -240,7 +240,7 @@
           <section id="Model-other-experiments">
 <h1>Model other experiments<a class="headerlink" href="#Model-other-experiments" title="Link to this heading">¶</a></h1>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">orsa</span>
@@ -270,21 +270,19 @@
 </pre></div></div>
 </div>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">orsa</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">Model</span><span class="p">(</span><span class="n">parameters</span> <span class="o">=</span> <span class="p">[],</span> <span class="n">E_eval</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">),</span> <span class="n">E_fit_min</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span> <span class="n">E_fit_max</span><span class="o">=</span><span class="mi">11</span><span class="p">,</span> <span class="n">oscillation</span><span class="o">=</span><span class="n">orsa</span><span class="o">.</span><span class="n">oscillation</span><span class="o">.</span><span class="n">load</span><span class="p">(),</span> <span class="n">detector</span><span class="o">=</span><span class="n">orsa</span><span class="o">.</span><span class="n">detector</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">which_xs</span><span class="o">=</span><span class="s1">&#39;ibd_heavy&#39;</span><span class="p">,</span> <span class="n">kwargs_xs</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">Z</span><span class="o">=</span><span class="mi">28</span><span class="p">,</span> <span class="n">Q</span> <span class="o">=</span> <span class="mf">0.066977</span><span class="o">+</span><span class="mf">0.08715</span><span class="p">,</span> <span class="n">logft</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">r</span><span class="o">=</span><span class="mf">3.88e-1</span><span class="p">,</span> <span class="n">J_i</span><span class="o">=</span><span class="mi">3</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="n">J_f</span><span class="o">=</span><span class="mf">2.5</span><span class="p">,</span> <span class="n">particle</span><span class="o">=</span><span class="s1">&#39;nubar&#39;</span><span class="p">)),</span> <span class="n">use_gpu</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">use_shape_uncertainty</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">rebin</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">exposure</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
 
-<span class="c1"># model.detector.target = orsa.detector.Target(&#39;63Cu&#39;, &#39;IBD&#39;, dict(Z=28, Q = 0.066977+0.08715, logft=5, r=3.88e-1, J_i=3/2, J_f=2.5, particle=&#39;nubar&#39;))</span>
-
 <span class="n">model</span><span class="o">.</span><span class="n">add_parameter</span><span class="p">(</span><span class="n">orsa</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">DetectorParameter</span><span class="p">(</span><span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;eff&#39;</span><span class="p">,</span> <span class="n">value</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>          <span class="n">error</span> <span class="o">=</span> <span class="mf">0.01</span><span class="p">,</span>   <span class="n">prior</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;positive&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">},</span>   <span class="n">formatted_label</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;$\epsilon$&#39;</span><span class="p">))</span>
-<span class="n">model</span><span class="o">.</span><span class="n">add_parameter</span><span class="p">(</span><span class="n">orsa</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">ResolutionParameter</span><span class="p">(</span><span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span>   <span class="n">value</span> <span class="o">=</span> <span class="mf">0.001</span><span class="p">,</span>    <span class="n">error</span> <span class="o">=</span> <span class="mf">0.0077</span><span class="p">,</span> <span class="n">prior</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;positive&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">},</span>   <span class="n">formatted_label</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;$a$&#39;</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add_parameter</span><span class="p">(</span><span class="n">orsa</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">ResolutionParameter</span><span class="p">(</span><span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span>   <span class="n">value</span> <span class="o">=</span> <span class="mf">0.001</span><span class="p">,</span>    <span class="n">error</span> <span class="o">=</span> <span class="mf">0.</span><span class="p">,</span> <span class="n">prior</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;positive&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">},</span>   <span class="n">formatted_label</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;$a$&#39;</span><span class="p">))</span>
 <span class="n">model</span><span class="o">.</span><span class="n">add_parameter</span><span class="p">(</span><span class="n">orsa</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">ResolutionParameter</span><span class="p">(</span><span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span>   <span class="n">value</span> <span class="o">=</span> <span class="mf">0.001</span><span class="p">,</span>   <span class="n">error</span> <span class="o">=</span> <span class="mf">0.</span><span class="p">,</span>  <span class="n">prior</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;positive&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">},</span>   <span class="n">formatted_label</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;$b$&#39;</span><span class="p">))</span>
 <span class="n">model</span><span class="o">.</span><span class="n">add_parameter</span><span class="p">(</span><span class="n">orsa</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">ResolutionParameter</span><span class="p">(</span><span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span>   <span class="n">value</span> <span class="o">=</span> <span class="mf">0.001</span><span class="p">,</span>    <span class="n">error</span> <span class="o">=</span> <span class="mf">0.</span><span class="p">,</span>  <span class="n">prior</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;positive&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">},</span>   <span class="n">formatted_label</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;$c$&#39;</span><span class="p">))</span>
-<span class="n">model</span><span class="o">.</span><span class="n">add_parameter</span><span class="p">(</span><span class="n">orsa</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">NonLinearityParameter</span><span class="p">(</span><span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;a0&#39;</span><span class="p">,</span>  <span class="n">value</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>          <span class="n">error</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>      <span class="n">is_relative</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>            <span class="n">formatted_label</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;$a^</span><span class="si">{nl}</span><span class="s1">_0$&#39;</span><span class="p">))</span>
-<span class="n">model</span><span class="o">.</span><span class="n">add_parameter</span><span class="p">(</span><span class="n">orsa</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">NonLinearityParameter</span><span class="p">(</span><span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;a1&#39;</span><span class="p">,</span>  <span class="n">value</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>          <span class="n">error</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>      <span class="n">is_relative</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>            <span class="n">formatted_label</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;$a^</span><span class="si">{nl}</span><span class="s1">_1$&#39;</span><span class="p">))</span>
-<span class="n">model</span><span class="o">.</span><span class="n">add_parameter</span><span class="p">(</span><span class="n">orsa</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">NonLinearityParameter</span><span class="p">(</span><span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;a2&#39;</span><span class="p">,</span>  <span class="n">value</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>          <span class="n">error</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>      <span class="n">is_relative</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>            <span class="n">formatted_label</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;$a^</span><span class="si">{nl}</span><span class="s1">_2$&#39;</span><span class="p">))</span>
-<span class="n">model</span><span class="o">.</span><span class="n">add_parameter</span><span class="p">(</span><span class="n">orsa</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">NonLinearityParameter</span><span class="p">(</span><span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;a3&#39;</span><span class="p">,</span>  <span class="n">value</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>          <span class="n">error</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>      <span class="n">is_relative</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>            <span class="n">formatted_label</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;$a^</span><span class="si">{nl}</span><span class="s1">_3$&#39;</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add_parameter</span><span class="p">(</span><span class="n">orsa</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">NonLinearityParameter</span><span class="p">(</span><span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;a0&#39;</span><span class="p">,</span>  <span class="n">value</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>          <span class="n">error</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>      <span class="n">is_relative</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>            <span class="n">formatted_label</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;$a^</span><span class="si">{nl}</span><span class="s1">_0$&#39;</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add_parameter</span><span class="p">(</span><span class="n">orsa</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">NonLinearityParameter</span><span class="p">(</span><span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;a1&#39;</span><span class="p">,</span>  <span class="n">value</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>          <span class="n">error</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>      <span class="n">is_relative</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>            <span class="n">formatted_label</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;$a^</span><span class="si">{nl}</span><span class="s1">_1$&#39;</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add_parameter</span><span class="p">(</span><span class="n">orsa</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">NonLinearityParameter</span><span class="p">(</span><span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;a2&#39;</span><span class="p">,</span>  <span class="n">value</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>          <span class="n">error</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>      <span class="n">is_relative</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>            <span class="n">formatted_label</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;$a^</span><span class="si">{nl}</span><span class="s1">_2$&#39;</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add_parameter</span><span class="p">(</span><span class="n">orsa</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">NonLinearityParameter</span><span class="p">(</span><span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;a3&#39;</span><span class="p">,</span>  <span class="n">value</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>          <span class="n">error</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>      <span class="n">is_relative</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>            <span class="n">formatted_label</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;$a^</span><span class="si">{nl}</span><span class="s1">_3$&#39;</span><span class="p">))</span>
 
 <span class="n">model</span><span class="o">.</span><span class="n">add_parameter</span><span class="p">(</span><span class="n">orsa</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">OscillationParameter</span><span class="p">(</span><span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;rho&#39;</span><span class="p">,</span>      <span class="n">value</span> <span class="o">=</span> <span class="mf">2.45</span><span class="p">,</span>       <span class="n">error</span> <span class="o">=</span> <span class="mf">0.06</span><span class="p">,</span>   <span class="n">prior</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;positive&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">},</span> <span class="n">formatted_label</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;$\rho$&#39;</span><span class="p">))</span>
 <span class="n">model</span><span class="o">.</span><span class="n">add_parameter</span><span class="p">(</span><span class="n">orsa</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">OscillationParameter</span><span class="p">(</span><span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;dm2_21&#39;</span><span class="p">,</span>   <span class="n">value</span> <span class="o">=</span> <span class="mf">7.53e-5</span><span class="p">,</span>    <span class="n">error</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">inf</span><span class="p">,</span>                       <span class="n">formatted_label</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;$\Delta m^2_</span><span class="si">{21}</span><span class="s1">$&#39;</span><span class="p">))</span>
@@ -296,10 +294,10 @@
 <span class="n">shape_fact_20</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mf">20e-03</span><span class="o">/</span><span class="n">model</span><span class="o">.</span><span class="n">bin</span><span class="p">)</span>
 
 <span class="n">gen_dict</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
-<span class="n">gen_dict</span><span class="p">[</span><span class="s1">&#39;rea&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">orsa</span><span class="o">.</span><span class="n">generator</span><span class="o">.</span><span class="n">reactor</span><span class="p">(</span><span class="s1">&#39;HM_bump&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="n">hasXS</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">shape_uncertainty</span><span class="o">=</span><span class="s1">&#39;tao&#39;</span><span class="p">,</span> <span class="n">xs</span><span class="o">=</span><span class="n">model</span><span class="o">.</span><span class="n">detector</span><span class="o">.</span><span class="n">crosssection</span><span class="p">)</span>
-<span class="n">gen_dict</span><span class="p">[</span><span class="s1">&#39;U&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">orsa</span><span class="o">.</span><span class="n">generator</span><span class="o">.</span><span class="n">geoneutrinos</span><span class="p">(</span><span class="s1">&#39;238U&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="n">hasXS</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">shape_uncertainty</span><span class="o">=</span><span class="mf">0.05</span><span class="p">,</span> <span class="n">xs</span><span class="o">=</span><span class="n">model</span><span class="o">.</span><span class="n">detector</span><span class="o">.</span><span class="n">crosssection</span><span class="p">)</span>
-<span class="n">gen_dict</span><span class="p">[</span><span class="s1">&#39;Th&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">orsa</span><span class="o">.</span><span class="n">generator</span><span class="o">.</span><span class="n">geoneutrinos</span><span class="p">(</span><span class="s1">&#39;232Th&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="n">hasXS</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">shape_uncertainty</span><span class="o">=</span><span class="mf">0.05</span><span class="p">,</span> <span class="n">xs</span><span class="o">=</span><span class="n">model</span><span class="o">.</span><span class="n">detector</span><span class="o">.</span><span class="n">crosssection</span><span class="p">)</span>
-<span class="n">gen_dict</span><span class="p">[</span><span class="s1">&#39;K&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">orsa</span><span class="o">.</span><span class="n">generator</span><span class="o">.</span><span class="n">geoneutrinos</span><span class="p">(</span><span class="s1">&#39;40K&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="n">hasXS</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">shape_uncertainty</span><span class="o">=</span><span class="mf">0.05</span><span class="p">,</span> <span class="n">xs</span><span class="o">=</span><span class="n">model</span><span class="o">.</span><span class="n">detector</span><span class="o">.</span><span class="n">crosssection</span><span class="p">)</span>
+<span class="n">gen_dict</span><span class="p">[</span><span class="s1">&#39;rea&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">orsa</span><span class="o">.</span><span class="n">generator</span><span class="o">.</span><span class="n">reactor</span><span class="p">(</span><span class="s1">&#39;HM_bump&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="n">shape_uncertainty</span><span class="o">=</span><span class="s1">&#39;tao&#39;</span><span class="p">,</span> <span class="n">xs</span><span class="o">=</span><span class="n">model</span><span class="o">.</span><span class="n">detector</span><span class="o">.</span><span class="n">crosssection</span><span class="p">)</span>
+<span class="n">gen_dict</span><span class="p">[</span><span class="s1">&#39;U&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">orsa</span><span class="o">.</span><span class="n">generator</span><span class="o">.</span><span class="n">geoneutrinos</span><span class="p">(</span><span class="s1">&#39;238U&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="n">shape_uncertainty</span><span class="o">=</span><span class="mf">0.05</span><span class="p">,</span> <span class="n">xs</span><span class="o">=</span><span class="n">model</span><span class="o">.</span><span class="n">detector</span><span class="o">.</span><span class="n">crosssection</span><span class="p">)</span>
+<span class="n">gen_dict</span><span class="p">[</span><span class="s1">&#39;Th&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">orsa</span><span class="o">.</span><span class="n">generator</span><span class="o">.</span><span class="n">geoneutrinos</span><span class="p">(</span><span class="s1">&#39;232Th&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="n">shape_uncertainty</span><span class="o">=</span><span class="mf">0.05</span><span class="p">,</span> <span class="n">xs</span><span class="o">=</span><span class="n">model</span><span class="o">.</span><span class="n">detector</span><span class="o">.</span><span class="n">crosssection</span><span class="p">)</span>
+<span class="n">gen_dict</span><span class="p">[</span><span class="s1">&#39;K&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">orsa</span><span class="o">.</span><span class="n">generator</span><span class="o">.</span><span class="n">geoneutrinos</span><span class="p">(</span><span class="s1">&#39;40K&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="n">shape_uncertainty</span><span class="o">=</span><span class="mf">0.05</span><span class="p">,</span> <span class="n">xs</span><span class="o">=</span><span class="n">model</span><span class="o">.</span><span class="n">detector</span><span class="o">.</span><span class="n">crosssection</span><span class="p">)</span>
 
 <span class="n">gen_dict</span><span class="p">[</span><span class="s1">&#39;lihe&#39;</span><span class="p">]</span> <span class="o">=</span>  <span class="n">orsa</span><span class="o">.</span><span class="n">generator</span><span class="o">.</span><span class="n">sniper</span><span class="p">(</span><span class="s1">&#39;lihe&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="n">shape_uncertainty</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span>
 <span class="n">gen_dict</span><span class="p">[</span><span class="s1">&#39;acc&#39;</span><span class="p">]</span> <span class="o">=</span>  <span class="n">orsa</span><span class="o">.</span><span class="n">generator</span><span class="o">.</span><span class="n">sniper</span><span class="p">(</span><span class="s1">&#39;accidentals&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="n">shape_uncertainty</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
@@ -307,8 +305,8 @@
 <span class="n">gen_dict</span><span class="p">[</span><span class="s1">&#39;alpha&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">orsa</span><span class="o">.</span><span class="n">generator</span><span class="o">.</span><span class="n">common_inputs</span><span class="p">(</span><span class="s1">&#39;AlphaNBkgHistogramAD&#39;</span><span class="p">,</span>  <span class="n">orsa</span><span class="o">.</span><span class="n">spectrum</span><span class="o">.</span><span class="n">ReconstructedSpectrum</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="n">shape_uncertainty</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
 <span class="n">gen_dict</span><span class="p">[</span><span class="s1">&#39;glob&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">orsa</span><span class="o">.</span><span class="n">generator</span><span class="o">.</span><span class="n">common_inputs</span><span class="p">(</span><span class="s1">&#39;OtherReactorSpectrum_L300km&#39;</span><span class="p">,</span>  <span class="n">orsa</span><span class="o">.</span><span class="n">spectrum</span><span class="o">.</span><span class="n">ReconstructedSpectrum</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="n">shape_uncertainty</span><span class="o">=</span><span class="mf">0.05</span><span class="p">)</span>
 <span class="n">gen_dict</span><span class="p">[</span><span class="s1">&#39;atm&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">orsa</span><span class="o">.</span><span class="n">generator</span><span class="o">.</span><span class="n">common_inputs</span><span class="p">(</span><span class="s1">&#39;AtmosphericNeutrinoModelGENIE2&#39;</span><span class="p">,</span>  <span class="n">orsa</span><span class="o">.</span><span class="n">spectrum</span><span class="o">.</span><span class="n">ReconstructedSpectrum</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="n">shape_uncertainty</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="n">gen_dict</span><span class="p">[</span><span class="s1">&#39;snf&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">orsa</span><span class="o">.</span><span class="n">generator</span><span class="o">.</span><span class="n">common_inputs</span><span class="p">(</span><span class="s1">&#39;SNF_VisibleSpectrum&#39;</span><span class="p">,</span>  <span class="n">orsa</span><span class="o">.</span><span class="n">spectrum</span><span class="o">.</span><span class="n">UnoscillatedSpectrum</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="n">shape_uncertainty</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-<span class="n">gen_dict</span><span class="p">[</span><span class="s1">&#39;noneq&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">orsa</span><span class="o">.</span><span class="n">generator</span><span class="o">.</span><span class="n">common_inputs</span><span class="p">(</span><span class="s1">&#39;NonEq_VisibleSpectrum&#39;</span><span class="p">,</span>  <span class="n">orsa</span><span class="o">.</span><span class="n">spectrum</span><span class="o">.</span><span class="n">UnoscillatedSpectrum</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="n">shape_uncertainty</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">gen_dict</span><span class="p">[</span><span class="s1">&#39;snf&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">orsa</span><span class="o">.</span><span class="n">generator</span><span class="o">.</span><span class="n">common_inputs</span><span class="p">(</span><span class="s1">&#39;SNF_VisibleSpectrum&#39;</span><span class="p">,</span>  <span class="n">orsa</span><span class="o">.</span><span class="n">spectrum</span><span class="o">.</span><span class="n">UnoscillatedSpectrum</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="n">shape_uncertainty</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">xs</span> <span class="o">=</span> <span class="n">orsa</span><span class="o">.</span><span class="n">detector</span><span class="o">.</span><span class="n">xs</span><span class="o">.</span><span class="n">load</span><span class="p">(),</span> <span class="n">nl</span> <span class="o">=</span> <span class="n">orsa</span><span class="o">.</span><span class="n">detector</span><span class="o">.</span><span class="n">nonlinearity</span><span class="o">.</span><span class="n">load</span><span class="p">())</span>
+<span class="n">gen_dict</span><span class="p">[</span><span class="s1">&#39;noneq&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">orsa</span><span class="o">.</span><span class="n">generator</span><span class="o">.</span><span class="n">common_inputs</span><span class="p">(</span><span class="s1">&#39;NonEq_VisibleSpectrum&#39;</span><span class="p">,</span>  <span class="n">orsa</span><span class="o">.</span><span class="n">spectrum</span><span class="o">.</span><span class="n">UnoscillatedSpectrum</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="n">shape_uncertainty</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">xs</span> <span class="o">=</span> <span class="n">orsa</span><span class="o">.</span><span class="n">detector</span><span class="o">.</span><span class="n">xs</span><span class="o">.</span><span class="n">load</span><span class="p">(),</span> <span class="n">nl</span> <span class="o">=</span> <span class="n">orsa</span><span class="o">.</span><span class="n">detector</span><span class="o">.</span><span class="n">nonlinearity</span><span class="o">.</span><span class="n">load</span><span class="p">())</span>
 
 <span class="n">model</span><span class="o">.</span><span class="n">add_parameter</span><span class="p">(</span><span class="n">orsa</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">CoreParameter</span><span class="p">(</span><span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;C1&#39;</span><span class="p">,</span> <span class="n">value</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">error</span> <span class="o">=</span> <span class="mf">0.008</span><span class="p">,</span> <span class="n">formatted_label</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;$R_\mathrm{YJ-C1}$&#39;</span><span class="p">,</span> <span class="n">baseline</span> <span class="o">=</span> <span class="mf">1452.74</span><span class="p">,</span> <span class="n">power</span> <span class="o">=</span> <span class="mf">2.9</span><span class="p">))</span>
 <span class="n">model</span><span class="o">.</span><span class="n">add_parameter</span><span class="p">(</span><span class="n">orsa</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">CoreParameter</span><span class="p">(</span><span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;C2&#39;</span><span class="p">,</span> <span class="n">value</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">error</span> <span class="o">=</span> <span class="mf">0.008</span><span class="p">,</span> <span class="n">formatted_label</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;$R_\mathrm{YJ-C1}$&#39;</span><span class="p">,</span> <span class="n">baseline</span> <span class="o">=</span> <span class="mf">2000.74</span><span class="p">,</span> <span class="n">power</span> <span class="o">=</span> <span class="mf">2.9</span><span class="p">))</span>
@@ -333,7 +331,7 @@
 </div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">get_spectrum</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
@@ -349,16 +347,16 @@
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;orsa.spectrum.spectrum.ReconstructedSpectrum at 0x7fdbe7178c50&gt;
+&lt;orsa.spectrum.spectrum.ReconstructedSpectrum at 0x7fdd813c2bd0&gt;
 </pre></div></div>
 </div>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">param</span> <span class="ow">in</span> <span class="n">model</span><span class="o">.</span><span class="n">oscillation_parameters</span><span class="p">:</span>
@@ -370,12 +368,12 @@
 </div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">init_model</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
 <span class="n">model</span><span class="o">.</span><span class="n">use_shape_uncertainty</span> <span class="o">=</span> <span class="kc">False</span>
-<span class="n">cf</span> <span class="o">=</span> <span class="n">orsa</span><span class="o">.</span><span class="n">probability</span><span class="o">.</span><span class="n">CostFunction</span><span class="p">(</span><span class="n">ll</span><span class="o">=</span><span class="n">orsa</span><span class="o">.</span><span class="n">probability</span><span class="o">.</span><span class="n">chi2</span><span class="p">,</span> <span class="n">model</span><span class="o">=</span><span class="n">model</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">ll_args</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">which</span> <span class="o">=</span> <span class="s1">&#39;C&#39;</span><span class="p">))</span>
+<span class="n">cf</span> <span class="o">=</span> <span class="n">orsa</span><span class="o">.</span><span class="n">probability</span><span class="o">.</span><span class="n">CostFunction</span><span class="p">(</span><span class="n">ll</span><span class="o">=</span><span class="n">orsa</span><span class="o">.</span><span class="n">probability</span><span class="o">.</span><span class="n">ll_binned</span><span class="p">,</span> <span class="n">model</span><span class="o">=</span><span class="n">model</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">ll_args</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">())</span>
 <span class="n">true_values</span> <span class="o">=</span> <span class="n">cf</span><span class="o">.</span><span class="n">get_params_to_fit</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
 <span class="n">res</span> <span class="o">=</span> <span class="n">orsa</span><span class="o">.</span><span class="n">fit</span><span class="o">.</span><span class="n">minuit</span><span class="p">(</span><span class="n">cf</span><span class="p">)</span>
 <span class="n">res</span><span class="o">.</span><span class="n">true_values</span> <span class="o">=</span> <span class="n">true_values</span>
@@ -387,11 +385,11 @@
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Cost function parsed as chi2-like
+Cost function parsed as LogLikelihood-like
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">res</span><span class="o">.</span><span class="n">obj</span>
@@ -399,7 +397,7 @@ Cost function parsed as chi2-like
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -408,12 +406,12 @@ Cost function parsed as chi2-like
         <th colspan="2" style="text-align:center" title="Minimizer"> Migrad </th>
     </tr>
     <tr>
-        <td style="text-align:left" title="Minimum value of function"> FCN = 202.4 </td>
-        <td style="text-align:center" title="Total number of function and (optional) gradient evaluations"> Nfcn = 381 </td>
+        <td style="text-align:left" title="Minimum value of function"> FCN = 2481 </td>
+        <td style="text-align:center" title="Total number of function and (optional) gradient evaluations"> Nfcn = 160 </td>
     </tr>
     <tr>
-        <td style="text-align:left" title="Estimated distance to minimum and goal"> EDM = 4.4e-06 (Goal: 0.0002) </td>
-        <td style="text-align:center" title="Total run time of algorithms"> time = 3.2 sec </td>
+        <td style="text-align:left" title="Estimated distance to minimum and goal"> EDM = 6.89e-17 (Goal: 0.0002) </td>
+        <td style="text-align:center" title="Total run time of algorithms"> time = 1.3 sec </td>
     </tr>
     <tr>
         <td style="text-align:center;background-color:#92CCA6;color:black"> Valid Minimum </td>
@@ -441,61 +439,6 @@ Cost function parsed as chi2-like
     </tr>
     <tr>
         <th> 0 </th>
-        <td> a: </td>
-        <td> 1.001e-3 </td>
-        <td> 0.008e-3 </td>
-        <td>  </td>
-        <td>  </td>
-        <td>  </td>
-        <td>  </td>
-        <td>  </td>
-    </tr>
-    <tr>
-        <th> 1 </th>
-        <td> a0: </td>
-        <td> 0 </td>
-        <td> 1 </td>
-        <td>  </td>
-        <td>  </td>
-        <td>  </td>
-        <td>  </td>
-        <td>  </td>
-    </tr>
-    <tr>
-        <th> 2 </th>
-        <td> a1: </td>
-        <td> -0.1 </td>
-        <td> 0.9 </td>
-        <td>  </td>
-        <td>  </td>
-        <td>  </td>
-        <td>  </td>
-        <td>  </td>
-    </tr>
-    <tr>
-        <th> 3 </th>
-        <td> a2: </td>
-        <td> 0.0 </td>
-        <td> 0.9 </td>
-        <td>  </td>
-        <td>  </td>
-        <td>  </td>
-        <td>  </td>
-        <td>  </td>
-    </tr>
-    <tr>
-        <th> 4 </th>
-        <td> a3: </td>
-        <td> 0.1 </td>
-        <td> 0.9 </td>
-        <td>  </td>
-        <td>  </td>
-        <td>  </td>
-        <td>  </td>
-        <td>  </td>
-    </tr>
-    <tr>
-        <th> 5 </th>
         <td> C1: </td>
         <td> 1.000 </td>
         <td> 0.008 </td>
@@ -506,7 +449,7 @@ Cost function parsed as chi2-like
         <td>  </td>
     </tr>
     <tr>
-        <th> 6 </th>
+        <th> 1 </th>
         <td> C2: </td>
         <td> 1.000 </td>
         <td> 0.008 </td>
@@ -517,9 +460,9 @@ Cost function parsed as chi2-like
         <td>  </td>
     </tr>
     <tr>
-        <th> 7 </th>
+        <th> 2 </th>
         <td> C3: </td>
-        <td> 0.999 </td>
+        <td> 1.000 </td>
         <td> 0.008 </td>
         <td>  </td>
         <td>  </td>
@@ -528,9 +471,9 @@ Cost function parsed as chi2-like
         <td>  </td>
     </tr>
     <tr>
-        <th> 8 </th>
+        <th> 3 </th>
         <td> rea: </td>
-        <td> 82.0 </td>
+        <td> 82.1 </td>
         <td> 0.8 </td>
         <td>  </td>
         <td>  </td>
@@ -539,9 +482,9 @@ Cost function parsed as chi2-like
         <td>  </td>
     </tr>
     <tr>
-        <th> 9 </th>
+        <th> 4 </th>
         <td> U: </td>
-        <td> 93.8 </td>
+        <td> 94.0 </td>
         <td> 0.9 </td>
         <td>  </td>
         <td>  </td>
@@ -550,9 +493,9 @@ Cost function parsed as chi2-like
         <td>  </td>
     </tr>
     <tr>
-        <th> 10 </th>
+        <th> 5 </th>
         <td> Th: </td>
-        <td> 55.7 </td>
+        <td> 55.8 </td>
         <td> 0.6 </td>
         <td>  </td>
         <td>  </td>
@@ -561,10 +504,10 @@ Cost function parsed as chi2-like
         <td>  </td>
     </tr>
     <tr>
-        <th> 11 </th>
+        <th> 6 </th>
         <td> K: </td>
-        <td> 10.3 </td>
-        <td> 2.8 </td>
+        <td> 12.0 </td>
+        <td> 2.9 </td>
         <td>  </td>
         <td>  </td>
         <td>  </td>
@@ -572,7 +515,7 @@ Cost function parsed as chi2-like
         <td>  </td>
     </tr>
     <tr>
-        <th> 12 </th>
+        <th> 7 </th>
         <td> acc: </td>
         <td> 0.800 </td>
         <td> 0.008 </td>
@@ -583,9 +526,9 @@ Cost function parsed as chi2-like
         <td>  </td>
     </tr>
     <tr>
-        <th> 13 </th>
+        <th> 8 </th>
         <td> lihe: </td>
-        <td> 0.79 </td>
+        <td> 0.80 </td>
         <td> 0.16 </td>
         <td>  </td>
         <td>  </td>
@@ -594,7 +537,7 @@ Cost function parsed as chi2-like
         <td>  </td>
     </tr>
     <tr>
-        <th> 14 </th>
+        <th> 9 </th>
         <td> fn: </td>
         <td> 0.1 </td>
         <td> 0.1 </td>
@@ -605,7 +548,7 @@ Cost function parsed as chi2-like
         <td>  </td>
     </tr>
     <tr>
-        <th> 15 </th>
+        <th> 10 </th>
         <td> alpha: </td>
         <td> 0.050 </td>
         <td> 0.025 </td>
@@ -616,7 +559,7 @@ Cost function parsed as chi2-like
         <td>  </td>
     </tr>
     <tr>
-        <th> 16 </th>
+        <th> 11 </th>
         <td> atm: </td>
         <td> 0.16 </td>
         <td> 0.08 </td>
@@ -629,11 +572,6 @@ Cost function parsed as chi2-like
 </table><table>
     <tr>
         <td></td>
-        <th> a: </th>
-        <th> a0: </th>
-        <th> a1: </th>
-        <th> a2: </th>
-        <th> a3: </th>
         <th> C1: </th>
         <th> C2: </th>
         <th> C3: </th>
@@ -648,112 +586,7 @@ Cost function parsed as chi2-like
         <th> atm: </th>
     </tr>
     <tr>
-        <th> a: </th>
-        <td> 5.92e-11 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0.18e-9 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 3.31e-9 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -3.54e-9 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -1.56e-9 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0.02e-9 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 2.26e-9 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 16.64e-9 <strong>(0.002)</strong> </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 7.27e-9 <strong>(0.002)</strong> </td>
-        <td style="background-color:rgb(250,248,248);color:black"> 250.42e-9 <strong>(0.012)</strong> </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0.03e-9 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0.01e-9 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0.01e-9 </td>
-    </tr>
-    <tr>
-        <th> a0: </th>
-        <td style="background-color:rgb(250,250,250);color:black"> 0.18e-9 </td>
-        <td> 0.961 </td>
-        <td style="background-color:rgb(238,238,250);color:black"> -0.1 <strong>(-0.093)</strong> </td>
-        <td style="background-color:rgb(250,236,236);color:black"> 0.1 <strong>(0.095)</strong> </td>
-        <td style="background-color:rgb(250,235,235);color:black"> 0.1 <strong>(0.097)</strong> </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0.0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0.0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0.00 </td>
-        <td style="background-color:rgb(249,249,250);color:black"> 0 <strong>(-0.009)</strong> </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0.000 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0.000 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0.000 </td>
-    </tr>
-    <tr>
-        <th> a1: </th>
-        <td style="background-color:rgb(250,250,250);color:black"> 3.31e-9 </td>
-        <td style="background-color:rgb(238,238,250);color:black"> -0.1 <strong>(-0.093)</strong> </td>
-        <td> 0.783 </td>
-        <td style="background-color:rgb(250,211,211);color:black"> 0.2 <strong>(0.259)</strong> </td>
-        <td style="background-color:rgb(250,211,211);color:black"> 0.2 <strong>(0.260)</strong> </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0.0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0.0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0.00 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0.0 <strong>(-0.003)</strong> </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0.000 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0.000 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0.000 </td>
-    </tr>
-    <tr>
-        <th> a2: </th>
-        <td style="background-color:rgb(250,250,250);color:black"> -3.54e-9 </td>
-        <td style="background-color:rgb(250,236,236);color:black"> 0.1 <strong>(0.095)</strong> </td>
-        <td style="background-color:rgb(250,211,211);color:black"> 0.2 <strong>(0.259)</strong> </td>
-        <td> 0.75 </td>
-        <td style="background-color:rgb(223,223,250);color:black"> -0.2 <strong>(-0.207)</strong> </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0.0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0.0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0.00 </td>
-        <td style="background-color:rgb(246,246,250);color:black"> -0.1 <strong>(-0.030)</strong> </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0.000 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0.00 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0.000 </td>
-    </tr>
-    <tr>
-        <th> a3: </th>
-        <td style="background-color:rgb(250,250,250);color:black"> -1.56e-9 </td>
-        <td style="background-color:rgb(250,235,235);color:black"> 0.1 <strong>(0.097)</strong> </td>
-        <td style="background-color:rgb(250,211,211);color:black"> 0.2 <strong>(0.260)</strong> </td>
-        <td style="background-color:rgb(223,223,250);color:black"> -0.2 <strong>(-0.207)</strong> </td>
-        <td> 0.787 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0.0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0.0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0.00 </td>
-        <td style="background-color:rgb(250,245,245);color:black"> 0.1 <strong>(0.032)</strong> </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0.000 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0.000 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0.000 </td>
-    </tr>
-    <tr>
         <th> C1: </th>
-        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
         <td> 6.4e-05 </td>
         <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
         <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
@@ -769,11 +602,6 @@ Cost function parsed as chi2-like
     </tr>
     <tr>
         <th> C2: </th>
-        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
         <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
         <td> 6.4e-05 </td>
         <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
@@ -789,15 +617,10 @@ Cost function parsed as chi2-like
     </tr>
     <tr>
         <th> C3: </th>
-        <td style="background-color:rgb(250,250,250);color:black"> 0.02e-9 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
         <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
         <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
         <td> 6.4e-05 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0.01e-3 <strong>(-0.001)</strong> </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
         <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
         <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
         <td style="background-color:rgb(250,250,250);color:black"> -0.01e-3 </td>
@@ -809,14 +632,9 @@ Cost function parsed as chi2-like
     </tr>
     <tr>
         <th> rea: </th>
-        <td style="background-color:rgb(250,250,250);color:black"> 2.26e-9 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0.0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0.0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0.0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0.0 </td>
         <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
         <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0.01e-3 <strong>(-0.001)</strong> </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
         <td> 0.674 </td>
         <td style="background-color:rgb(250,250,250);color:black"> -0.0 </td>
         <td style="background-color:rgb(250,250,250);color:black"> -0.00 </td>
@@ -829,58 +647,43 @@ Cost function parsed as chi2-like
     </tr>
     <tr>
         <th> U: </th>
-        <td style="background-color:rgb(250,250,250);color:black"> 16.64e-9 <strong>(0.002)</strong> </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0.0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0.0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0.0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0.0 </td>
         <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
         <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
         <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
         <td style="background-color:rgb(250,250,250);color:black"> -0.0 </td>
-        <td> 0.88 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0.00 <strong>(-0.003)</strong> </td>
+        <td> 0.879 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0.00 <strong>(-0.004)</strong> </td>
         <td style="background-color:rgb(249,249,250);color:black"> -0.0 <strong>(-0.004)</strong> </td>
         <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
         <td style="background-color:rgb(250,250,250);color:black"> -0.000 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0.00 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0.000 </td>
         <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
         <td style="background-color:rgb(250,250,250);color:black"> -0.000 </td>
     </tr>
     <tr>
         <th> Th: </th>
-        <td style="background-color:rgb(250,250,250);color:black"> 7.27e-9 <strong>(0.002)</strong> </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0.00 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0.00 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0.00 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0.00 </td>
         <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
         <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
         <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
         <td style="background-color:rgb(250,250,250);color:black"> -0.00 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0.00 <strong>(-0.003)</strong> </td>
-        <td> 0.311 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0.00 <strong>(-0.004)</strong> </td>
+        <td> 0.31 </td>
         <td style="background-color:rgb(249,249,250);color:black"> -0.01 <strong>(-0.004)</strong> </td>
         <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
         <td style="background-color:rgb(250,250,250);color:black"> -0.000 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0.000 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0.00 </td>
         <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
         <td style="background-color:rgb(250,250,250);color:black"> -0.000 </td>
     </tr>
     <tr>
         <th> K: </th>
-        <td style="background-color:rgb(250,248,248);color:black"> 250.42e-9 <strong>(0.012)</strong> </td>
-        <td style="background-color:rgb(249,249,250);color:black"> 0 <strong>(-0.009)</strong> </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0.0 <strong>(-0.003)</strong> </td>
-        <td style="background-color:rgb(246,246,250);color:black"> -0.1 <strong>(-0.030)</strong> </td>
-        <td style="background-color:rgb(250,245,245);color:black"> 0.1 <strong>(0.032)</strong> </td>
         <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
         <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
         <td style="background-color:rgb(250,250,250);color:black"> -0.01e-3 </td>
         <td style="background-color:rgb(250,250,250);color:black"> -0.0 </td>
         <td style="background-color:rgb(249,249,250);color:black"> -0.0 <strong>(-0.004)</strong> </td>
         <td style="background-color:rgb(249,249,250);color:black"> -0.01 <strong>(-0.004)</strong> </td>
-        <td> 7.97 </td>
+        <td> 8.63 </td>
         <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
         <td style="background-color:rgb(250,250,250);color:black"> -0.000 </td>
         <td style="background-color:rgb(250,250,250);color:black"> -0.000 </td>
@@ -889,11 +692,6 @@ Cost function parsed as chi2-like
     </tr>
     <tr>
         <th> acc: </th>
-        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
         <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
         <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
         <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
@@ -909,11 +707,6 @@ Cost function parsed as chi2-like
     </tr>
     <tr>
         <th> lihe: </th>
-        <td style="background-color:rgb(250,250,250);color:black"> 0.03e-9 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0.000 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0.000 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0.000 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0.000 </td>
         <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
         <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
         <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
@@ -929,17 +722,12 @@ Cost function parsed as chi2-like
     </tr>
     <tr>
         <th> fn: </th>
-        <td style="background-color:rgb(250,250,250);color:black"> 0.01e-9 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
         <td style="background-color:rgb(250,250,250);color:black"> -0.000 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0.000 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0.00 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0.000 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
         <td style="background-color:rgb(250,250,250);color:black"> -0.000 </td>
         <td style="background-color:rgb(250,250,250);color:black"> -0.00 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0.000 </td>
         <td style="background-color:rgb(250,250,250);color:black"> -0.000 </td>
         <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
         <td style="background-color:rgb(250,250,250);color:black"> -0.000 </td>
@@ -949,11 +737,6 @@ Cost function parsed as chi2-like
     </tr>
     <tr>
         <th> alpha: </th>
-        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
         <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
         <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
         <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
@@ -969,11 +752,6 @@ Cost function parsed as chi2-like
     </tr>
     <tr>
         <th> atm: </th>
-        <td style="background-color:rgb(250,250,250);color:black"> 0.01e-9 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0.000 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0.000 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0.000 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0.000 </td>
         <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
         <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
         <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
@@ -990,7 +768,7 @@ Cost function parsed as chi2-like
 </table></div>
 </div>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">scipy</span>
@@ -1001,23 +779,13 @@ Cost function parsed as chi2-like
 </pre></div>
 </div>
 </div>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[23]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">events</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mf">1e-9</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mf">.1</span><span class="p">)</span>
-
-<span class="n">x_nores</span><span class="p">,</span> <span class="n">y_nores</span> <span class="o">=</span> <span class="n">res</span><span class="o">.</span><span class="n">obj</span><span class="o">.</span><span class="n">profile</span><span class="p">(</span><span class="s1">&#39;K:&#39;</span><span class="p">,</span> <span class="n">grid</span> <span class="o">=</span> <span class="n">events</span><span class="p">)</span> <span class="c1"># no res, bkg finer_binning</span>
-</pre></div>
-</div>
-</div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[24]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
 
-<span class="n">ax</span><span class="o">.</span><span class="n">axhline</span><span class="p">()</span>
+<span class="n">x_nores</span><span class="p">,</span> <span class="n">y_nores</span> <span class="o">=</span> <span class="n">orsa</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">get_profile</span><span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;K:&#39;</span><span class="p">,</span> <span class="n">kind</span> <span class="o">=</span> <span class="s1">&#39;conditional&#39;</span><span class="p">,</span> <span class="n">n_sigmas</span> <span class="o">=</span> <span class="mi">6</span><span class="p">,</span> <span class="n">n_samples</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_nores</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">y_nores</span><span class="o">-</span><span class="nb">min</span><span class="p">(</span><span class="n">y_nores</span><span class="p">)),</span> <span class="s1">&#39;b-&#39;</span><span class="p">,</span> <span class="n">lw</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;Spectral fit (w/o resolution)&#39;</span><span class="p">)</span>
 
 <span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="n">left</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">right</span> <span class="o">=</span> <span class="mi">16</span><span class="p">)</span>
@@ -1034,7 +802,7 @@ Cost function parsed as chi2-like
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../../_images/_include_notebooks_12_model_other_experiments_9_0.png" src="../../_images/_include_notebooks_12_model_other_experiments_9_0.png" />
+<img alt="../../_images/_include_notebooks_12_model_other_experiments_8_0.png" src="../../_images/_include_notebooks_12_model_other_experiments_8_0.png" />
 </div>
 </div>
 </section>
@@ -1087,7 +855,7 @@ Cost function parsed as chi2-like
       
     </aside>
   </div>
-</div><script src="../../_static/documentation_options.js?v=1067c88a"></script>
+</div><script src="../../_static/documentation_options.js?v=279f42e0"></script>
     <script src="../../_static/doctools.js?v=9a2dae69"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/scripts/furo.js?v=32e29ea5"></script>

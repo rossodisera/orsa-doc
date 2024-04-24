@@ -6,10 +6,10 @@
 <link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Opening a SNiPER EDM" href="6_opening_sniper_EDMs.html" /><link rel="prev" title="Play interactively" href="4_play_interactively.html" />
 
     <link rel="shortcut icon" href="../../_static/orsa_fitter.ico"/><!-- Generated with Sphinx 7.3.7 and Furo 2024.01.29 -->
-        <title>Opening a SNiPER userfile - orsa_fitter 0.8.5 documentation</title>
+        <title>Opening a SNiPER userfile - orsa_fitter 0.8.6 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=362ab14a" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=135e06be" />
-    <link rel="stylesheet" type="text/css" href="../../_static/nbsphinx-code-cells.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/nbsphinx-code-cells.css?v=2aa19091" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?v=36a5483c" />
     
     
@@ -133,7 +133,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../index.html"><div class="brand">orsa_fitter 0.8.5 documentation</div></a>
+      <a href="../../index.html"><div class="brand">orsa_fitter 0.8.6 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -159,7 +159,7 @@
     <img class="sidebar-logo" src="../../_static/orsa_fitter.svg" alt="Logo"/>
   </div>
   
-  <span class="sidebar-brand-text">orsa_fitter 0.8.5 documentation</span>
+  <span class="sidebar-brand-text">orsa_fitter 0.8.6 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../search.html" role="search">
   <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
@@ -280,7 +280,7 @@
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;orsa.spectrum.spectrum.ReconstructedEventList at 0x7f66f0096310&gt;
+&lt;orsa.spectrum.spectrum.ReconstructedEventList at 0x7efd2df2c590&gt;
 </pre></div></div>
 </div>
 <div class="nbinput nblast docutils container">
@@ -312,7 +312,7 @@
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;orsa.spectrum.spectrum.ReconstructedEventList at 0x7f66dc3fe550&gt;
+&lt;orsa.spectrum.spectrum.ReconstructedEventList at 0x7efd2c5954d0&gt;
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -336,7 +336,7 @@
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;orsa.spectrum.spectrum.ReconstructedEventList at 0x7f66bcec08d0&gt;
+&lt;orsa.spectrum.spectrum.ReconstructedEventList at 0x7efd2f0e2450&gt;
 </pre></div></div>
 </div>
 <section id="Let's-try-a-fit">
@@ -367,7 +367,7 @@
 <span class="n">shape_fact_20</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mf">20e-03</span><span class="o">/</span><span class="n">model</span><span class="o">.</span><span class="n">bin</span><span class="p">)</span>
 
 <span class="n">gen_dict</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
-<span class="n">gen_dict</span><span class="p">[</span><span class="s1">&#39;rea&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">orsa</span><span class="o">.</span><span class="n">generator</span><span class="o">.</span><span class="n">reactor</span><span class="p">(</span><span class="s1">&#39;HM_bump&#39;</span><span class="p">,</span> <span class="n">isPDF</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">hasXS</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">shape_uncertainty</span><span class="o">=</span><span class="s1">&#39;tao&#39;</span><span class="p">)</span>
+<span class="n">gen_dict</span><span class="p">[</span><span class="s1">&#39;rea&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">orsa</span><span class="o">.</span><span class="n">generator</span><span class="o">.</span><span class="n">reactor</span><span class="p">(</span><span class="s1">&#39;HM_bump&#39;</span><span class="p">,</span> <span class="n">isPDF</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">xs</span><span class="o">=</span><span class="n">model</span><span class="o">.</span><span class="n">detector</span><span class="o">.</span><span class="n">crosssection</span><span class="p">,</span> <span class="n">shape_uncertainty</span><span class="o">=</span><span class="s1">&#39;tao&#39;</span><span class="p">)</span>
 <span class="n">model</span><span class="o">.</span><span class="n">add_parameter</span><span class="p">(</span><span class="n">orsa</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">CoreParameter</span><span class="p">(</span><span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;YJ-C1&#39;</span><span class="p">,</span> <span class="n">value</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">error</span> <span class="o">=</span> <span class="mf">0.008</span><span class="p">,</span> <span class="n">formatted_label</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;$R_\mathrm{YJ-C1}$&#39;</span><span class="p">,</span> <span class="n">baseline</span> <span class="o">=</span> <span class="mf">52.74</span><span class="p">,</span> <span class="n">power</span> <span class="o">=</span> <span class="mf">2.9</span><span class="p">))</span>
 <span class="n">model</span><span class="o">.</span><span class="n">add_parameter</span><span class="p">(</span><span class="n">orsa</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">NormalizationParameter</span><span class="p">(</span><span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;rea&#39;</span><span class="p">,</span>   <span class="n">value</span> <span class="o">=</span> <span class="n">promptlist</span><span class="o">.</span><span class="n">n</span><span class="p">,</span>    <span class="n">generator</span> <span class="o">=</span> <span class="n">gen_dict</span><span class="p">[</span><span class="s1">&#39;rea&#39;</span><span class="p">],</span>     <span class="n">error</span> <span class="o">=</span> <span class="mf">0.02</span><span class="p">,</span>     <span class="n">is_oscillated</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">has_duty</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>      <span class="n">formatted_label</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;$N_\mathrm</span><span class="si">{rea}</span><span class="s1">$&#39;</span><span class="p">))</span>
 
@@ -389,7 +389,7 @@
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;orsa.spectrum.spectrum.ReconstructedSpectrum at 0x7f66afef9dd0&gt;
+&lt;orsa.spectrum.spectrum.ReconstructedSpectrum at 0x7efd146706d0&gt;
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -431,7 +431,7 @@ Cost function parsed as chi2-like
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-[&lt;matplotlib.lines.Line2D at 0x7f66afc4b090&gt;]
+[&lt;matplotlib.lines.Line2D at 0x7efd149f5d50&gt;]
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -485,12 +485,12 @@ Cost function parsed as chi2-like
         <th colspan="2" style="text-align:center" title="Minimizer"> Migrad </th>
     </tr>
     <tr>
-        <td style="text-align:left" title="Minimum value of function"> FCN = 4191 </td>
-        <td style="text-align:center" title="Total number of function and (optional) gradient evaluations"> Nfcn = 550 </td>
+        <td style="text-align:left" title="Minimum value of function"> FCN = 4184 </td>
+        <td style="text-align:center" title="Total number of function and (optional) gradient evaluations"> Nfcn = 664 </td>
     </tr>
     <tr>
-        <td style="text-align:left" title="Estimated distance to minimum and goal"> EDM = 1.07e-09 (Goal: 0.0002) </td>
-        <td style="text-align:center" title="Total run time of algorithms"> time = 2.3 sec </td>
+        <td style="text-align:left" title="Estimated distance to minimum and goal"> EDM = 1.36e-06 (Goal: 0.0002) </td>
+        <td style="text-align:center" title="Total run time of algorithms"> time = 2.7 sec </td>
     </tr>
     <tr>
         <td style="text-align:center;background-color:#92CCA6;color:black"> Valid Minimum </td>
@@ -519,7 +519,7 @@ Cost function parsed as chi2-like
     <tr>
         <th> 0 </th>
         <td> eff: </td>
-        <td> 1.001 </td>
+        <td> 1.000 </td>
         <td> 0.009 </td>
         <td>  </td>
         <td>  </td>
@@ -530,7 +530,7 @@ Cost function parsed as chi2-like
     <tr>
         <th> 1 </th>
         <td> a: </td>
-        <td> 26.14e-3 </td>
+        <td> 26.16e-3 </td>
         <td> 0.20e-3 </td>
         <td>  </td>
         <td>  </td>
@@ -563,8 +563,8 @@ Cost function parsed as chi2-like
     <tr>
         <th> 4 </th>
         <td> a0: </td>
-        <td> 0 </td>
-        <td> 1 </td>
+        <td> 0.7 </td>
+        <td> 0.9 </td>
         <td>  </td>
         <td>  </td>
         <td>  </td>
@@ -574,8 +574,8 @@ Cost function parsed as chi2-like
     <tr>
         <th> 5 </th>
         <td> a1: </td>
-        <td> 0 </td>
-        <td> 1 </td>
+        <td> -0.2 </td>
+        <td> 0.7 </td>
         <td>  </td>
         <td>  </td>
         <td>  </td>
@@ -585,8 +585,8 @@ Cost function parsed as chi2-like
     <tr>
         <th> 6 </th>
         <td> a2: </td>
-        <td> 0 </td>
-        <td> 1 </td>
+        <td> 0.1 </td>
+        <td> 0.6 </td>
         <td>  </td>
         <td>  </td>
         <td>  </td>
@@ -596,8 +596,8 @@ Cost function parsed as chi2-like
     <tr>
         <th> 7 </th>
         <td> a3: </td>
-        <td> 0 </td>
-        <td> 1 </td>
+        <td> -0.9 </td>
+        <td> 0.7 </td>
         <td>  </td>
         <td>  </td>
         <td>  </td>
@@ -640,8 +640,8 @@ Cost function parsed as chi2-like
     <tr>
         <th> 11 </th>
         <td> s2_12: </td>
-        <td> 0.3124 </td>
-        <td> 0.0012 </td>
+        <td> 0.3123 </td>
+        <td> 0.0013 </td>
         <td>  </td>
         <td>  </td>
         <td>  </td>
@@ -651,7 +651,7 @@ Cost function parsed as chi2-like
     <tr>
         <th> 12 </th>
         <td> s2_13: </td>
-        <td> 0.0195 </td>
+        <td> 0.0196 </td>
         <td> 0.0022 </td>
         <td>  </td>
         <td>  </td>
@@ -702,272 +702,272 @@ Cost function parsed as chi2-like
     </tr>
     <tr>
         <th> eff: </th>
-        <td> 8.37e-05 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0e-9 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
+        <td> 8.4e-05 </td>
+        <td style="background-color:rgb(250,249,249);color:black"> 0.01e-6 <strong>(0.004)</strong> </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 1e-9 <strong>(0.001)</strong> </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0.01e-6 <strong>(0.001)</strong> </td>
+        <td style="background-color:rgb(250,249,249);color:black"> 0.05e-3 <strong>(0.006)</strong> </td>
+        <td style="background-color:rgb(250,249,249);color:black"> 0.06e-3 <strong>(0.010)</strong> </td>
+        <td style="background-color:rgb(250,239,239);color:black"> 0.36e-3 <strong>(0.071)</strong> </td>
+        <td style="background-color:rgb(247,247,250);color:black"> -0.14e-3 <strong>(-0.024)</strong> </td>
         <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
-        <td style="background-color:rgb(250,246,246);color:black"> 25.875e-12 <strong>(0.024)</strong> </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0.096e-9 <strong>(0.002)</strong> </td>
-        <td style="background-color:rgb(250,238,238);color:black"> 0.9e-6 <strong>(0.082)</strong> </td>
-        <td style="background-color:rgb(250,238,238);color:black"> 2e-6 <strong>(0.077)</strong> </td>
-        <td style="background-color:rgb(230,230,250);color:black"> -0.01e-3 <strong>(-0.150)</strong> </td>
-        <td style="background-color:rgb(172,172,250);color:black"> -18.05688 <strong>(-0.599)</strong> </td>
+        <td style="background-color:rgb(250,244,244);color:black"> 42.503e-12 <strong>(0.038)</strong> </td>
+        <td style="background-color:rgb(250,249,249);color:black"> 0.197e-9 <strong>(0.005)</strong> </td>
+        <td style="background-color:rgb(250,235,235);color:black"> 1.2e-6 <strong>(0.100)</strong> </td>
+        <td style="background-color:rgb(250,238,238);color:black"> 2e-6 <strong>(0.078)</strong> </td>
+        <td style="background-color:rgb(231,231,250);color:black"> -0.01e-3 <strong>(-0.149)</strong> </td>
+        <td style="background-color:rgb(173,173,250);color:black"> -17.83858 <strong>(-0.589)</strong> </td>
     </tr>
     <tr>
         <th> a: </th>
+        <td style="background-color:rgb(250,249,249);color:black"> 0.01e-6 <strong>(0.004)</strong> </td>
+        <td> 4.04e-08 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0e-9 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0 <strong>(-0.004)</strong> </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0.13e-6 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0.52e-6 <strong>(-0.004)</strong> </td>
+        <td style="background-color:rgb(249,249,250);color:black"> -0.58e-6 <strong>(-0.005)</strong> </td>
+        <td style="background-color:rgb(250,246,246);color:black"> 3.13e-6 <strong>(0.024)</strong> </td>
         <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
-        <td> 4.05e-08 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0e-9 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0.057e-12 <strong>(-0.002)</strong> </td>
+        <td style="background-color:rgb(249,249,250);color:black"> -0.004e-9 <strong>(-0.005)</strong> </td>
+        <td style="background-color:rgb(250,249,249);color:black"> 0 <strong>(0.003)</strong> </td>
+        <td style="background-color:rgb(250,243,243);color:black"> 0.02e-6 <strong>(0.047)</strong> </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0 <strong>(0.003)</strong> </td>
+        <td style="background-color:rgb(250,248,248);color:black"> 8.08367e-3 <strong>(0.012)</strong> </td>
     </tr>
     <tr>
         <th> b: </th>
+        <td style="background-color:rgb(250,250,250);color:black"> 1e-9 <strong>(0.001)</strong> </td>
         <td style="background-color:rgb(250,250,250);color:black"> -0e-9 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0e-9 </td>
         <td> 5.9e-09 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0e-9 </td>
         <td style="background-color:rgb(250,250,250);color:black"> -0e-9 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -58e-9 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 5e-9 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -39e-9 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 123e-9 <strong>(0.002)</strong> </td>
         <td style="background-color:rgb(250,250,250);color:black"> -0e-9 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0e-9 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0e-9 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0e-9 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0.004e-12 </td>
         <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
         <td style="background-color:rgb(250,250,250);color:black"> 0e-9 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0e-9 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0e-9 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0e-9 </td>
+        <td style="background-color:rgb(250,248,248);color:black"> 2e-9 <strong>(0.015)</strong> </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 1e-9 </td>
+        <td style="background-color:rgb(250,249,249);color:black"> 950.566e-6 <strong>(0.004)</strong> </td>
     </tr>
     <tr>
         <th> c: </th>
-        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0e-9 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0.01e-6 <strong>(0.001)</strong> </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0 <strong>(-0.004)</strong> </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0e-9 </td>
         <td> 1.58e-07 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0.39e-6 <strong>(0.001)</strong> </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0.94e-6 <strong>(-0.003)</strong> </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0.54e-6 <strong>(-0.002)</strong> </td>
+        <td style="background-color:rgb(250,247,247);color:black"> 5.61e-6 <strong>(0.022)</strong> </td>
         <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0.053e-12 <strong>(-0.001)</strong> </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0.003e-9 <strong>(-0.002)</strong> </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0 <strong>(0.003)</strong> </td>
+        <td style="background-color:rgb(250,248,248);color:black"> 0.01e-6 <strong>(0.014)</strong> </td>
         <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
+        <td style="background-color:rgb(250,249,249);color:black"> 5.43803e-3 <strong>(0.004)</strong> </td>
     </tr>
     <tr>
         <th> a0: </th>
-        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0e-9 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
-        <td> 1 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0.000 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0e-6 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0.0 </td>
+        <td style="background-color:rgb(250,249,249);color:black"> 0.05e-3 <strong>(0.006)</strong> </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0.13e-6 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -58e-9 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0.39e-6 <strong>(0.001)</strong> </td>
+        <td> 0.726 </td>
+        <td style="background-color:rgb(250,245,245);color:black"> 0.0 <strong>(0.035)</strong> </td>
+        <td style="background-color:rgb(250,209,209);color:black"> 0.13 <strong>(0.271)</strong> </td>
+        <td style="background-color:rgb(250,201,201);color:black"> 0.2 <strong>(0.327)</strong> </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0.000 <strong>(-0.002)</strong> </td>
+        <td style="background-color:rgb(244,244,250);color:black"> -4.393801e-9 <strong>(-0.042)</strong> </td>
+        <td style="background-color:rgb(241,241,250);color:black"> -252.819e-9 <strong>(-0.069)</strong> </td>
+        <td style="background-color:rgb(249,249,250);color:black"> -6.9e-6 <strong>(-0.006)</strong> </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -5e-6 <strong>(-0.003)</strong> </td>
+        <td style="background-color:rgb(249,249,250);color:black"> -0.05e-3 <strong>(-0.007)</strong> </td>
+        <td style="background-color:rgb(249,249,250);color:black"> -21.9 <strong>(-0.008)</strong> </td>
     </tr>
     <tr>
         <th> a1: </th>
-        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0e-9 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
-        <td> 1 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0.000 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0e-6 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0.0 </td>
+        <td style="background-color:rgb(250,249,249);color:black"> 0.06e-3 <strong>(0.010)</strong> </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0.52e-6 <strong>(-0.004)</strong> </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 5e-9 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0.94e-6 <strong>(-0.003)</strong> </td>
+        <td style="background-color:rgb(250,245,245);color:black"> 0.0 <strong>(0.035)</strong> </td>
+        <td> 0.473 </td>
+        <td style="background-color:rgb(250,197,197);color:black"> 0.14 <strong>(0.355)</strong> </td>
+        <td style="background-color:rgb(250,162,162);color:black"> 0.3 <strong>(0.587)</strong> </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0.000 <strong>(-0.002)</strong> </td>
+        <td style="background-color:rgb(250,242,242);color:black"> 4.616430e-9 <strong>(0.055)</strong> </td>
+        <td style="background-color:rgb(250,237,237);color:black"> 248.901e-9 <strong>(0.084)</strong> </td>
+        <td style="background-color:rgb(245,245,250);color:black"> -31.3e-6 <strong>(-0.035)</strong> </td>
+        <td style="background-color:rgb(248,248,250);color:black"> -19e-6 <strong>(-0.013)</strong> </td>
+        <td style="background-color:rgb(248,248,250);color:black"> -0.06e-3 <strong>(-0.012)</strong> </td>
+        <td style="background-color:rgb(248,248,250);color:black"> -30.9 <strong>(-0.014)</strong> </td>
     </tr>
     <tr>
         <th> a2: </th>
-        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0e-9 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
-        <td> 1 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0.000 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0e-6 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0.0 </td>
+        <td style="background-color:rgb(250,239,239);color:black"> 0.36e-3 <strong>(0.071)</strong> </td>
+        <td style="background-color:rgb(249,249,250);color:black"> -0.58e-6 <strong>(-0.005)</strong> </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -39e-9 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0.54e-6 <strong>(-0.002)</strong> </td>
+        <td style="background-color:rgb(250,209,209);color:black"> 0.13 <strong>(0.271)</strong> </td>
+        <td style="background-color:rgb(250,197,197);color:black"> 0.14 <strong>(0.355)</strong> </td>
+        <td> 0.31 </td>
+        <td style="background-color:rgb(231,231,250);color:black"> -0.05 <strong>(-0.148)</strong> </td>
+        <td style="background-color:rgb(249,249,250);color:black"> -0.001 <strong>(-0.008)</strong> </td>
+        <td style="background-color:rgb(250,222,222);color:black"> 12.848096e-9 <strong>(0.190)</strong> </td>
+        <td style="background-color:rgb(250,243,243);color:black"> 114.788e-9 <strong>(0.048)</strong> </td>
+        <td style="background-color:rgb(250,213,213);color:black"> 175.6e-6 <strong>(0.244)</strong> </td>
+        <td style="background-color:rgb(248,248,250);color:black"> -19e-6 <strong>(-0.016)</strong> </td>
+        <td style="background-color:rgb(248,248,250);color:black"> -0.06e-3 <strong>(-0.014)</strong> </td>
+        <td style="background-color:rgb(250,241,241);color:black"> 115.48 <strong>(0.063)</strong> </td>
     </tr>
     <tr>
         <th> a3: </th>
-        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0e-9 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
-        <td> 1 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0.000 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0e-6 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0.0 </td>
+        <td style="background-color:rgb(247,247,250);color:black"> -0.14e-3 <strong>(-0.024)</strong> </td>
+        <td style="background-color:rgb(250,246,246);color:black"> 3.13e-6 <strong>(0.024)</strong> </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 123e-9 <strong>(0.002)</strong> </td>
+        <td style="background-color:rgb(250,247,247);color:black"> 5.61e-6 <strong>(0.022)</strong> </td>
+        <td style="background-color:rgb(250,201,201);color:black"> 0.2 <strong>(0.327)</strong> </td>
+        <td style="background-color:rgb(250,162,162);color:black"> 0.3 <strong>(0.587)</strong> </td>
+        <td style="background-color:rgb(231,231,250);color:black"> -0.05 <strong>(-0.148)</strong> </td>
+        <td> 0.427 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0.000 <strong>(0.002)</strong> </td>
+        <td style="background-color:rgb(238,238,250);color:black"> -7.112162e-9 <strong>(-0.090)</strong> </td>
+        <td style="background-color:rgb(250,249,249);color:black"> 23.687e-9 <strong>(0.008)</strong> </td>
+        <td style="background-color:rgb(234,234,250);color:black"> -101.4e-6 <strong>(-0.120)</strong> </td>
+        <td style="background-color:rgb(248,248,250);color:black"> -16e-6 <strong>(-0.012)</strong> </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0.02e-3 <strong>(-0.004)</strong> </td>
+        <td style="background-color:rgb(245,245,250);color:black"> -86.1 <strong>(-0.040)</strong> </td>
     </tr>
     <tr>
         <th> rho: </th>
         <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0e-9 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0.000 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0.000 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0.000 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0.000 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0e-9 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0.000 <strong>(-0.002)</strong> </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0.000 <strong>(-0.002)</strong> </td>
+        <td style="background-color:rgb(249,249,250);color:black"> -0.001 <strong>(-0.008)</strong> </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0.000 <strong>(0.002)</strong> </td>
         <td> 0.0216 </td>
-        <td style="background-color:rgb(242,242,250);color:black"> -1.118401e-9 <strong>(-0.064)</strong> </td>
-        <td style="background-color:rgb(249,249,250);color:black"> -6.710e-9 <strong>(-0.011)</strong> </td>
-        <td style="background-color:rgb(250,225,225);color:black"> 29.9e-6 <strong>(0.165)</strong> </td>
+        <td style="background-color:rgb(242,242,250);color:black"> -1.147926e-9 <strong>(-0.064)</strong> </td>
+        <td style="background-color:rgb(249,249,250);color:black"> -6.739e-9 <strong>(-0.011)</strong> </td>
+        <td style="background-color:rgb(250,227,227);color:black"> 29.5e-6 <strong>(0.155)</strong> </td>
         <td style="background-color:rgb(250,250,250);color:black"> -0e-6 </td>
         <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0.866 <strong>(0.002)</strong> </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0.431 <strong>(0.001)</strong> </td>
     </tr>
     <tr>
         <th> dm2_21: </th>
-        <td style="background-color:rgb(250,246,246);color:black"> 25.875e-12 <strong>(0.024)</strong> </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
-        <td style="background-color:rgb(242,242,250);color:black"> -1.118401e-9 <strong>(-0.064)</strong> </td>
-        <td> 1.41e-14 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0.002e-12 <strong>(-0.003)</strong> </td>
-        <td style="background-color:rgb(249,249,250);color:black"> -1.355e-12 <strong>(-0.009)</strong> </td>
-        <td style="background-color:rgb(248,248,250);color:black"> -4.353e-12 <strong>(-0.017)</strong> </td>
-        <td style="background-color:rgb(250,247,247);color:black"> 16.566e-12 <strong>(0.018)</strong> </td>
-        <td style="background-color:rgb(250,239,239);color:black"> 28.709228339e-6 <strong>(0.073)</strong> </td>
+        <td style="background-color:rgb(250,244,244);color:black"> 42.503e-12 <strong>(0.038)</strong> </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0.057e-12 <strong>(-0.002)</strong> </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0.004e-12 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0.053e-12 <strong>(-0.001)</strong> </td>
+        <td style="background-color:rgb(244,244,250);color:black"> -4.393801e-9 <strong>(-0.042)</strong> </td>
+        <td style="background-color:rgb(250,242,242);color:black"> 4.616430e-9 <strong>(0.055)</strong> </td>
+        <td style="background-color:rgb(250,222,222);color:black"> 12.848096e-9 <strong>(0.190)</strong> </td>
+        <td style="background-color:rgb(238,238,250);color:black"> -7.112162e-9 <strong>(-0.090)</strong> </td>
+        <td style="background-color:rgb(242,242,250);color:black"> -1.147926e-9 <strong>(-0.064)</strong> </td>
+        <td> 1.48e-14 </td>
+        <td style="background-color:rgb(250,248,248);color:black"> 0.007e-12 <strong>(0.013)</strong> </td>
+        <td style="background-color:rgb(250,243,243);color:black"> 7.345e-12 <strong>(0.047)</strong> </td>
+        <td style="background-color:rgb(248,248,250);color:black"> -5.066e-12 <strong>(-0.019)</strong> </td>
+        <td style="background-color:rgb(250,248,248);color:black"> 14.537e-12 <strong>(0.016)</strong> </td>
+        <td style="background-color:rgb(250,237,237);color:black"> 34.775272904e-6 <strong>(0.087)</strong> </td>
     </tr>
     <tr>
         <th> dm2_31: </th>
-        <td style="background-color:rgb(250,250,250);color:black"> 0.096e-9 <strong>(0.002)</strong> </td>
+        <td style="background-color:rgb(250,249,249);color:black"> 0.197e-9 <strong>(0.005)</strong> </td>
+        <td style="background-color:rgb(249,249,250);color:black"> -0.004e-9 <strong>(-0.005)</strong> </td>
         <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
-        <td style="background-color:rgb(249,249,250);color:black"> -6.710e-9 <strong>(-0.011)</strong> </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0.002e-12 <strong>(-0.003)</strong> </td>
-        <td> 1.88e-11 </td>
-        <td style="background-color:rgb(250,247,247);color:black"> 0.115e-9 <strong>(0.021)</strong> </td>
-        <td style="background-color:rgb(250,249,249);color:black"> 0.062e-9 <strong>(0.007)</strong> </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0.061e-9 <strong>(0.002)</strong> </td>
-        <td style="background-color:rgb(250,249,249);color:black"> 106.506882e-6 <strong>(0.007)</strong> </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0.003e-9 <strong>(-0.002)</strong> </td>
+        <td style="background-color:rgb(241,241,250);color:black"> -252.819e-9 <strong>(-0.069)</strong> </td>
+        <td style="background-color:rgb(250,237,237);color:black"> 248.901e-9 <strong>(0.084)</strong> </td>
+        <td style="background-color:rgb(250,243,243);color:black"> 114.788e-9 <strong>(0.048)</strong> </td>
+        <td style="background-color:rgb(250,249,249);color:black"> 23.687e-9 <strong>(0.008)</strong> </td>
+        <td style="background-color:rgb(249,249,250);color:black"> -6.739e-9 <strong>(-0.011)</strong> </td>
+        <td style="background-color:rgb(250,248,248);color:black"> 0.007e-12 <strong>(0.013)</strong> </td>
+        <td> 1.86e-11 </td>
+        <td style="background-color:rgb(250,246,246);color:black"> 0.166e-9 <strong>(0.030)</strong> </td>
+        <td style="background-color:rgb(250,249,249);color:black"> 0.052e-9 <strong>(0.006)</strong> </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0.055e-9 <strong>(0.002)</strong> </td>
+        <td style="background-color:rgb(250,248,248);color:black"> 148.738833e-6 <strong>(0.010)</strong> </td>
     </tr>
     <tr>
         <th> s2_12: </th>
-        <td style="background-color:rgb(250,238,238);color:black"> 0.9e-6 <strong>(0.082)</strong> </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
+        <td style="background-color:rgb(250,235,235);color:black"> 1.2e-6 <strong>(0.100)</strong> </td>
+        <td style="background-color:rgb(250,249,249);color:black"> 0 <strong>(0.003)</strong> </td>
         <td style="background-color:rgb(250,250,250);color:black"> 0e-9 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
-        <td style="background-color:rgb(250,225,225);color:black"> 29.9e-6 <strong>(0.165)</strong> </td>
-        <td style="background-color:rgb(249,249,250);color:black"> -1.355e-12 <strong>(-0.009)</strong> </td>
-        <td style="background-color:rgb(250,247,247);color:black"> 0.115e-9 <strong>(0.021)</strong> </td>
-        <td> 1.53e-06 </td>
-        <td style="background-color:rgb(247,247,250);color:black"> -0.1e-6 <strong>(-0.021)</strong> </td>
-        <td style="background-color:rgb(250,240,240);color:black"> 0.6e-6 <strong>(0.063)</strong> </td>
-        <td style="background-color:rgb(250,212,212);color:black"> 1.0271225 <strong>(0.252)</strong> </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0 <strong>(0.003)</strong> </td>
+        <td style="background-color:rgb(249,249,250);color:black"> -6.9e-6 <strong>(-0.006)</strong> </td>
+        <td style="background-color:rgb(245,245,250);color:black"> -31.3e-6 <strong>(-0.035)</strong> </td>
+        <td style="background-color:rgb(250,213,213);color:black"> 175.6e-6 <strong>(0.244)</strong> </td>
+        <td style="background-color:rgb(234,234,250);color:black"> -101.4e-6 <strong>(-0.120)</strong> </td>
+        <td style="background-color:rgb(250,227,227);color:black"> 29.5e-6 <strong>(0.155)</strong> </td>
+        <td style="background-color:rgb(250,243,243);color:black"> 7.345e-12 <strong>(0.047)</strong> </td>
+        <td style="background-color:rgb(250,246,246);color:black"> 0.166e-9 <strong>(0.030)</strong> </td>
+        <td> 1.68e-06 </td>
+        <td style="background-color:rgb(247,247,250);color:black"> -0.1e-6 <strong>(-0.025)</strong> </td>
+        <td style="background-color:rgb(250,241,241);color:black"> 0.6e-6 <strong>(0.058)</strong> </td>
+        <td style="background-color:rgb(250,210,210);color:black"> 1.1301001 <strong>(0.264)</strong> </td>
     </tr>
     <tr>
         <th> s2_13: </th>
-        <td style="background-color:rgb(250,238,238);color:black"> 2e-6 <strong>(0.077)</strong> </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0e-9 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
+        <td style="background-color:rgb(250,238,238);color:black"> 2e-6 <strong>(0.078)</strong> </td>
+        <td style="background-color:rgb(250,243,243);color:black"> 0.02e-6 <strong>(0.047)</strong> </td>
+        <td style="background-color:rgb(250,248,248);color:black"> 2e-9 <strong>(0.015)</strong> </td>
+        <td style="background-color:rgb(250,248,248);color:black"> 0.01e-6 <strong>(0.014)</strong> </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -5e-6 <strong>(-0.003)</strong> </td>
+        <td style="background-color:rgb(248,248,250);color:black"> -19e-6 <strong>(-0.013)</strong> </td>
+        <td style="background-color:rgb(248,248,250);color:black"> -19e-6 <strong>(-0.016)</strong> </td>
+        <td style="background-color:rgb(248,248,250);color:black"> -16e-6 <strong>(-0.012)</strong> </td>
         <td style="background-color:rgb(250,250,250);color:black"> -0e-6 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0e-6 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0e-6 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0e-6 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0e-6 </td>
-        <td style="background-color:rgb(248,248,250);color:black"> -4.353e-12 <strong>(-0.017)</strong> </td>
-        <td style="background-color:rgb(250,249,249);color:black"> 0.062e-9 <strong>(0.007)</strong> </td>
-        <td style="background-color:rgb(247,247,250);color:black"> -0.1e-6 <strong>(-0.021)</strong> </td>
+        <td style="background-color:rgb(248,248,250);color:black"> -5.066e-12 <strong>(-0.019)</strong> </td>
+        <td style="background-color:rgb(250,249,249);color:black"> 0.052e-9 <strong>(0.006)</strong> </td>
+        <td style="background-color:rgb(247,247,250);color:black"> -0.1e-6 <strong>(-0.025)</strong> </td>
         <td> 4.72e-06 </td>
-        <td style="background-color:rgb(250,241,241);color:black"> 1e-6 <strong>(0.060)</strong> </td>
-        <td style="background-color:rgb(250,214,214);color:black"> 1.701573 <strong>(0.238)</strong> </td>
+        <td style="background-color:rgb(250,241,241);color:black"> 1e-6 <strong>(0.058)</strong> </td>
+        <td style="background-color:rgb(250,215,215);color:black"> 1.689077 <strong>(0.235)</strong> </td>
     </tr>
     <tr>
         <th> YJ-C1: </th>
-        <td style="background-color:rgb(230,230,250);color:black"> -0.01e-3 <strong>(-0.150)</strong> </td>
+        <td style="background-color:rgb(231,231,250);color:black"> -0.01e-3 <strong>(-0.149)</strong> </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0 <strong>(0.003)</strong> </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 1e-9 </td>
         <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0e-9 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
+        <td style="background-color:rgb(249,249,250);color:black"> -0.05e-3 <strong>(-0.007)</strong> </td>
+        <td style="background-color:rgb(248,248,250);color:black"> -0.06e-3 <strong>(-0.012)</strong> </td>
+        <td style="background-color:rgb(248,248,250);color:black"> -0.06e-3 <strong>(-0.014)</strong> </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0.02e-3 <strong>(-0.004)</strong> </td>
         <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
-        <td style="background-color:rgb(250,247,247);color:black"> 16.566e-12 <strong>(0.018)</strong> </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0.061e-9 <strong>(0.002)</strong> </td>
-        <td style="background-color:rgb(250,240,240);color:black"> 0.6e-6 <strong>(0.063)</strong> </td>
-        <td style="background-color:rgb(250,241,241);color:black"> 1e-6 <strong>(0.060)</strong> </td>
-        <td> 5.73e-05 </td>
-        <td style="background-color:rgb(190,190,250);color:black"> -11.56073 <strong>(-0.463)</strong> </td>
+        <td style="background-color:rgb(250,248,248);color:black"> 14.537e-12 <strong>(0.016)</strong> </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0.055e-9 <strong>(0.002)</strong> </td>
+        <td style="background-color:rgb(250,241,241);color:black"> 0.6e-6 <strong>(0.058)</strong> </td>
+        <td style="background-color:rgb(250,241,241);color:black"> 1e-6 <strong>(0.058)</strong> </td>
+        <td> 5.72e-05 </td>
+        <td style="background-color:rgb(190,190,250);color:black"> -11.60284 <strong>(-0.464)</strong> </td>
     </tr>
     <tr>
         <th> rea: </th>
-        <td style="background-color:rgb(172,172,250);color:black"> -18.05688 <strong>(-0.599)</strong> </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0e-9 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0.0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0.0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0.0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> -0.0 </td>
-        <td style="background-color:rgb(250,250,250);color:black"> 0.866 <strong>(0.002)</strong> </td>
-        <td style="background-color:rgb(250,239,239);color:black"> 28.709228339e-6 <strong>(0.073)</strong> </td>
-        <td style="background-color:rgb(250,249,249);color:black"> 106.506882e-6 <strong>(0.007)</strong> </td>
-        <td style="background-color:rgb(250,212,212);color:black"> 1.0271225 <strong>(0.252)</strong> </td>
-        <td style="background-color:rgb(250,214,214);color:black"> 1.701573 <strong>(0.238)</strong> </td>
-        <td style="background-color:rgb(190,190,250);color:black"> -11.56073 <strong>(-0.463)</strong> </td>
+        <td style="background-color:rgb(173,173,250);color:black"> -17.83858 <strong>(-0.589)</strong> </td>
+        <td style="background-color:rgb(250,248,248);color:black"> 8.08367e-3 <strong>(0.012)</strong> </td>
+        <td style="background-color:rgb(250,249,249);color:black"> 950.566e-6 <strong>(0.004)</strong> </td>
+        <td style="background-color:rgb(250,249,249);color:black"> 5.43803e-3 <strong>(0.004)</strong> </td>
+        <td style="background-color:rgb(249,249,250);color:black"> -21.9 <strong>(-0.008)</strong> </td>
+        <td style="background-color:rgb(248,248,250);color:black"> -30.9 <strong>(-0.014)</strong> </td>
+        <td style="background-color:rgb(250,241,241);color:black"> 115.48 <strong>(0.063)</strong> </td>
+        <td style="background-color:rgb(245,245,250);color:black"> -86.1 <strong>(-0.040)</strong> </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0.431 <strong>(0.001)</strong> </td>
+        <td style="background-color:rgb(250,237,237);color:black"> 34.775272904e-6 <strong>(0.087)</strong> </td>
+        <td style="background-color:rgb(250,248,248);color:black"> 148.738833e-6 <strong>(0.010)</strong> </td>
+        <td style="background-color:rgb(250,210,210);color:black"> 1.1301001 <strong>(0.264)</strong> </td>
+        <td style="background-color:rgb(250,215,215);color:black"> 1.689077 <strong>(0.235)</strong> </td>
+        <td style="background-color:rgb(190,190,250);color:black"> -11.60284 <strong>(-0.464)</strong> </td>
         <td> 1.09e+07 </td>
     </tr>
 </table></div>
@@ -978,9 +978,7 @@ Cost function parsed as chi2-like
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">res</span><span class="o">.</span><span class="n">get_samples</span><span class="p">(</span><span class="mi">10000</span><span class="p">)</span>
 
-<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">promptlist</span><span class="o">.</span><span class="n">to_hist</span><span class="p">(</span><span class="n">asimov</span><span class="o">.</span><span class="n">Eedges</span><span class="p">)</span><span class="o">.</span><span class="n">E</span><span class="p">,</span> <span class="n">promptlist</span><span class="o">.</span><span class="n">to_hist</span><span class="p">(</span><span class="n">asimov</span><span class="o">.</span><span class="n">Eedges</span><span class="p">)</span><span class="o">.</span><span class="n">counts</span><span class="p">,</span> <span class="s1">&#39;k-&#39;</span><span class="p">,</span> <span class="n">zorder</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-<span class="c1"># orsa.plot.model_ci(res, 1000, [3], ax = ax) # Needs fix</span>
+<span class="n">orsa</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">plot_ci</span><span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="p">[</span><span class="mi">3</span><span class="p">])</span> <span class="c1"># Needs fix</span>
 </pre></div>
 </div>
 </div>
@@ -991,6 +989,15 @@ Cost function parsed as chi2-like
 <div class="highlight"><pre>
 /home/ubuntu/miniconda3/lib/python3.11/site-packages/orsa/fit/minimizers.py:152: RuntimeWarning: covariance is not symmetric positive-semidefinite.
   samples = np.random.multivariate_normal(
+  0%|          | 0/1000 [00:00&lt;?, ?it/s]
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+100%|██████████| 1000/1000 [00:05&lt;00:00, 195.12it/s]
 </pre></div></div>
 </div>
 <div class="nboutput docutils container">
@@ -999,14 +1006,14 @@ Cost function parsed as chi2-like
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-[&lt;matplotlib.lines.Line2D at 0x7f66afe70890&gt;]
+(&lt;Figure size 800x600 with 1 Axes&gt;, &lt;Axes: &gt;)
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../../_images/_include_notebooks_5_opening_sniper_userfiles_12_2.png" src="../../_images/_include_notebooks_5_opening_sniper_userfiles_12_2.png" />
+<img alt="../../_images/_include_notebooks_5_opening_sniper_userfiles_12_3.png" src="../../_images/_include_notebooks_5_opening_sniper_userfiles_12_3.png" />
 </div>
 </div>
 <div class="nbinput docutils container">
@@ -1114,7 +1121,7 @@ Cost function parsed as LogLikelihood-like
       
     </aside>
   </div>
-</div><script src="../../_static/documentation_options.js?v=1067c88a"></script>
+</div><script src="../../_static/documentation_options.js?v=279f42e0"></script>
     <script src="../../_static/doctools.js?v=9a2dae69"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/scripts/furo.js?v=32e29ea5"></script>

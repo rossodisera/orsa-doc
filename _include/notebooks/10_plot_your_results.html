@@ -6,10 +6,10 @@
 <link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Build TAO model" href="11_build_TAO_model.html" /><link rel="prev" title="Exploiting the nested sampling" href="9_exploiting_nested_sampling.html" />
 
     <link rel="shortcut icon" href="../../_static/orsa_fitter.ico"/><!-- Generated with Sphinx 7.3.7 and Furo 2024.01.29 -->
-        <title>Plot your results - orsa_fitter 0.8.5 documentation</title>
+        <title>Plot your results - orsa_fitter 0.8.6 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=362ab14a" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=135e06be" />
-    <link rel="stylesheet" type="text/css" href="../../_static/nbsphinx-code-cells.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/nbsphinx-code-cells.css?v=2aa19091" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?v=36a5483c" />
     
     
@@ -133,7 +133,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../index.html"><div class="brand">orsa_fitter 0.8.5 documentation</div></a>
+      <a href="../../index.html"><div class="brand">orsa_fitter 0.8.6 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -159,7 +159,7 @@
     <img class="sidebar-logo" src="../../_static/orsa_fitter.svg" alt="Logo"/>
   </div>
   
-  <span class="sidebar-brand-text">orsa_fitter 0.8.5 documentation</span>
+  <span class="sidebar-brand-text">orsa_fitter 0.8.6 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../search.html" role="search">
   <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
@@ -292,7 +292,7 @@
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;orsa.model.model.Model at 0x212169c59d0&gt;
+&lt;orsa.model.model.Model at 0x7fef255352d0&gt;
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -316,7 +316,7 @@
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;orsa.model.model.Model at 0x212169c59d0&gt;
+&lt;orsa.model.model.Model at 0x7fef255352d0&gt;
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -341,7 +341,7 @@
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;orsa.spectrum.spectrum.ReconstructedSpectrum at 0x2121881a810&gt;
+&lt;orsa.spectrum.spectrum.ReconstructedSpectrum at 0x7feee0364990&gt;
 </pre></div></div>
 </div>
 <div class="nbinput nblast docutils container">
@@ -401,12 +401,12 @@ Cost function parsed as LogLikelihood-like
         <th colspan="2" style="text-align:center" title="Minimizer"> Migrad </th>
     </tr>
     <tr>
-        <td style="text-align:left" title="Minimum value of function"> FCN = 6931 </td>
-        <td style="text-align:center" title="Total number of function and (optional) gradient evaluations"> Nfcn = 190 </td>
+        <td style="text-align:left" title="Minimum value of function"> FCN = 6858 </td>
+        <td style="text-align:center" title="Total number of function and (optional) gradient evaluations"> Nfcn = 385 </td>
     </tr>
     <tr>
-        <td style="text-align:left" title="Estimated distance to minimum and goal"> EDM = 0.000156 (Goal: 0.0002) </td>
-        <td style="text-align:center" title="Total run time of algorithms"> time = 5.8 sec </td>
+        <td style="text-align:left" title="Estimated distance to minimum and goal"> EDM = 0.000107 (Goal: 0.0002) </td>
+        <td style="text-align:center" title="Total run time of algorithms"> time = 4.1 sec </td>
     </tr>
     <tr>
         <td style="text-align:center;background-color:#92CCA6;color:black"> Valid Minimum </td>
@@ -434,9 +434,9 @@ Cost function parsed as LogLikelihood-like
     </tr>
     <tr>
         <th> 0 </th>
-        <td> dm2_21: </td>
-        <td> 75.40e-6 </td>
-        <td> 0.24e-6 </td>
+        <td> a: </td>
+        <td> 26.14e-3 </td>
+        <td> 0.20e-3 </td>
         <td>  </td>
         <td>  </td>
         <td>  </td>
@@ -445,9 +445,9 @@ Cost function parsed as LogLikelihood-like
     </tr>
     <tr>
         <th> 1 </th>
-        <td> dm2_31: </td>
-        <td> 2.536e-3 </td>
-        <td> 0.004e-3 </td>
+        <td> b: </td>
+        <td> 6.40e-3 </td>
+        <td> 0.08e-3 </td>
         <td>  </td>
         <td>  </td>
         <td>  </td>
@@ -456,9 +456,9 @@ Cost function parsed as LogLikelihood-like
     </tr>
     <tr>
         <th> 2 </th>
-        <td> s2_12: </td>
-        <td> 0.3080 </td>
-        <td> 0.0018 </td>
+        <td> c: </td>
+        <td> 12.1e-3 </td>
+        <td> 0.4e-3 </td>
         <td>  </td>
         <td>  </td>
         <td>  </td>
@@ -467,9 +467,9 @@ Cost function parsed as LogLikelihood-like
     </tr>
     <tr>
         <th> 3 </th>
-        <td> s2_13: </td>
-        <td> 0.0199 </td>
-        <td> 0.0024 </td>
+        <td> a0: </td>
+        <td> -0.9 </td>
+        <td> 0.8 </td>
         <td>  </td>
         <td>  </td>
         <td>  </td>
@@ -478,9 +478,9 @@ Cost function parsed as LogLikelihood-like
     </tr>
     <tr>
         <th> 4 </th>
-        <td> rea: </td>
-        <td> 290.3e3 </td>
-        <td> 2.3e3 </td>
+        <td> a1: </td>
+        <td> 0.5 </td>
+        <td> 0.7 </td>
         <td>  </td>
         <td>  </td>
         <td>  </td>
@@ -489,9 +489,9 @@ Cost function parsed as LogLikelihood-like
     </tr>
     <tr>
         <th> 5 </th>
-        <td> U: </td>
-        <td> 1.9e3 </td>
-        <td> 0.5e3 </td>
+        <td> a2: </td>
+        <td> 0.8 </td>
+        <td> 0.6 </td>
         <td>  </td>
         <td>  </td>
         <td>  </td>
@@ -500,9 +500,86 @@ Cost function parsed as LogLikelihood-like
     </tr>
     <tr>
         <th> 6 </th>
+        <td> a3: </td>
+        <td> 0.3 </td>
+        <td> 0.5 </td>
+        <td>  </td>
+        <td>  </td>
+        <td>  </td>
+        <td>  </td>
+        <td>  </td>
+    </tr>
+    <tr>
+        <th> 7 </th>
+        <td> dm2_21: </td>
+        <td> 75.19e-6 </td>
+        <td> 0.24e-6 </td>
+        <td>  </td>
+        <td>  </td>
+        <td>  </td>
+        <td>  </td>
+        <td>  </td>
+    </tr>
+    <tr>
+        <th> 8 </th>
+        <td> dm2_31: </td>
+        <td> 2.525e-3 </td>
+        <td> 0.005e-3 </td>
+        <td>  </td>
+        <td>  </td>
+        <td>  </td>
+        <td>  </td>
+        <td>  </td>
+    </tr>
+    <tr>
+        <th> 9 </th>
+        <td> s2_12: </td>
+        <td> 0.3059 </td>
+        <td> 0.0017 </td>
+        <td>  </td>
+        <td>  </td>
+        <td>  </td>
+        <td>  </td>
+        <td>  </td>
+    </tr>
+    <tr>
+        <th> 10 </th>
+        <td> s2_13: </td>
+        <td> 0.0194 </td>
+        <td> 0.0020 </td>
+        <td>  </td>
+        <td>  </td>
+        <td>  </td>
+        <td>  </td>
+        <td>  </td>
+    </tr>
+    <tr>
+        <th> 11 </th>
+        <td> rea: </td>
+        <td> 286.1e3 </td>
+        <td> 2.3e3 </td>
+        <td>  </td>
+        <td>  </td>
+        <td>  </td>
+        <td>  </td>
+        <td>  </td>
+    </tr>
+    <tr>
+        <th> 12 </th>
+        <td> U: </td>
+        <td> 2.3e3 </td>
+        <td> 0.5e3 </td>
+        <td>  </td>
+        <td>  </td>
+        <td>  </td>
+        <td>  </td>
+        <td>  </td>
+    </tr>
+    <tr>
+        <th> 13 </th>
         <td> Th: </td>
-        <td> 0.54e3 </td>
-        <td> 0.18e3 </td>
+        <td> 0.58e3 </td>
+        <td> 0.20e3 </td>
         <td>  </td>
         <td>  </td>
         <td>  </td>
@@ -512,6 +589,13 @@ Cost function parsed as LogLikelihood-like
 </table><table>
     <tr>
         <td></td>
+        <th> a: </th>
+        <th> b: </th>
+        <th> c: </th>
+        <th> a0: </th>
+        <th> a1: </th>
+        <th> a2: </th>
+        <th> a3: </th>
         <th> dm2_21: </th>
         <th> dm2_31: </th>
         <th> s2_12: </th>
@@ -521,74 +605,242 @@ Cost function parsed as LogLikelihood-like
         <th> Th: </th>
     </tr>
     <tr>
+        <th> a: </th>
+        <td> 4.04e-08 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0e-9 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
+        <td style="background-color:rgb(249,249,250);color:black"> -1.27e-6 <strong>(-0.008)</strong> </td>
+        <td style="background-color:rgb(249,249,250);color:black"> -1.14e-6 <strong>(-0.009)</strong> </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0.20e-6 <strong>(-0.002)</strong> </td>
+        <td style="background-color:rgb(250,249,249);color:black"> 0.37e-6 <strong>(0.003)</strong> </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0.13e-12 <strong>(-0.003)</strong> </td>
+        <td style="background-color:rgb(250,249,249);color:black"> 0.004e-9 <strong>(0.004)</strong> </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0 <strong>(0.002)</strong> </td>
+        <td style="background-color:rgb(250,245,245);color:black"> 0.01e-6 <strong>(0.030)</strong> </td>
+        <td style="background-color:rgb(250,248,248);color:black"> 6.87810e-3 <strong>(0.015)</strong> </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -248.98e-6 <strong>(-0.003)</strong> </td>
+        <td style="background-color:rgb(250,249,249);color:black"> 364.96e-6 <strong>(0.009)</strong> </td>
+    </tr>
+    <tr>
+        <th> b: </th>
+        <td style="background-color:rgb(250,250,250);color:black"> 0e-9 </td>
+        <td> 5.9e-09 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0e-9 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -228e-9 <strong>(-0.004)</strong> </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -98e-9 <strong>(-0.002)</strong> </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -37e-9 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -70e-9 <strong>(-0.002)</strong> </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0.001e-9 <strong>(0.002)</strong> </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0e-9 <strong>(0.001)</strong> </td>
+        <td style="background-color:rgb(250,248,248);color:black"> 2e-9 <strong>(0.010)</strong> </td>
+        <td style="background-color:rgb(250,249,249);color:black"> 1.041807e-3 <strong>(0.006)</strong> </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -34.483e-6 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 22.832e-6 <strong>(0.002)</strong> </td>
+    </tr>
+    <tr>
+        <th> c: </th>
+        <td style="background-color:rgb(250,250,250);color:black"> 0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0e-9 </td>
+        <td> 1.58e-07 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0.34e-6 <strong>(-0.001)</strong> </td>
+        <td style="background-color:rgb(249,249,250);color:black"> -1.08e-6 <strong>(-0.004)</strong> </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0.05e-6 </td>
+        <td style="background-color:rgb(250,249,249);color:black"> 1.63e-6 <strong>(0.008)</strong> </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0.21e-12 <strong>(-0.002)</strong> </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0.001e-9 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
+        <td style="background-color:rgb(250,249,249);color:black"> 0.01e-6 <strong>(0.009)</strong> </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 2.48163e-3 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -233.17e-6 <strong>(-0.001)</strong> </td>
+        <td style="background-color:rgb(250,249,249);color:black"> 531.65e-6 <strong>(0.007)</strong> </td>
+    </tr>
+    <tr>
+        <th> a0: </th>
+        <td style="background-color:rgb(249,249,250);color:black"> -1.27e-6 <strong>(-0.008)</strong> </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -228e-9 <strong>(-0.004)</strong> </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0.34e-6 <strong>(-0.001)</strong> </td>
+        <td> 0.657 </td>
+        <td style="background-color:rgb(246,246,250);color:black"> -0.0 <strong>(-0.034)</strong> </td>
+        <td style="background-color:rgb(250,222,222);color:black"> 0.1 <strong>(0.187)</strong> </td>
+        <td style="background-color:rgb(250,194,194);color:black"> 0.16 <strong>(0.374)</strong> </td>
+        <td style="background-color:rgb(249,249,250);color:black"> -1.10318e-9 <strong>(-0.006)</strong> </td>
+        <td style="background-color:rgb(250,244,244);color:black"> 142.230e-9 <strong>(0.038)</strong> </td>
+        <td style="background-color:rgb(243,243,250);color:black"> -79.1e-6 <strong>(-0.056)</strong> </td>
+        <td style="background-color:rgb(219,219,250);color:black"> -391e-6 <strong>(-0.236)</strong> </td>
+        <td style="background-color:rgb(233,233,250);color:black"> -239.8 <strong>(-0.127)</strong> </td>
+        <td style="background-color:rgb(236,236,250);color:black"> -40.6 <strong>(-0.111)</strong> </td>
+        <td style="background-color:rgb(250,230,230);color:black"> 21.7 <strong>(0.135)</strong> </td>
+    </tr>
+    <tr>
+        <th> a1: </th>
+        <td style="background-color:rgb(249,249,250);color:black"> -1.14e-6 <strong>(-0.009)</strong> </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -98e-9 <strong>(-0.002)</strong> </td>
+        <td style="background-color:rgb(249,249,250);color:black"> -1.08e-6 <strong>(-0.004)</strong> </td>
+        <td style="background-color:rgb(246,246,250);color:black"> -0.0 <strong>(-0.034)</strong> </td>
+        <td> 0.425 </td>
+        <td style="background-color:rgb(250,157,157);color:black"> 0.2 <strong>(0.618)</strong> </td>
+        <td style="background-color:rgb(250,195,195);color:black"> 0.13 <strong>(0.367)</strong> </td>
+        <td style="background-color:rgb(250,242,242);color:black"> 7.77786e-9 <strong>(0.051)</strong> </td>
+        <td style="background-color:rgb(250,236,236);color:black"> 279.456e-9 <strong>(0.092)</strong> </td>
+        <td style="background-color:rgb(250,218,218);color:black"> 238.6e-6 <strong>(0.212)</strong> </td>
+        <td style="background-color:rgb(222,222,250);color:black"> -283e-6 <strong>(-0.213)</strong> </td>
+        <td style="background-color:rgb(250,243,243);color:black"> 74.2 <strong>(0.049)</strong> </td>
+        <td style="background-color:rgb(250,247,247);color:black"> 6.0 <strong>(0.020)</strong> </td>
+        <td style="background-color:rgb(249,249,250);color:black"> -1.0 <strong>(-0.008)</strong> </td>
+    </tr>
+    <tr>
+        <th> a2: </th>
+        <td style="background-color:rgb(250,250,250);color:black"> -0.20e-6 <strong>(-0.002)</strong> </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -37e-9 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0.05e-6 </td>
+        <td style="background-color:rgb(250,222,222);color:black"> 0.1 <strong>(0.187)</strong> </td>
+        <td style="background-color:rgb(250,157,157);color:black"> 0.2 <strong>(0.618)</strong> </td>
+        <td> 0.357 </td>
+        <td style="background-color:rgb(250,238,238);color:black"> 0.03 <strong>(0.081)</strong> </td>
+        <td style="background-color:rgb(250,205,205);color:black"> 42.34204e-9 <strong>(0.300)</strong> </td>
+        <td style="background-color:rgb(250,232,232);color:black"> 335.301e-9 <strong>(0.121)</strong> </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -2.8e-6 <strong>(-0.003)</strong> </td>
+        <td style="background-color:rgb(228,228,250);color:black"> -203e-6 <strong>(-0.166)</strong> </td>
+        <td style="background-color:rgb(250,238,238);color:black"> 110.9 <strong>(0.080)</strong> </td>
+        <td style="background-color:rgb(212,212,250);color:black"> -77.9 <strong>(-0.290)</strong> </td>
+        <td style="background-color:rgb(250,202,202);color:black"> 37.7 <strong>(0.318)</strong> </td>
+    </tr>
+    <tr>
+        <th> a3: </th>
+        <td style="background-color:rgb(250,249,249);color:black"> 0.37e-6 <strong>(0.003)</strong> </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -70e-9 <strong>(-0.002)</strong> </td>
+        <td style="background-color:rgb(250,249,249);color:black"> 1.63e-6 <strong>(0.008)</strong> </td>
+        <td style="background-color:rgb(250,194,194);color:black"> 0.16 <strong>(0.374)</strong> </td>
+        <td style="background-color:rgb(250,195,195);color:black"> 0.13 <strong>(0.367)</strong> </td>
+        <td style="background-color:rgb(250,238,238);color:black"> 0.03 <strong>(0.081)</strong> </td>
+        <td> 0.279 </td>
+        <td style="background-color:rgb(223,223,250);color:black"> -26.21965e-9 <strong>(-0.210)</strong> </td>
+        <td style="background-color:rgb(250,247,247);color:black"> 49.493e-9 <strong>(0.020)</strong> </td>
+        <td style="background-color:rgb(250,222,222);color:black"> 173.3e-6 <strong>(0.190)</strong> </td>
+        <td style="background-color:rgb(218,218,250);color:black"> -263e-6 <strong>(-0.244)</strong> </td>
+        <td style="background-color:rgb(236,236,250);color:black"> -135.13 <strong>(-0.110)</strong> </td>
+        <td style="background-color:rgb(250,236,236);color:black"> 22.84 <strong>(0.096)</strong> </td>
+        <td style="background-color:rgb(250,247,247);color:black"> 1.97 <strong>(0.019)</strong> </td>
+    </tr>
+    <tr>
         <th> dm2_21: </th>
-        <td> 5.89e-14 </td>
-        <td style="background-color:rgb(248,248,250);color:black"> -0.01e-12 <strong>(-0.014)</strong> </td>
-        <td style="background-color:rgb(203,203,250);color:black"> -156.32e-12 <strong>(-0.363)</strong> </td>
-        <td style="background-color:rgb(244,244,250);color:black"> -28.03e-12 <strong>(-0.048)</strong> </td>
-        <td style="background-color:rgb(250,199,199);color:black"> 192.37012076e-6 <strong>(0.339)</strong> </td>
-        <td style="background-color:rgb(149,149,250);color:black"> -87.56214863e-6 <strong>(-0.780)</strong> </td>
-        <td style="background-color:rgb(250,186,186);color:black"> 19.01784294e-6 <strong>(0.429)</strong> </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0.13e-12 <strong>(-0.003)</strong> </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0.21e-12 <strong>(-0.002)</strong> </td>
+        <td style="background-color:rgb(249,249,250);color:black"> -1.10318e-9 <strong>(-0.006)</strong> </td>
+        <td style="background-color:rgb(250,242,242);color:black"> 7.77786e-9 <strong>(0.051)</strong> </td>
+        <td style="background-color:rgb(250,205,205);color:black"> 42.34204e-9 <strong>(0.300)</strong> </td>
+        <td style="background-color:rgb(223,223,250);color:black"> -26.21965e-9 <strong>(-0.210)</strong> </td>
+        <td> 5.57e-14 </td>
+        <td style="background-color:rgb(242,242,250);color:black"> -0.06e-12 <strong>(-0.059)</strong> </td>
+        <td style="background-color:rgb(215,215,250);color:black"> -111.15e-12 <strong>(-0.273)</strong> </td>
+        <td style="background-color:rgb(250,245,245);color:black"> 17.49e-12 <strong>(0.036)</strong> </td>
+        <td style="background-color:rgb(250,189,189);color:black"> 222.55184818e-6 <strong>(0.406)</strong> </td>
+        <td style="background-color:rgb(152,152,250);color:black"> -80.10078587e-6 <strong>(-0.755)</strong> </td>
+        <td style="background-color:rgb(250,179,179);color:black"> 21.95693604e-6 <strong>(0.470)</strong> </td>
     </tr>
     <tr>
         <th> dm2_31: </th>
-        <td style="background-color:rgb(248,248,250);color:black"> -0.01e-12 <strong>(-0.014)</strong> </td>
-        <td> 2e-11 </td>
-        <td style="background-color:rgb(250,246,246);color:black"> 0.190e-9 <strong>(0.024)</strong> </td>
-        <td style="background-color:rgb(250,249,249);color:black"> 0.092e-9 <strong>(0.008)</strong> </td>
-        <td style="background-color:rgb(250,248,248);color:black"> 129.908821e-6 <strong>(0.012)</strong> </td>
-        <td style="background-color:rgb(250,248,248);color:black"> 33.746641e-6 <strong>(0.016)</strong> </td>
-        <td style="background-color:rgb(248,248,250);color:black"> -11.263648e-6 <strong>(-0.014)</strong> </td>
+        <td style="background-color:rgb(250,249,249);color:black"> 0.004e-9 <strong>(0.004)</strong> </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0.001e-9 <strong>(0.002)</strong> </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0.001e-9 </td>
+        <td style="background-color:rgb(250,244,244);color:black"> 142.230e-9 <strong>(0.038)</strong> </td>
+        <td style="background-color:rgb(250,236,236);color:black"> 279.456e-9 <strong>(0.092)</strong> </td>
+        <td style="background-color:rgb(250,232,232);color:black"> 335.301e-9 <strong>(0.121)</strong> </td>
+        <td style="background-color:rgb(250,247,247);color:black"> 49.493e-9 <strong>(0.020)</strong> </td>
+        <td style="background-color:rgb(242,242,250);color:black"> -0.06e-12 <strong>(-0.059)</strong> </td>
+        <td> 2.17e-11 </td>
+        <td style="background-color:rgb(250,242,242);color:black"> 0.443e-9 <strong>(0.055)</strong> </td>
+        <td style="background-color:rgb(250,231,231);color:black"> 1.230e-9 <strong>(0.130)</strong> </td>
+        <td style="background-color:rgb(250,242,242);color:black"> 556.995404e-6 <strong>(0.052)</strong> </td>
+        <td style="background-color:rgb(250,239,239);color:black"> 146.927849e-6 <strong>(0.070)</strong> </td>
+        <td style="background-color:rgb(247,247,250);color:black"> -18.552422e-6 <strong>(-0.020)</strong> </td>
     </tr>
     <tr>
         <th> s2_12: </th>
-        <td style="background-color:rgb(203,203,250);color:black"> -156.32e-12 <strong>(-0.363)</strong> </td>
-        <td style="background-color:rgb(250,246,246);color:black"> 0.190e-9 <strong>(0.024)</strong> </td>
-        <td> 3.16e-06 </td>
-        <td style="background-color:rgb(246,246,250);color:black"> -0.1e-6 <strong>(-0.035)</strong> </td>
-        <td style="background-color:rgb(250,184,184);color:black"> 1.8336634 <strong>(0.442)</strong> </td>
-        <td style="background-color:rgb(250,164,164);color:black"> 471.9102e-3 <strong>(0.575)</strong> </td>
-        <td style="background-color:rgb(174,174,250);color:black"> -189.9924e-3 <strong>(-0.585)</strong> </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0 <strong>(0.002)</strong> </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 0e-9 <strong>(0.001)</strong> </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -0 </td>
+        <td style="background-color:rgb(243,243,250);color:black"> -79.1e-6 <strong>(-0.056)</strong> </td>
+        <td style="background-color:rgb(250,218,218);color:black"> 238.6e-6 <strong>(0.212)</strong> </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -2.8e-6 <strong>(-0.003)</strong> </td>
+        <td style="background-color:rgb(250,222,222);color:black"> 173.3e-6 <strong>(0.190)</strong> </td>
+        <td style="background-color:rgb(215,215,250);color:black"> -111.15e-12 <strong>(-0.273)</strong> </td>
+        <td style="background-color:rgb(250,242,242);color:black"> 0.443e-9 <strong>(0.055)</strong> </td>
+        <td> 2.98e-06 </td>
+        <td style="background-color:rgb(246,246,250);color:black"> -0.1e-6 <strong>(-0.032)</strong> </td>
+        <td style="background-color:rgb(250,177,177);color:black"> 1.9564244 <strong>(0.488)</strong> </td>
+        <td style="background-color:rgb(250,168,168);color:black"> 425.9573e-3 <strong>(0.548)</strong> </td>
+        <td style="background-color:rgb(172,172,250);color:black"> -204.2640e-3 <strong>(-0.598)</strong> </td>
     </tr>
     <tr>
         <th> s2_13: </th>
-        <td style="background-color:rgb(244,244,250);color:black"> -28.03e-12 <strong>(-0.048)</strong> </td>
-        <td style="background-color:rgb(250,249,249);color:black"> 0.092e-9 <strong>(0.008)</strong> </td>
-        <td style="background-color:rgb(246,246,250);color:black"> -0.1e-6 <strong>(-0.035)</strong> </td>
-        <td> 5.84e-06 </td>
-        <td style="background-color:rgb(250,174,174);color:black"> 2.843681 <strong>(0.504)</strong> </td>
-        <td style="background-color:rgb(250,246,246);color:black"> 33.057e-3 <strong>(0.030)</strong> </td>
-        <td style="background-color:rgb(250,247,247);color:black"> 7.563e-3 <strong>(0.017)</strong> </td>
+        <td style="background-color:rgb(250,245,245);color:black"> 0.01e-6 <strong>(0.030)</strong> </td>
+        <td style="background-color:rgb(250,248,248);color:black"> 2e-9 <strong>(0.010)</strong> </td>
+        <td style="background-color:rgb(250,249,249);color:black"> 0.01e-6 <strong>(0.009)</strong> </td>
+        <td style="background-color:rgb(219,219,250);color:black"> -391e-6 <strong>(-0.236)</strong> </td>
+        <td style="background-color:rgb(222,222,250);color:black"> -283e-6 <strong>(-0.213)</strong> </td>
+        <td style="background-color:rgb(228,228,250);color:black"> -203e-6 <strong>(-0.166)</strong> </td>
+        <td style="background-color:rgb(218,218,250);color:black"> -263e-6 <strong>(-0.244)</strong> </td>
+        <td style="background-color:rgb(250,245,245);color:black"> 17.49e-12 <strong>(0.036)</strong> </td>
+        <td style="background-color:rgb(250,231,231);color:black"> 1.230e-9 <strong>(0.130)</strong> </td>
+        <td style="background-color:rgb(246,246,250);color:black"> -0.1e-6 <strong>(-0.032)</strong> </td>
+        <td> 4.16e-06 </td>
+        <td style="background-color:rgb(250,176,176);color:black"> 2.326600 <strong>(0.491)</strong> </td>
+        <td style="background-color:rgb(235,235,250);color:black"> -102.796e-3 <strong>(-0.112)</strong> </td>
+        <td style="background-color:rgb(250,235,235);color:black"> 40.263e-3 <strong>(0.100)</strong> </td>
     </tr>
     <tr>
         <th> rea: </th>
-        <td style="background-color:rgb(250,199,199);color:black"> 192.37012076e-6 <strong>(0.339)</strong> </td>
-        <td style="background-color:rgb(250,248,248);color:black"> 129.908821e-6 <strong>(0.012)</strong> </td>
-        <td style="background-color:rgb(250,184,184);color:black"> 1.8336634 <strong>(0.442)</strong> </td>
-        <td style="background-color:rgb(250,174,174);color:black"> 2.843681 <strong>(0.504)</strong> </td>
-        <td> 5.46e+06 </td>
-        <td style="background-color:rgb(229,229,250);color:black"> -0.17e6 <strong>(-0.160)</strong> </td>
-        <td style="background-color:rgb(240,240,250);color:black"> -0.034e6 <strong>(-0.080)</strong> </td>
+        <td style="background-color:rgb(250,248,248);color:black"> 6.87810e-3 <strong>(0.015)</strong> </td>
+        <td style="background-color:rgb(250,249,249);color:black"> 1.041807e-3 <strong>(0.006)</strong> </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 2.48163e-3 </td>
+        <td style="background-color:rgb(233,233,250);color:black"> -239.8 <strong>(-0.127)</strong> </td>
+        <td style="background-color:rgb(250,243,243);color:black"> 74.2 <strong>(0.049)</strong> </td>
+        <td style="background-color:rgb(250,238,238);color:black"> 110.9 <strong>(0.080)</strong> </td>
+        <td style="background-color:rgb(236,236,250);color:black"> -135.13 <strong>(-0.110)</strong> </td>
+        <td style="background-color:rgb(250,189,189);color:black"> 222.55184818e-6 <strong>(0.406)</strong> </td>
+        <td style="background-color:rgb(250,242,242);color:black"> 556.995404e-6 <strong>(0.052)</strong> </td>
+        <td style="background-color:rgb(250,177,177);color:black"> 1.9564244 <strong>(0.488)</strong> </td>
+        <td style="background-color:rgb(250,176,176);color:black"> 2.326600 <strong>(0.491)</strong> </td>
+        <td> 5.39e+06 </td>
+        <td style="background-color:rgb(223,223,250);color:black"> -0.22e6 <strong>(-0.210)</strong> </td>
+        <td style="background-color:rgb(245,245,250);color:black"> -0.02e6 <strong>(-0.036)</strong> </td>
     </tr>
     <tr>
         <th> U: </th>
-        <td style="background-color:rgb(149,149,250);color:black"> -87.56214863e-6 <strong>(-0.780)</strong> </td>
-        <td style="background-color:rgb(250,248,248);color:black"> 33.746641e-6 <strong>(0.016)</strong> </td>
-        <td style="background-color:rgb(250,164,164);color:black"> 471.9102e-3 <strong>(0.575)</strong> </td>
-        <td style="background-color:rgb(250,246,246);color:black"> 33.057e-3 <strong>(0.030)</strong> </td>
-        <td style="background-color:rgb(229,229,250);color:black"> -0.17e6 <strong>(-0.160)</strong> </td>
-        <td> 2.14e+05 </td>
-        <td style="background-color:rgb(147,147,250);color:black"> -0.067e6 <strong>(-0.789)</strong> </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -248.98e-6 <strong>(-0.003)</strong> </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -34.483e-6 </td>
+        <td style="background-color:rgb(250,250,250);color:black"> -233.17e-6 <strong>(-0.001)</strong> </td>
+        <td style="background-color:rgb(236,236,250);color:black"> -40.6 <strong>(-0.111)</strong> </td>
+        <td style="background-color:rgb(250,247,247);color:black"> 6.0 <strong>(0.020)</strong> </td>
+        <td style="background-color:rgb(212,212,250);color:black"> -77.9 <strong>(-0.290)</strong> </td>
+        <td style="background-color:rgb(250,236,236);color:black"> 22.84 <strong>(0.096)</strong> </td>
+        <td style="background-color:rgb(152,152,250);color:black"> -80.10078587e-6 <strong>(-0.755)</strong> </td>
+        <td style="background-color:rgb(250,239,239);color:black"> 146.927849e-6 <strong>(0.070)</strong> </td>
+        <td style="background-color:rgb(250,168,168);color:black"> 425.9573e-3 <strong>(0.548)</strong> </td>
+        <td style="background-color:rgb(235,235,250);color:black"> -102.796e-3 <strong>(-0.112)</strong> </td>
+        <td style="background-color:rgb(223,223,250);color:black"> -0.22e6 <strong>(-0.210)</strong> </td>
+        <td> 2.02e+05 </td>
+        <td style="background-color:rgb(142,142,250);color:black"> -0.07e6 <strong>(-0.832)</strong> </td>
     </tr>
     <tr>
         <th> Th: </th>
-        <td style="background-color:rgb(250,186,186);color:black"> 19.01784294e-6 <strong>(0.429)</strong> </td>
-        <td style="background-color:rgb(248,248,250);color:black"> -11.263648e-6 <strong>(-0.014)</strong> </td>
-        <td style="background-color:rgb(174,174,250);color:black"> -189.9924e-3 <strong>(-0.585)</strong> </td>
-        <td style="background-color:rgb(250,247,247);color:black"> 7.563e-3 <strong>(0.017)</strong> </td>
-        <td style="background-color:rgb(240,240,250);color:black"> -0.034e6 <strong>(-0.080)</strong> </td>
-        <td style="background-color:rgb(147,147,250);color:black"> -0.067e6 <strong>(-0.789)</strong> </td>
-        <td> 3.34e+04 </td>
+        <td style="background-color:rgb(250,249,249);color:black"> 364.96e-6 <strong>(0.009)</strong> </td>
+        <td style="background-color:rgb(250,250,250);color:black"> 22.832e-6 <strong>(0.002)</strong> </td>
+        <td style="background-color:rgb(250,249,249);color:black"> 531.65e-6 <strong>(0.007)</strong> </td>
+        <td style="background-color:rgb(250,230,230);color:black"> 21.7 <strong>(0.135)</strong> </td>
+        <td style="background-color:rgb(249,249,250);color:black"> -1.0 <strong>(-0.008)</strong> </td>
+        <td style="background-color:rgb(250,202,202);color:black"> 37.7 <strong>(0.318)</strong> </td>
+        <td style="background-color:rgb(250,247,247);color:black"> 1.97 <strong>(0.019)</strong> </td>
+        <td style="background-color:rgb(250,179,179);color:black"> 21.95693604e-6 <strong>(0.470)</strong> </td>
+        <td style="background-color:rgb(247,247,250);color:black"> -18.552422e-6 <strong>(-0.020)</strong> </td>
+        <td style="background-color:rgb(172,172,250);color:black"> -204.2640e-3 <strong>(-0.598)</strong> </td>
+        <td style="background-color:rgb(250,235,235);color:black"> 40.263e-3 <strong>(0.100)</strong> </td>
+        <td style="background-color:rgb(245,245,250);color:black"> -0.02e6 <strong>(-0.036)</strong> </td>
+        <td style="background-color:rgb(142,142,250);color:black"> -0.07e6 <strong>(-0.832)</strong> </td>
+        <td> 3.92e+04 </td>
     </tr>
 </table></div>
 </div>
@@ -660,16 +912,24 @@ Cost function parsed as LogLikelihood-like
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-c:\Users\metal\miniconda3\envs\orsa\Lib\site-packages\orsa\fit\minimizers.py:152: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+/home/ubuntu/miniconda3/lib/python3.11/site-packages/orsa/fit/minimizers.py:152: RuntimeWarning: covariance is not symmetric positive-semidefinite.
   samples = np.random.multivariate_normal(
-100%|██████████| 1000/1000 [00:31&lt;00:00, 31.98it/s]
+  0%|          | 0/1000 [00:00&lt;?, ?it/s]
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+100%|██████████| 1000/1000 [00:11&lt;00:00, 86.61it/s]
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../../_images/_include_notebooks_10_plot_your_results_10_1.png" src="../../_images/_include_notebooks_10_plot_your_results_10_1.png" />
+<img alt="../../_images/_include_notebooks_10_plot_your_results_10_2.png" src="../../_images/_include_notebooks_10_plot_your_results_10_2.png" />
 </div>
 </div>
 <div class="nbinput docutils container">
@@ -708,7 +968,7 @@ Removed no burn in
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-c:\Users\metal\miniconda3\envs\orsa\Lib\site-packages\orsa\plot\plot.py:201: UserWarning: *c* argument looks like a single numeric RGB or RGBA sequence, which should be avoided as value-mapping will have precedence in case its length matches with *x* &amp; *y*.  Please use the *color* keyword-argument or provide a 2D array with a single row if you intend to specify the same RGB or RGBA value for all points.
+/home/ubuntu/miniconda3/lib/python3.11/site-packages/orsa/plot/plot.py:201: UserWarning: *c* argument looks like a single numeric RGB or RGBA sequence, which should be avoided as value-mapping will have precedence in case its length matches with *x* &amp; *y*.  Please use the *color* keyword-argument or provide a 2D array with a single row if you intend to specify the same RGB or RGBA value for all points.
   g.subplots[i, j].scatter(
 </pre></div></div>
 </div>
@@ -803,7 +1063,7 @@ c:\Users\metal\miniconda3\envs\orsa\Lib\site-packages\orsa\plot\plot.py:201: Use
       
     </aside>
   </div>
-</div><script src="../../_static/documentation_options.js?v=1067c88a"></script>
+</div><script src="../../_static/documentation_options.js?v=279f42e0"></script>
     <script src="../../_static/doctools.js?v=9a2dae69"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/scripts/furo.js?v=32e29ea5"></script>
