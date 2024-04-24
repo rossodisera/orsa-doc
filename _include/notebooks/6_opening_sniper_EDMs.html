@@ -1050,65 +1050,6 @@ Cost function parsed as LogLikelihood-like
 <img alt="../../_images/_include_notebooks_6_opening_sniper_EDMs_14_0.png" src="../../_images/_include_notebooks_6_opening_sniper_EDMs_14_0.png" />
 </div>
 </div>
-<div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">res</span> <span class="o">=</span> <span class="n">orsa</span><span class="o">.</span><span class="n">fit</span><span class="o">.</span><span class="n">parse_emcee</span><span class="p">(</span><span class="s1">&#39;inputs/test_mcmc copy.h5&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-Discarded 836 samples for best fit values. Recalculate them by looking at the chain.
-</pre></div></div>
-</div>
-<div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">orsa</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">chains</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[15], line 1</span>
-<span class="ansi-green-fg">----&gt; 1</span> orsa<span style="color: rgb(98,98,98)">.</span>plot<span style="color: rgb(98,98,98)">.</span>chains(res)
-
-File <span class="ansi-green-fg">~/miniconda3/lib/python3.11/site-packages/orsa/plot/plot.py:259</span>, in <span class="ansi-cyan-fg">chains</span><span class="ansi-blue-fg">(results, which, cut, c, ax, true_values)</span>
-<span class="ansi-green-intense-fg ansi-bold">    255</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">raise</span> <span class="ansi-bold" style="color: rgb(215,95,95)">Exception</span>(<span style="color: rgb(175,0,0)">f</span><span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">input must be a </span><span class="ansi-bold" style="color: rgb(175,95,135)">{</span>type_check<span class="ansi-bold" style="color: rgb(175,95,135)">}</span><span style="color: rgb(175,0,0)"> object</span><span style="color: rgb(175,0,0)">&#34;</span>)
-<span class="ansi-green-intense-fg ansi-bold">    257</span> chains <span style="color: rgb(98,98,98)">=</span> result<span style="color: rgb(98,98,98)">.</span>all_samples
-<span class="ansi-green-fg">--&gt; 259</span> indexes, labels_unform, labels_form <span style="color: rgb(98,98,98)">=</span> parse_labels(results[<span style="color: rgb(98,98,98)">0</span>], which)
-<span class="ansi-green-intense-fg ansi-bold">    261</span> chains <span style="color: rgb(98,98,98)">=</span> chains[:, :, indexes]
-<span class="ansi-green-intense-fg ansi-bold">    262</span> n_chains, n_samples, n_params <span style="color: rgb(98,98,98)">=</span> chains<span style="color: rgb(98,98,98)">.</span>shape
-
-File <span class="ansi-green-fg">~/miniconda3/lib/python3.11/site-packages/orsa/plot/plot.py:49</span>, in <span class="ansi-cyan-fg">parse_labels</span><span class="ansi-blue-fg">(results, which)</span>
-<span class="ansi-green-intense-fg ansi-bold">     46</span> <span class="ansi-bold" style="color: rgb(0,135,0)">else</span>:
-<span class="ansi-green-intense-fg ansi-bold">     47</span>     indexes <span style="color: rgb(98,98,98)">=</span> [np<span style="color: rgb(98,98,98)">.</span>where(np<span style="color: rgb(98,98,98)">.</span>asarray(temp_labels) <span style="color: rgb(98,98,98)">==</span> l)[<span style="color: rgb(98,98,98)">0</span>][<span style="color: rgb(98,98,98)">0</span>] <span class="ansi-bold" style="color: rgb(0,135,0)">for</span> l <span class="ansi-bold" style="color: rgb(175,0,255)">in</span> which]
-<span class="ansi-green-fg">---&gt; 49</span> <span class="ansi-bold" style="color: rgb(0,135,0)">assert</span> (np<span style="color: rgb(98,98,98)">.</span>asarray(results<span style="color: rgb(98,98,98)">.</span>labels[indexes]) <span style="color: rgb(98,98,98)">==</span> np<span style="color: rgb(98,98,98)">.</span>asarray(which))<span style="color: rgb(98,98,98)">.</span>all()
-<span class="ansi-green-intense-fg ansi-bold">     51</span> labels_unformatted <span style="color: rgb(98,98,98)">=</span> results<span style="color: rgb(98,98,98)">.</span>labels[indexes]
-<span class="ansi-green-intense-fg ansi-bold">     52</span> labels_formatted <span style="color: rgb(98,98,98)">=</span> results<span style="color: rgb(98,98,98)">.</span>formatted_labels[indexes]
-
-<span class="ansi-red-fg">TypeError</span>: &#39;NoneType&#39; object is not subscriptable
-</pre></div></div>
-</div>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-</div>
 </section>
 </section>
 
