@@ -6,7 +6,7 @@
 <link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Test different interaction targets" href="14_test_different_interaction_targets.html" /><link rel="prev" title="Model other experiments" href="12_model_other_experiments.html" />
 
     <link rel="shortcut icon" href="../../_static/orsa_fitter.ico"/><!-- Generated with Sphinx 7.3.7 and Furo 2024.01.29 -->
-        <title>Explore the effect of correlations - orsa_fitter 0.8.6 documentation</title>
+        <title>Explore the effect of correlations - orsa_fitter 0.8.7 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=362ab14a" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=135e06be" />
     <link rel="stylesheet" type="text/css" href="../../_static/nbsphinx-code-cells.css?v=2aa19091" />
@@ -133,7 +133,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../index.html"><div class="brand">orsa_fitter 0.8.6 documentation</div></a>
+      <a href="../../index.html"><div class="brand">orsa_fitter 0.8.7 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -159,7 +159,7 @@
     <img class="sidebar-logo" src="../../_static/orsa_fitter.svg" alt="Logo"/>
   </div>
   
-  <span class="sidebar-brand-text">orsa_fitter 0.8.6 documentation</span>
+  <span class="sidebar-brand-text">orsa_fitter 0.8.7 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../search.html" role="search">
   <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
@@ -266,7 +266,7 @@
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-0.8.5
+0.8.7
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -292,7 +292,7 @@
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;orsa.model.model.Model at 0x7f727b9d6210&gt;
+&lt;orsa.model.model.Model at 0x7f3d39a88f90&gt;
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -317,7 +317,7 @@
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;orsa.spectrum.spectrum.ReconstructedSpectrum at 0x7f727bc99cd0&gt;
+&lt;orsa.spectrum.spectrum.ReconstructedSpectrum at 0x7f3d3825b8d0&gt;
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -341,7 +341,7 @@ Cost function parsed as LogLikelihood-like
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
@@ -370,18 +370,19 @@ Discarded 5000 samples for best fit values. Recalculate them by looking at the c
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;dm2_21:&#39;</span>
 <span class="n">res</span><span class="o">.</span><span class="n">get_samples</span><span class="p">(</span><span class="mi">100000</span><span class="p">)</span>
+
 <span class="n">n_points</span> <span class="o">=</span> <span class="mi">101</span>
 
 <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
 <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">orsa</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">profile</span><span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="n">label</span><span class="p">,</span> <span class="n">kind</span> <span class="o">=</span> <span class="s1">&#39;conditional&#39;</span><span class="p">,</span> <span class="n">n_sigmas</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">n_samples</span> <span class="o">=</span> <span class="n">n_points</span><span class="p">,</span> <span class="n">use_minuit</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">subtract_min</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">ax</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">plot_kwargs</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">ls</span> <span class="o">=</span> <span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;Conditional&#39;</span><span class="p">))</span>
 <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">orsa</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">profile</span><span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="n">label</span><span class="p">,</span> <span class="n">kind</span> <span class="o">=</span> <span class="s1">&#39;profile&#39;</span><span class="p">,</span> <span class="n">n_sigmas</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">n_samples</span> <span class="o">=</span> <span class="n">n_points</span><span class="p">,</span> <span class="n">use_minuit</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">subtract_min</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">ax</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="n">plot_kwargs</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">ls</span> <span class="o">=</span> <span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;Profile&#39;</span><span class="p">))</span>
 
-<span class="c1"># Marginalization is unreliable when covariance is not positive-semidefinite. Try using emcce for the fit.</span>
+<span class="c1"># Marginalization is unreliable when approximate covariance is not positive-semidefinite. Try using emcce for the fit.</span>
 <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">orsa</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">profile</span><span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="n">label</span><span class="p">,</span> <span class="n">kind</span> <span class="o">=</span> <span class="s1">&#39;marginal&#39;</span><span class="p">,</span> <span class="n">n_sigmas</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">n_samples</span> <span class="o">=</span> <span class="n">n_points</span><span class="p">,</span> <span class="n">use_minuit</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">subtract_min</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">ax</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s1">&#39;g&#39;</span><span class="p">,</span> <span class="n">plot_kwargs</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">ls</span> <span class="o">=</span> <span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;Marginal&#39;</span><span class="p">))</span>
 <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">orsa</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">profile</span><span class="p">(</span><span class="n">res_mcmc</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="n">label</span><span class="p">,</span> <span class="n">kind</span> <span class="o">=</span> <span class="s1">&#39;marginal&#39;</span><span class="p">,</span> <span class="n">n_sigmas</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">n_samples</span> <span class="o">=</span> <span class="n">n_points</span><span class="p">,</span> <span class="n">use_minuit</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">subtract_min</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">ax</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s1">&#39;g&#39;</span><span class="p">,</span> <span class="n">plot_kwargs</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">ls</span> <span class="o">=</span> <span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;Marginal&#39;</span><span class="p">))</span>
 
@@ -390,23 +391,32 @@ Discarded 5000 samples for best fit values. Recalculate them by looking at the c
 </div>
 </div>
 <div class="nboutput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+/home/ubuntu/miniconda3/lib/python3.11/site-packages/orsa/fit/minimizers.py:152: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  samples = np.random.multivariate_normal(
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;matplotlib.legend.Legend at 0x7f70943c8d90&gt;
+&lt;matplotlib.legend.Legend at 0x7f3d380720d0&gt;
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../../_images/_include_notebooks_13_explore_correlations_6_1.png" src="../../_images/_include_notebooks_13_explore_correlations_6_1.png" />
+<img alt="../../_images/_include_notebooks_13_explore_correlations_6_2.png" src="../../_images/_include_notebooks_13_explore_correlations_6_2.png" />
 </div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">orsa</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">profiles</span><span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="n">kind</span> <span class="o">=</span> <span class="s1">&#39;conditional&#39;</span><span class="p">,</span> <span class="n">n_sigmas</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">n_samples</span> <span class="o">=</span> <span class="n">n_points</span><span class="p">,</span> <span class="n">use_minuit</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">subtract_min</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">plot_kwargs</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">ls</span> <span class="o">=</span> <span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;Conditional&#39;</span><span class="p">),</span> <span class="n">n_cols</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span> <span class="n">box_size</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">which</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span>
@@ -433,14 +443,6 @@ No artists with labels found to put in legend.  Note that artists whose label st
 </div>
 <div class="output_area docutils container">
 <img alt="../../_images/_include_notebooks_13_explore_correlations_7_1.png" src="../../_images/_include_notebooks_13_explore_correlations_7_1.png" />
-</div>
-</div>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
 </div>
 </div>
 </section>
@@ -493,7 +495,7 @@ No artists with labels found to put in legend.  Note that artists whose label st
       
     </aside>
   </div>
-</div><script src="../../_static/documentation_options.js?v=279f42e0"></script>
+</div><script src="../../_static/documentation_options.js?v=83e7c6f9"></script>
     <script src="../../_static/doctools.js?v=9a2dae69"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/scripts/furo.js?v=32e29ea5"></script>

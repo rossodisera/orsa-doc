@@ -6,7 +6,7 @@
 <link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="orsa.generator" href="generator.html" /><link rel="prev" title="orsa.detector" href="detector.html" />
 
     <link rel="shortcut icon" href="../../_static/orsa_fitter.ico"/><!-- Generated with Sphinx 7.3.7 and Furo 2024.01.29 -->
-        <title>orsa.fit - orsa_fitter 0.8.6 documentation</title>
+        <title>orsa.fit - orsa_fitter 0.8.7 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=362ab14a" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=135e06be" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?v=36a5483c" />
@@ -132,7 +132,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../index.html"><div class="brand">orsa_fitter 0.8.6 documentation</div></a>
+      <a href="../../index.html"><div class="brand">orsa_fitter 0.8.7 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -158,7 +158,7 @@
     <img class="sidebar-logo" src="../../_static/orsa_fitter.svg" alt="Logo"/>
   </div>
   
-  <span class="sidebar-brand-text">orsa_fitter 0.8.6 documentation</span>
+  <span class="sidebar-brand-text">orsa_fitter 0.8.7 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../search.html" role="search">
   <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
@@ -345,9 +345,31 @@ object from <cite>get_stats()</cite>.</p>
 </dl>
 </dd></dl>
 
-<dl class="py attribute">
+<dl class="py property">
+<dt class="sig sig-object py" id="orsa.fit.Results.covariance">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">covariance</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ndarray</span></em><a class="headerlink" href="#orsa.fit.Results.covariance" title="Link to this definition">¶</a></dt>
+<dd><p>2D covariance matrix</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
 <dt class="sig sig-object py" id="orsa.fit.Results.discard">
-<span class="sig-name descname"><span class="pre">discard</span></span><a class="headerlink" href="#orsa.fit.Results.discard" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">discard</span></span><a class="headerlink" href="#orsa.fit.Results.discard" title="Link to this definition">¶</a></dt>
+<dd><p>number of samples to discard at the beginning of the chain</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="orsa.fit.Results.discard_">
+<span class="sig-name descname"><span class="pre">discard_</span></span><a class="headerlink" href="#orsa.fit.Results.discard_" title="Link to this definition">¶</a></dt>
 <dd><p>number of samples to discard when working with the chains.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
@@ -374,6 +396,46 @@ object from <cite>get_stats()</cite>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="orsa.fit.Results.get_covariance">
+<span class="sig-name descname"><span class="pre">get_covariance</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#orsa.fit.Results.get_covariance" title="Link to this definition">¶</a></dt>
+<dd><p>Get the covariance matrix</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Exception</strong> – raises an exception if both covariance and errors are not set and covariance cannot be computed from correlation.</p></li>
+<li><p><strong>Exception</strong> – raises an exception if both covariance and correlation are not set and covariance cannot be computed from errors.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>covariance matrix.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="orsa.fit.Results.get_samples">
+<span class="sig-name descname"><span class="pre">get_samples</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#orsa.fit.Results.get_samples" title="Link to this definition">¶</a></dt>
+<dd><p>Get samples from the posterior distribution</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>n</strong> (<em>int</em><em>, </em><em>optional</em>) – number of samples to be drawn. Defaults to None (all available samples).</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>Exception</strong> – if number of samples has not been provided and samples are not been drawn before.</p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>array containing samples with dimension (n_chains x n_samples x n_parameters)</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>np.ndarray</p>
 </dd>
 </dl>
 </dd></dl>
@@ -411,6 +473,42 @@ object from <cite>get_stats()</cite>.</p>
 </dl>
 </dd></dl>
 
+<dl class="py method">
+<dt class="sig sig-object py" id="orsa.fit.Results.set_covariance">
+<span class="sig-name descname"><span class="pre">set_covariance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">covariance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#orsa.fit.Results.set_covariance" title="Link to this definition">¶</a></dt>
+<dd><p>Set the covariance matrix</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>covariance</strong> (<em>np.ndarray</em>) – 2D covariance matrix</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="orsa.fit.Results.to_dict">
+<span class="sig-name descname"><span class="pre">to_dict</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#orsa.fit.Results.to_dict" title="Link to this definition">¶</a></dt>
+<dd><p>Export the Results object to parsable dictionary</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dictionary with the exported object.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="orsa.fit.Results.to_json">
+<span class="sig-name descname"><span class="pre">to_json</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#orsa.fit.Results.to_json" title="Link to this definition">¶</a></dt>
+<dd><p>Export the Results object to a json file</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>filename</strong> (<em>str</em>) – path to the output file.</p>
+</dd>
+</dl>
+</dd></dl>
+
 <dl class="py attribute">
 <dt class="sig sig-object py" id="orsa.fit.Results.true_values">
 <span class="sig-name descname"><span class="pre">true_values</span></span><a class="headerlink" href="#orsa.fit.Results.true_values" title="Link to this definition">¶</a></dt>
@@ -437,7 +535,7 @@ object from <cite>get_stats()</cite>.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="orsa.fit.dynesty">
-<span class="sig-prename descclassname"><span class="pre">orsa.fit.</span></span><span class="sig-name descname"><span class="pre">dynesty</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">type</span><span class="p"><span class="pre">[</span></span><span class="pre">CostFunction</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_livepoints</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ll_scale</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parallel</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">backend</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dynesty_kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dynesty_run_kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">{}</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">type</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#orsa.fit.Results" title="orsa.fit.minimizers.Results"><span class="pre">Results</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#orsa.fit.dynesty" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">orsa.fit.</span></span><span class="sig-name descname"><span class="pre">dynesty</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">type</span><span class="p"><span class="pre">[</span></span><span class="pre">CostFunction</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_livepoints</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ll_scale</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parallel</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">backend</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dynesty_kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">{'bound':</span> <span class="pre">'single',</span> <span class="pre">'sample':</span> <span class="pre">'auto'}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dynesty_run_kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">{}</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">type</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#orsa.fit.Results" title="orsa.fit.minimizers.Results"><span class="pre">Results</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#orsa.fit.dynesty" title="Link to this definition">¶</a></dt>
 <dd><p>Function to perform a fit through the dynesty library.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -615,6 +713,40 @@ Access the underlying function with f.__wrapped__.</p>
 </dl>
 </dd></dl>
 
+<dl class="py function">
+<dt class="sig sig-object py" id="orsa.fit.read_dict">
+<span class="sig-prename descclassname"><span class="pre">orsa.fit.</span></span><span class="sig-name descname"><span class="pre">read_dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#orsa.fit.read_dict" title="Link to this definition">¶</a></dt>
+<dd><p>Parse a Results object from a dictionary</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>dict</em>) – input dictionary.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>parsed object.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#orsa.fit.Results" title="orsa.fit.Results">Results</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="orsa.fit.read_json">
+<span class="sig-prename descclassname"><span class="pre">orsa.fit.</span></span><span class="sig-name descname"><span class="pre">read_json</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#orsa.fit.read_json" title="Link to this definition">¶</a></dt>
+<dd><p>Parse a Results object from a json file</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>filename</strong> (<em>str</em>) – path to the input file.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>parsed object.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#orsa.fit.Results" title="orsa.fit.Results">Results</a></p>
+</dd>
+</dl>
+</dd></dl>
+
 </section>
 
         </article>
@@ -688,12 +820,19 @@ Access the underlying function with f.__wrapped__.</p>
 <li><a class="reference internal" href="#orsa.fit.Results"><code class="docutils literal notranslate"><span class="pre">Results</span></code></a><ul>
 <li><a class="reference internal" href="#orsa.fit.Results.correlation"><code class="docutils literal notranslate"><span class="pre">Results.correlation</span></code></a></li>
 <li><a class="reference internal" href="#orsa.fit.Results.cost_function"><code class="docutils literal notranslate"><span class="pre">Results.cost_function</span></code></a></li>
+<li><a class="reference internal" href="#orsa.fit.Results.covariance"><code class="docutils literal notranslate"><span class="pre">Results.covariance</span></code></a></li>
 <li><a class="reference internal" href="#orsa.fit.Results.discard"><code class="docutils literal notranslate"><span class="pre">Results.discard</span></code></a></li>
+<li><a class="reference internal" href="#orsa.fit.Results.discard_"><code class="docutils literal notranslate"><span class="pre">Results.discard_</span></code></a></li>
 <li><a class="reference internal" href="#orsa.fit.Results.errors"><code class="docutils literal notranslate"><span class="pre">Results.errors</span></code></a></li>
 <li><a class="reference internal" href="#orsa.fit.Results.formatted_labels"><code class="docutils literal notranslate"><span class="pre">Results.formatted_labels</span></code></a></li>
+<li><a class="reference internal" href="#orsa.fit.Results.get_covariance"><code class="docutils literal notranslate"><span class="pre">Results.get_covariance()</span></code></a></li>
+<li><a class="reference internal" href="#orsa.fit.Results.get_samples"><code class="docutils literal notranslate"><span class="pre">Results.get_samples()</span></code></a></li>
 <li><a class="reference internal" href="#orsa.fit.Results.labels"><code class="docutils literal notranslate"><span class="pre">Results.labels</span></code></a></li>
 <li><a class="reference internal" href="#orsa.fit.Results.obj"><code class="docutils literal notranslate"><span class="pre">Results.obj</span></code></a></li>
 <li><a class="reference internal" href="#orsa.fit.Results.samples"><code class="docutils literal notranslate"><span class="pre">Results.samples</span></code></a></li>
+<li><a class="reference internal" href="#orsa.fit.Results.set_covariance"><code class="docutils literal notranslate"><span class="pre">Results.set_covariance()</span></code></a></li>
+<li><a class="reference internal" href="#orsa.fit.Results.to_dict"><code class="docutils literal notranslate"><span class="pre">Results.to_dict()</span></code></a></li>
+<li><a class="reference internal" href="#orsa.fit.Results.to_json"><code class="docutils literal notranslate"><span class="pre">Results.to_json()</span></code></a></li>
 <li><a class="reference internal" href="#orsa.fit.Results.true_values"><code class="docutils literal notranslate"><span class="pre">Results.true_values</span></code></a></li>
 <li><a class="reference internal" href="#orsa.fit.Results.values"><code class="docutils literal notranslate"><span class="pre">Results.values</span></code></a></li>
 </ul>
@@ -707,6 +846,8 @@ Access the underlying function with f.__wrapped__.</p>
 <li><a class="reference internal" href="#orsa.fit.parse_emcee"><code class="docutils literal notranslate"><span class="pre">parse_emcee()</span></code></a></li>
 <li><a class="reference internal" href="#orsa.fit.print_stats"><code class="docutils literal notranslate"><span class="pre">print_stats()</span></code></a></li>
 <li><a class="reference internal" href="#orsa.fit.profile"><code class="docutils literal notranslate"><span class="pre">profile()</span></code></a></li>
+<li><a class="reference internal" href="#orsa.fit.read_dict"><code class="docutils literal notranslate"><span class="pre">read_dict()</span></code></a></li>
+<li><a class="reference internal" href="#orsa.fit.read_json"><code class="docutils literal notranslate"><span class="pre">read_json()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -718,7 +859,7 @@ Access the underlying function with f.__wrapped__.</p>
       
     </aside>
   </div>
-</div><script src="../../_static/documentation_options.js?v=279f42e0"></script>
+</div><script src="../../_static/documentation_options.js?v=83e7c6f9"></script>
     <script src="../../_static/doctools.js?v=9a2dae69"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/scripts/furo.js?v=32e29ea5"></script>
